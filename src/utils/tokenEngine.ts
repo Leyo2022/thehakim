@@ -1,6 +1,6 @@
-import type { Scene, Line, Token, TokenType, LineType, Script } from '@/types';
+import type { Scene, Line, Token, TokenType, LineType, Script, Entity } from '@/types';
 import { TOKEN_TYPE_CONFIGS } from '@/types';
-import { allEntityAliases, allPropAliases, getScriptFromMapping, sceneHeaders } from '@/data/scriptMapping';
+import { allEntityAliases, allPropAliases, allSceneAliases, allLightingAliases, getScriptFromMapping, sceneHeaders } from '@/data/scriptMapping';
 import rawScript from '@/data/rawScript.md?raw';
 
 function generateId(): string {
@@ -8,7 +8,11 @@ function generateId(): string {
 }
 
 function stripMarkdown(text: string): string {
-  return text.replace(/\*\*(.+?)\*\*/g, '$1');
+  let result = text.replace(/\*\*(.+?)\*\*/g, '$1');
+  result = result.replace(/[ \t]+/g, ' ');
+  result = result.replace(/\n{3,}/g, '\n\n');
+  result = result.replace(/\s*\n\s*\n\s*\n/g, '\n\n');
+  return result;
 }
 
 function parseScript(rawText: string): Scene[] {
@@ -19,7 +23,7 @@ function parseScript(rawText: string): Scene[] {
   let currentLines: Line[] = [];
   let emptyLineCount = 0;
 
-  const sceneHeaderRegex = /^\s*(\d{1,3})\s+(内景|外景)\s+(.+?)\s*(白天|夜晚|清晨|黄昏|拂晓|傍晚|日夜|日)?\s*-?\s*(\d{4})?/;
+  const sceneHeaderRegex = /^\s*(\d{1,3})\s*(?:闪回\s+)?(?:内景|外景|内外景|内景\s*\/\s*外景|外景\s*\/\s*内景)\s+(.+?)\s*$/;
 
   for (let i = 0; i < lines.length; i++) {
     const rawLine = lines[i];
@@ -51,11 +55,12 @@ function parseScript(rawText: string): Scene[] {
       }
       const sceneNumber = parseInt(headerMatch[1]);
       const sceneCode = `Sc${String(sceneNumber).padStart(3, '0')}`;
+      const rawHeader = trimmed.replace(/\*\*/g, '');
       currentScene = {
         id: generateId(),
         sceneNumber: `SC${String(sceneNumber).padStart(3, '0')}`,
         sceneCode,
-        header: trimmed,
+        header: rawHeader,
         summary: sceneHeaders[sceneCode]?.summary || '',
         lines: [],
         associatedCharacters: [],
@@ -104,7 +109,7 @@ function parseScript(rawText: string): Scene[] {
 function detectLineType(text: string, prevLine: string): LineType {
   const trimmed = text.trim();
 
-  if (/^\d+\s+[内外]景/i.test(trimmed)) {
+  if (/^\d+\s*(?:闪回\s+)?(?:内景|外景|内外景|内景\s*\/\s*外景|外景\s*\/\s*内景)/i.test(trimmed)) {
     return 'scene_header';
   }
 
@@ -295,7 +300,7 @@ export function tokenizeScript(): Script {
 
   return {
     ...script,
-    scenes: parsedScenes.filter((s) => s.lines.length > 0),
+    scenes: parsedScenes,
   };
 }
 
@@ -403,4 +408,74 @@ export function getTokenLocations(
   }
 
   return locations;
+}
+
+export function getAllConfiguredEntities(script: Script) {
+  const textMatchedNames = new Set<string>();
+  const sceneMappingNames = new Set<string>();
+  
+  for (const scene of script.scenes) {
+    for (const line of scene.lines) {
+      for (const token of line.tokens) {
+        if (token.source === 'scene_mapping') {
+          sceneMappingNames.add(token.canonicalName);
+        } else {
+          textMatchedNames.add(token.canonicalName);
+        }
+      }
+    }
+  }
+
+  const allEntities: Entity[] = [
+    ...allEntityAliases,
+    ...allPropAliases,
+    ...allSceneAliases,
+    ...allLightingAliases,
+  ];
+
+  const scriptText = stripMarkdown(rawScript);
+
+  const seen = new Set<string>();
+  const result: { canonicalName: string; type: TokenType; matched: boolean; matchedInText: boolean }[] = [];
+  
+  for (const entity of allEntities) {
+    if (!seen.has(entity.canonicalName)) {
+      seen.add(entity.canonicalName);
+      
+      let textMatched = textMatchedNames.has(entity.canonicalName);
+      
+      if (!textMatched) {
+        const searchTerms: string[] = [];
+        
+        searchTerms.push(entity.canonicalName);
+        
+        if (entity.aliases) {
+          searchTerms.push(...entity.aliases);
+        }
+        
+        if (entity.type === 'scene' || entity.type === 'lighting') {
+          const cleanedName = entity.canonicalName.replace(/^L\d+\s*/i, '').trim();
+          if (cleanedName && cleanedName !== entity.canonicalName) {
+            searchTerms.push(cleanedName);
+          }
+        }
+        
+        for (const term of searchTerms) {
+          if (term && scriptText.includes(term)) {
+            textMatched = true;
+            break;
+          }
+        }
+      }
+      
+      result.push({
+        canonicalName: entity.canonicalName,
+        type: entity.type,
+        matched: textMatched || sceneMappingNames.has(entity.canonicalName),
+        matchedInText: textMatched,
+      });
+    }
+  }
+
+  return result;
 }

@@ -2,8 +2,10 @@ import React, { useMemo } from 'react';
 import type { Script, TokenType } from '@/types';
 import { TOKEN_TYPE_CONFIGS } from '@/types';
 import { useScriptStore } from '@/stores/scriptStore';
-import { getAllUniqueEntities } from '@/utils/tokenEngine';
-import { Search } from 'lucide-react';
+import { getAllUniqueEntities, getAllConfiguredEntities } from '@/utils/tokenEngine';
+import { Search, CheckCircle, XCircle, Filter } from 'lucide-react';
+
+type MatchFilter = 'all' | 'matched' | 'unmatched';
 
 interface InventoryViewProps {
   script: Script;
@@ -15,13 +17,15 @@ export const InventoryView: React.FC<InventoryViewProps> = ({ script }) => {
 
   const [searchQuery, setSearchQuery] = React.useState('');
   const [sortBy, setSortBy] = React.useState<'count' | 'name'>('count');
+  const [matchFilter, setMatchFilter] = React.useState<MatchFilter>('all');
 
-  const entities = useMemo(() => {
+  const matchedEntities = useMemo(() => {
     const map = getAllUniqueEntities(script);
     const list = Array.from(map.entries()).map(([name, info]) => ({
       name,
       type: info.type,
       count: info.count,
+      matched: true,
     }));
 
     return list
@@ -35,8 +39,35 @@ export const InventoryView: React.FC<InventoryViewProps> = ({ script }) => {
       });
   }, [script, activeFilters, searchQuery, sortBy]);
 
+  const allConfigured = useMemo(() => {
+    const configured = getAllConfiguredEntities(script);
+    return configured
+      .filter((e) => activeFilters[e.type])
+      .filter((e) =>
+        searchQuery ? e.canonicalName.toLowerCase().includes(searchQuery.toLowerCase()) : true
+      )
+      .filter((e) => {
+        if (matchFilter === 'all') return true;
+        if (matchFilter === 'matched') return e.matchedInText;
+        return !e.matchedInText;
+      })
+      .sort((a, b) => a.canonicalName.localeCompare(b.canonicalName));
+  }, [script, activeFilters, searchQuery, matchFilter]);
+
+  const unmatchedCount = allConfigured.filter((e) => !e.matchedInText).length;
+  const matchedCount = allConfigured.filter((e) => e.matchedInText).length;
+  const sceneMappedOnlyCount = allConfigured.filter((e) => e.matched && !e.matchedInText).length;
+
+  const matchedByName = useMemo(() => {
+    const map = new Map<string, number>();
+    for (const e of matchedEntities) {
+      map.set(e.name, e.count);
+    }
+    return map;
+  }, [matchedEntities]);
+
   const grouped = useMemo(() => {
-    const groups: Record<TokenType, typeof entities> = {
+    const groups: Record<TokenType, typeof allConfigured> = {
       character: [],
       prop: [],
       vfx: [],
@@ -45,9 +76,9 @@ export const InventoryView: React.FC<InventoryViewProps> = ({ script }) => {
       scene: [],
       lighting: [],
     };
-    entities.forEach((e) => groups[e.type].push(e));
+    allConfigured.forEach((e) => groups[e.type].push(e));
     return groups;
-  }, [entities]);
+  }, [allConfigured]);
 
   return (
     <div className="flex-1 overflow-auto bg-slate-50">
@@ -55,11 +86,14 @@ export const InventoryView: React.FC<InventoryViewProps> = ({ script }) => {
         <div className="mb-6">
           <h2 className="text-xl font-bold text-slate-800 mb-1">资产清单</h2>
           <p className="text-sm text-slate-500">
-            共 {entities.length} 类资产，总计 {entities.reduce((s, e) => s + e.count, 0)} 次出现
+            共 {allConfigured.length} 类资产 · 
+            <span className="text-green-600 font-semibold">文本匹配 {matchedCount}</span> · 
+            <span className="text-amber-600 font-semibold">场景关联 {sceneMappedOnlyCount}</span> · 
+            <span className="text-red-600 font-semibold">未匹配 {unmatchedCount}</span>
           </p>
         </div>
 
-        <div className="flex items-center gap-3 mb-4">
+        <div className="flex items-center gap-3 mb-4 flex-wrap">
           <div className="relative flex-1 max-w-xs">
             <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400" />
             <input
@@ -78,6 +112,22 @@ export const InventoryView: React.FC<InventoryViewProps> = ({ script }) => {
             <option value="count">按频次排序</option>
             <option value="name">按名称排序</option>
           </select>
+          <div className="flex items-center gap-1 bg-white border border-slate-200 rounded-lg p-1">
+            <Filter size={14} className="ml-1 text-slate-400" />
+            {(['all', 'matched', 'unmatched'] as MatchFilter[]).map((f) => (
+              <button
+                key={f}
+                onClick={() => setMatchFilter(f)}
+                className={`px-2 py-1 text-xs rounded transition-colors ${
+                  matchFilter === f
+                    ? 'bg-slate-800 text-white'
+                    : 'text-slate-600 hover:bg-slate-100'
+                }`}
+              >
+                {f === 'all' ? '全部' : f === 'matched' ? '已匹配' : '未匹配'}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="space-y-6">
@@ -104,43 +154,73 @@ export const InventoryView: React.FC<InventoryViewProps> = ({ script }) => {
                   </span>
                 </div>
                 <div className="divide-y divide-slate-100">
-                  {items.map((item) => (
-                    <button
-                      key={item.name}
-                      onClick={() => selectEntity(item.name)}
-                      className="w-full text-left px-4 py-3 flex items-center justify-between hover:bg-slate-50 transition-colors"
-                    >
-                      <div className="flex items-center gap-3">
-                        <span
-                          className="w-8 h-8 rounded-lg flex items-center justify-center text-sm"
-                          style={{
-                            backgroundColor: config.bgColor,
-                            color: config.textColor,
-                          }}
-                        >
-                          {config.icon}
-                        </span>
-                        <div>
-                          <div className="text-sm font-medium text-slate-800">{item.name}</div>
-                          <div className="text-xs text-slate-400">
-                            出现在 {new Set(
-                              script.scenes
-                                .flatMap((s) => s.lines)
-                                .flatMap((l) => l.tokens)
-                                .filter((t) => t.canonicalName === item.name)
-                                .map((t) => t.lineId)
-                            ).size} 行
+                  {items.map((item) => {
+                    const count = matchedByName.get(item.canonicalName) || 0;
+                    const canClick = item.matchedInText;
+                    return (
+                      <button
+                        key={item.canonicalName}
+                        onClick={() => canClick && selectEntity(item.canonicalName)}
+                        disabled={!canClick}
+                        className={`w-full text-left px-4 py-3 flex items-center justify-between transition-colors ${
+                          canClick
+                            ? 'hover:bg-slate-50 cursor-pointer'
+                            : 'opacity-60 cursor-not-allowed'
+                        }`}
+                      >
+                        <div className="flex items-center gap-3">
+                          <span
+                            className="w-8 h-8 rounded-lg flex items-center justify-center text-sm"
+                            style={{
+                              backgroundColor: config.bgColor,
+                              color: config.textColor,
+                            }}
+                          >
+                            {config.icon}
+                          </span>
+                          <div>
+                            <div className="text-sm font-medium text-slate-800 flex items-center gap-2">
+                              {item.canonicalName}
+                              {item.matchedInText ? (
+                                <CheckCircle size={14} className="text-green-500" />
+                              ) : item.matched ? (
+                                <CheckCircle size={14} className="text-amber-500" />
+                              ) : (
+                                <XCircle size={14} className="text-red-500" />
+                              )}
+                            </div>
+                            <div className="text-xs text-slate-400">
+                              {item.matchedInText
+                                ? `文本匹配 · 出现在 ${new Set(
+                                    script.scenes
+                                      .flatMap((s) => s.lines)
+                                      .flatMap((l) => l.tokens)
+                                      .filter((t) => t.canonicalName === item.canonicalName && t.source !== 'scene_mapping')
+                                      .map((t) => t.lineId)
+                                  ).size} 行`
+                                : item.matched
+                                ? '场景关联 · 未在文本中匹配'
+                                : '未匹配 · 需检查剧本或映射'}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-lg font-bold" style={{ color: config.textColor }}>
-                          {item.count}
+                        <div className="text-right">
+                          {item.matchedInText ? (
+                            <>
+                              <div className="text-lg font-bold" style={{ color: config.textColor }}>
+                                {count}
+                              </div>
+                              <div className="text-[10px] text-slate-400 uppercase">次</div>
+                            </>
+                          ) : item.matched ? (
+                            <span className="text-xs text-amber-600 font-medium">场景关联</span>
+                          ) : (
+                            <span className="text-xs text-red-600 font-medium">未匹配</span>
+                          )}
                         </div>
-                        <div className="text-[10px] text-slate-400 uppercase">次</div>
-                      </div>
-                    </button>
-                  ))}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             );
