@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { TOKEN_TYPE_CONFIGS } from '@/types';
 import type { Script } from '@/types';
-import { X, MapPin, FileText, Eye } from 'lucide-react';
+import { X, MapPin, FileText, Eye, ChevronRight, ChevronDown } from 'lucide-react';
 import { useScriptStore } from '@/stores/scriptStore';
 import { getTokenLocations } from '@/utils/tokenEngine';
 
@@ -16,6 +16,7 @@ export const AssetDrawer: React.FC<AssetDrawerProps> = ({ script, onNavigate }) 
   const selectedEntities = useScriptStore((s) => s.selectedEntities);
   const clearSelection = useScriptStore((s) => s.clearSelection);
   const toggleEntity = useScriptStore((s) => s.toggleEntity);
+  const [expandedScenes, setExpandedScenes] = useState<Set<string>>(new Set());
 
   const entityInfo = useMemo(() => {
     if (!selectedEntity) return null;
@@ -39,6 +40,31 @@ export const AssetDrawer: React.FC<AssetDrawerProps> = ({ script, onNavigate }) 
     if (!selectedEntity) return [];
     return getTokenLocations(script, selectedEntity);
   }, [script, selectedEntity]);
+
+  const groupedLocations = useMemo(() => {
+    const groups = new Map<string, typeof locations>();
+    for (const loc of locations) {
+      const existing = groups.get(loc.sceneNumber);
+      if (existing) {
+        existing.push(loc);
+      } else {
+        groups.set(loc.sceneNumber, [loc]);
+      }
+    }
+    return groups;
+  }, [locations]);
+
+  const toggleScene = (sceneNumber: string) => {
+    setExpandedScenes((prev) => {
+      const next = new Set(prev);
+      if (next.has(sceneNumber)) {
+        next.delete(sceneNumber);
+      } else {
+        next.add(sceneNumber);
+      }
+      return next;
+    });
+  };
 
   const entityTypeMap = useMemo(() => {
     const map = new Map<string, { type: string; count: number }>();
@@ -72,7 +98,7 @@ export const AssetDrawer: React.FC<AssetDrawerProps> = ({ script, onNavigate }) 
         onClick={clearSelection}
       />
       <div className="fixed right-0 top-14 bottom-0 w-[380px] bg-white shadow-2xl z-40 flex flex-col border-l border-slate-200 animate-slideIn">
-        <div className="flex items-center justify-between px-4 py-3 border-b border-slate-100">
+        <div className="flex items-center justify-between px-4 py-3 border-b border-slate-100 shrink-0">
           <div className="flex items-center gap-2">
             <FileText size={16} className="text-slate-400" />
             <span className="text-sm font-medium text-slate-600">
@@ -92,9 +118,9 @@ export const AssetDrawer: React.FC<AssetDrawerProps> = ({ script, onNavigate }) 
           </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-4 space-y-4">
-          {selectedEntities.length === 1 && entityInfo && config && (
-            <div className="space-y-4">
+        {selectedEntities.length === 1 && entityInfo && config ? (
+          <>
+            <div className="shrink-0 p-4 space-y-4 border-b border-slate-100">
               <div
                 className="rounded-lg p-3 flex items-center gap-3"
                 style={{ backgroundColor: config.bgColor }}
@@ -137,111 +163,141 @@ export const AssetDrawer: React.FC<AssetDrawerProps> = ({ script, onNavigate }) 
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div>
-                <div className="text-[11px] text-slate-400 uppercase mb-2 flex items-center gap-1">
+            <div className="flex-1 flex flex-col min-h-0">
+              <div className="px-4 py-2 border-b border-slate-100 shrink-0">
+                <div className="text-[11px] text-slate-400 uppercase flex items-center gap-1">
                   <MapPin size={12} />
                   出现位置
                 </div>
-                <div className="space-y-1 max-h-80 overflow-y-auto pr-1">
-                  {locations.map((loc, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => onNavigate(loc.sceneId, loc.lineNumber)}
-                      className="w-full text-left p-2 rounded border border-slate-100 hover:bg-sky-50 hover:border-sky-200 transition-colors group"
-                    >
-                      <div className="flex items-center gap-2 mb-0.5">
-                        <span className="font-mono text-xs text-slate-400">
-                          {loc.sceneNumber}
-                        </span>
-                        <span className="font-mono text-xs text-slate-400">
-                          L{loc.lineNumber}
-                        </span>
-                        <Eye
-                          size={12}
-                          className="text-slate-300 group-hover:text-sky-500 opacity-0 group-hover:opacity-100 transition-opacity"
-                        />
-                      </div>
-                      <div className="text-xs text-slate-600 truncate">
-                        {loc.preview}
-                      </div>
-                    </button>
-                  ))}
-                </div>
               </div>
-            </div>
-          )}
-
-          {selectedEntities.length > 1 && (
-            <div className="space-y-4">
-              <div className="space-y-2">
-                {selectedEntities.map((name) => {
-                  const info = entityTypeMap.get(name);
-                  if (!info) return null;
-                  const tConfig = TOKEN_TYPE_CONFIGS[info.type as keyof typeof TOKEN_TYPE_CONFIGS];
+              <div className="flex-1 overflow-y-auto px-4 py-2 space-y-1">
+                {Array.from(groupedLocations.entries()).map(([sceneNumber, group]) => {
+                  const isExpanded = expandedScenes.has(sceneNumber);
+                  const firstLoc = group[0];
                   return (
-                    <div
-                      key={name}
-                      className="flex items-center gap-3 p-2 rounded-lg border border-slate-100"
-                      style={{ backgroundColor: tConfig.bgColor }}
-                    >
-                      <span className="text-lg">{tConfig.icon}</span>
-                      <div className="flex-1">
-                        <div className="font-medium text-sm" style={{ color: tConfig.textColor }}>
-                          {name}
-                        </div>
-                        <div className="text-xs" style={{ color: tConfig.textColor }}>
-                          {tConfig.label} · {info.count} 次
-                        </div>
-                      </div>
+                    <div key={sceneNumber} className="rounded-lg border border-slate-200 overflow-hidden">
                       <button
-                        onClick={() => toggleEntity(name)}
-                        className="p-1 rounded hover:bg-white/50 transition-colors"
+                        onClick={() => toggleScene(sceneNumber)}
+                        className="w-full text-left p-2 bg-slate-50 hover:bg-sky-50 transition-colors flex items-center gap-2"
                       >
-                        <X size={14} className="opacity-50" />
+                        {isExpanded ? (
+                          <ChevronDown size={14} className="text-slate-400 shrink-0" />
+                        ) : (
+                          <ChevronRight size={14} className="text-slate-400 shrink-0" />
+                        )}
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <span className="font-mono text-xs text-slate-500 font-semibold">
+                              {sceneNumber}
+                            </span>
+                            <span className="px-1.5 py-0.5 bg-white border border-slate-200 rounded text-[10px] text-slate-500">
+                              {group.length} 处
+                            </span>
+                            <Eye
+                              size={12}
+                              className="text-slate-300 ml-auto shrink-0"
+                            />
+                          </div>
+                          <div className="text-xs text-slate-600 truncate">
+                            {firstLoc.preview}
+                          </div>
+                        </div>
                       </button>
+                      {isExpanded && group.length > 1 && (
+                        <div className="border-t border-slate-100">
+                          {group.slice(1).map((loc, idx) => (
+                            <button
+                              key={idx}
+                              onClick={() => onNavigate(loc.sceneId, loc.lineNumber)}
+                              className="w-full text-left px-3 py-1.5 hover:bg-sky-50 transition-colors flex items-center gap-2"
+                            >
+                              <span className="w-8 font-mono text-[10px] text-slate-400 shrink-0">
+                                L{loc.lineNumber}
+                              </span>
+                              <span className="text-xs text-slate-500 truncate">
+                                {loc.preview}
+                              </span>
+                            </button>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   );
                 })}
               </div>
-
-              {(() => {
-                const sceneSets: string[][] = selectedEntities.map(() => []);
-                for (const scene of script.scenes) {
-                  const namesInScene = new Set(
-                    scene.lines.flatMap((l) => l.tokens.map((t) => t.canonicalName))
-                  );
-                  selectedEntities.forEach((name, idx) => {
-                    if (namesInScene.has(name)) {
-                      sceneSets[idx].push(scene.sceneNumber);
-                    }
-                  });
-                }
-                const commonScenes = sceneSets.reduce(
-                  (a, b) => a.filter((x) => b.includes(x)),
-                  sceneSets[0] || []
-                );
-
+            </div>
+          </>
+        ) : selectedEntities.length > 1 ? (
+          <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            <div className="space-y-2">
+              {selectedEntities.map((name) => {
+                const info = entityTypeMap.get(name);
+                if (!info) return null;
+                const tConfig = TOKEN_TYPE_CONFIGS[info.type as keyof typeof TOKEN_TYPE_CONFIGS];
                 return (
-                  <div className="bg-slate-50 rounded-lg p-3">
-                    <div className="text-[11px] text-slate-400 uppercase mb-2">共同出现场次</div>
-                    {commonScenes.length > 0 ? (
-                      <div className="flex flex-wrap gap-1">
-                        {commonScenes.map((s) => (
-                          <span key={s} className="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs font-mono text-slate-600">
-                            {s}
-                          </span>
-                        ))}
+                  <div
+                    key={name}
+                    className="flex items-center gap-3 p-2 rounded-lg border border-slate-100"
+                    style={{ backgroundColor: tConfig.bgColor }}
+                  >
+                    <span className="text-lg">{tConfig.icon}</span>
+                    <div className="flex-1">
+                      <div className="font-medium text-sm" style={{ color: tConfig.textColor }}>
+                        {name}
                       </div>
-                    ) : (
-                      <div className="text-xs text-slate-400">无共同场次</div>
-                    )}
+                      <div className="text-xs" style={{ color: tConfig.textColor }}>
+                        {tConfig.label} · {info.count} 次
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => toggleEntity(name)}
+                      className="p-1 rounded hover:bg-white/50 transition-colors"
+                    >
+                      <X size={14} className="opacity-50" />
+                    </button>
                   </div>
                 );
-              })()}
+              })}
             </div>
-          )}
-        </div>
+
+            {(() => {
+              const sceneSets: string[][] = selectedEntities.map(() => []);
+              for (const scene of script.scenes) {
+                const namesInScene = new Set(
+                  scene.lines.flatMap((l) => l.tokens.map((t) => t.canonicalName))
+                );
+                selectedEntities.forEach((name, idx) => {
+                  if (namesInScene.has(name)) {
+                    sceneSets[idx].push(scene.sceneNumber);
+                  }
+                });
+              }
+              const commonScenes = sceneSets.reduce(
+                (a, b) => a.filter((x) => b.includes(x)),
+                sceneSets[0] || []
+              );
+
+              return (
+                <div className="bg-slate-50 rounded-lg p-3">
+                  <div className="text-[11px] text-slate-400 uppercase mb-2">共同出现场次</div>
+                  {commonScenes.length > 0 ? (
+                    <div className="flex flex-wrap gap-1">
+                      {commonScenes.map((s) => (
+                        <span key={s} className="px-2 py-0.5 bg-white border border-slate-200 rounded text-xs font-mono text-slate-600">
+                          {s}
+                        </span>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-xs text-slate-400">无共同场次</div>
+                  )}
+                </div>
+              );
+            })()}
+          </div>
+        ) : null}
       </div>
     </>
   );

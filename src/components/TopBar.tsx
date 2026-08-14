@@ -45,8 +45,8 @@ export const TopBar: React.FC<TopBarProps> = ({ viewMode, onViewChange }) => {
 
     const ws = XLSX.utils.json_to_sheet(exportData);
     const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, '资产清单');
-    XLSX.writeFile(wb, `${script.title}_资产清单.xlsx`);
+    XLSX.utils.book_append_sheet(wb, ws, '资产匹配管理');
+    XLSX.writeFile(wb, `${script.title}_资产匹配管理.xlsx`);
   };
 
   const handleExportPDF = () => {
@@ -108,7 +108,7 @@ export const TopBar: React.FC<TopBarProps> = ({ viewMode, onViewChange }) => {
           }`}
         >
           <List size={14} />
-          资产清单
+          资产匹配管理
         </button>
         <button
           onClick={() => onViewChange('mindmap')}
@@ -119,7 +119,7 @@ export const TopBar: React.FC<TopBarProps> = ({ viewMode, onViewChange }) => {
           }`}
         >
           <LayoutGrid size={14} />
-          分镜大纲
+          场次资产详情
         </button>
       </div>
 
@@ -191,7 +191,7 @@ export const TopBar: React.FC<TopBarProps> = ({ viewMode, onViewChange }) => {
                 }}
                 className="w-full text-left px-3 py-2 text-sm hover:bg-slate-50"
               >
-                导出资产清单 Excel
+                导出资产匹配管理 Excel
               </button>
               <button
                 onClick={() => {

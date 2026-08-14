@@ -58,7 +58,7 @@ export const MindmapView: React.FC<MindmapViewProps> = ({ script }) => {
     <div className="flex-1 overflow-auto bg-slate-50">
       <div className="max-w-4xl mx-auto p-6">
         <div className="mb-6">
-          <h2 className="text-xl font-bold text-slate-800 mb-1">分镜大纲</h2>
+          <h2 className="text-xl font-bold text-slate-800 mb-1">场次资产详情</h2>
           <p className="text-sm text-slate-500">
             按场次展示资产分布，点击资产可在审阅视图中定位
           </p>

@@ -163,6 +163,10 @@ const characterMap: Record<string, string[]> = {
   '印度教信徒A': ['Sc078'],
   '巴黎市民': ['Sc125'],
   '餐厅侍者': ['Sc126'],
+  '少年A': ['Sc007'],
+  '卡地亚随从B': ['Sc067','Sc068'],
+  '王室宗亲A': ['Sc038','Sc081'],
+  '王族宗亲A': ['Sc038','Sc081'],
 };
 
 const sceneMap: Record<string, string[]> = {
@@ -233,6 +237,13 @@ const propMap: Record<string, string[]> = {
   '墙面结构': ['Sc004','Sc018','Sc020','Sc023','Sc024','Sc042','Sc045','Sc048','Sc050','Sc064','Sc066','Sc079','Sc102','Sc109'],
   '挂件': ['Sc004','Sc018','Sc020','Sc023','Sc024','Sc042','Sc045','Sc048','Sc050','Sc064','Sc066','Sc079','Sc102','Sc109'],
   '横条': ['Sc004','Sc018','Sc020','Sc023','Sc024','Sc042','Sc045','Sc048','Sc050','Sc064','Sc066','Sc079','Sc102','Sc109'],
+  '管道': ['Sc001'],
+  '牧豆树干': ['Sc001'],
+  '墙沿': ['Sc001','Sc015','Sc057','Sc136','Sc138'],
+  '墙面': ['Sc001','Sc015','Sc057','Sc136','Sc138'],
+  '窗': ['Sc018','Sc045','Sc058','Sc060','Sc063','Sc065','Sc081','Sc108','Sc115'],
+  '牧豆树': ['Sc019','Sc049','Sc062','Sc111','Sc112','Sc113'],
+  '台阶': ['Sc004','Sc018','Sc020','Sc023','Sc024','Sc042','Sc045','Sc048','Sc050','Sc064','Sc066','Sc079','Sc102','Sc109'],
 };
 
 export const allEntityAliases: Entity[] = [
@@ -284,6 +295,10 @@ export const allEntityAliases: Entity[] = [
   { id: 'e_hindu_follow', canonicalName: '印度教信徒A', type: 'character', aliases: ['印度教徒', '印度教信徒'] },
   { id: 'e_parisian', canonicalName: '巴黎市民', type: 'character', aliases: [] },
   { id: 'e_waiter', canonicalName: '餐厅侍者', type: 'character', aliases: [] },
+  { id: 'e_shaonianA', canonicalName: '少年A', type: 'character', aliases: [] },
+  { id: 'e_cartierB', canonicalName: '卡地亚随从B', type: 'character', aliases: [] },
+  { id: 'e_royalA', canonicalName: '王室宗亲A', type: 'character', aliases: [] },
+  { id: 'e_royalA2', canonicalName: '王族宗亲A', type: 'character', aliases: [] },
 ];
 
 export const allPropAliases: Entity[] = [
@@ -294,7 +309,7 @@ export const allPropAliases: Entity[] = [
   { id: 'p_warship', canonicalName: '军舰', type: 'prop', aliases: ['提泽尔号军舰'] },
   { id: 'p_pearl', canonicalName: '黑珍珠', type: 'prop', aliases: [] },
   { id: 'p_frangipani', canonicalName: '鸡蛋花', type: 'prop', aliases: [] },
-  { id: 'p_frangipani_tree', canonicalName: '鸡蛋花树', type: 'prop', aliases: [] },
+  { id: 'p_frangipani_tree', canonicalName: '鸡蛋花树', type: 'prop', aliases: ['牧豆树'] },
   { id: 'p_sword', canonicalName: '剑', type: 'prop', aliases: [] },
   { id: 'p_scimitar', canonicalName: '弯刀', type: 'prop', aliases: [] },
   { id: 'p_bow', canonicalName: '弓', type: 'prop', aliases: [] },

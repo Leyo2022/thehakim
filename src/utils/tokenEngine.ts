@@ -219,7 +219,7 @@ export function tokenizeScript(): Script {
         line.id,
         parsedScene.id,
         entities,
-        line.type === 'dialogue'
+        false
       );
     }
 
@@ -435,46 +435,42 @@ export function getAllConfiguredEntities(script: Script) {
 
   const scriptText = stripMarkdown(rawScript);
 
-  const seen = new Set<string>();
-  const result: { canonicalName: string; type: TokenType; matched: boolean; matchedInText: boolean }[] = [];
+  const result: { id: string; canonicalName: string; type: TokenType; matched: boolean; matchedInText: boolean }[] = [];
   
   for (const entity of allEntities) {
-    if (!seen.has(entity.canonicalName)) {
-      seen.add(entity.canonicalName);
+    let textMatched = textMatchedNames.has(entity.canonicalName);
+    
+    if (!textMatched) {
+      const searchTerms: string[] = [];
       
-      let textMatched = textMatchedNames.has(entity.canonicalName);
+      searchTerms.push(entity.canonicalName);
       
-      if (!textMatched) {
-        const searchTerms: string[] = [];
-        
-        searchTerms.push(entity.canonicalName);
-        
-        if (entity.aliases) {
-          searchTerms.push(...entity.aliases);
-        }
-        
-        if (entity.type === 'scene' || entity.type === 'lighting') {
-          const cleanedName = entity.canonicalName.replace(/^L\d+\s*/i, '').trim();
-          if (cleanedName && cleanedName !== entity.canonicalName) {
-            searchTerms.push(cleanedName);
-          }
-        }
-        
-        for (const term of searchTerms) {
-          if (term && scriptText.includes(term)) {
-            textMatched = true;
-            break;
-          }
+      if (entity.aliases) {
+        searchTerms.push(...entity.aliases);
+      }
+      
+      if (entity.type === 'scene' || entity.type === 'lighting') {
+        const cleanedName = entity.canonicalName.replace(/^L\d+\s*/i, '').trim();
+        if (cleanedName && cleanedName !== entity.canonicalName) {
+          searchTerms.push(cleanedName);
         }
       }
       
-      result.push({
-        canonicalName: entity.canonicalName,
-        type: entity.type,
-        matched: textMatched || sceneMappingNames.has(entity.canonicalName),
-        matchedInText: textMatched,
-      });
+      for (const term of searchTerms) {
+        if (term && scriptText.includes(term)) {
+          textMatched = true;
+          break;
+        }
+      }
     }
+    
+    result.push({
+      id: entity.id,
+      canonicalName: entity.canonicalName,
+      type: entity.type,
+      matched: textMatched || sceneMappingNames.has(entity.canonicalName),
+      matchedInText: textMatched,
+    });
   }
 
   return result;
