@@ -47,21 +47,27 @@ graph TD
 
 ## 2. 技术说明
 
-- **前端框架**: React@18 + TypeScript
-- **构建工具**: Vite
-- **样式**: Tailwind CSS@3
-- **状态管理**: Zustand
-- **图标**: Lucide React
-- **导出**: xlsx (Excel), jspdf (PDF)
-- **UI 组件**: 自定义组件 (基于 Tailwind)
+* **前端框架**: React\@18 + TypeScript
+
+* **构建工具**: Vite
+
+* **样式**: Tailwind CSS\@3
+
+* **状态管理**: Zustand
+
+* **图标**: Lucide React
+
+* **导出**: xlsx (Excel), jspdf (PDF)
+
+* **UI 组件**: 自定义组件 (基于 Tailwind)
 
 ## 3. 路由定义
 
-| 路由 | 用途 |
-|------|------|
-| `/` | 剧本审阅主页 (Review Mode) |
-| `/inventory` | 资产清单视图 |
-| `/mindmap` | 分镜大纲视图 |
+| 路由           | 用途                   |
+| ------------ | -------------------- |
+| `/`          | 剧本审阅主页 (Review Mode) |
+| `/inventory` | 资产清单视图               |
+| `/mindmap`   | 分镜大纲视图               |
 
 ## 4. API 定义
 
@@ -155,3 +161,4 @@ ExportService.exportPDF(script: Script): void
 ExportService.exportExcel(script: Script): void
 ExportService.exportCSV(script: Script): void
 ```
+

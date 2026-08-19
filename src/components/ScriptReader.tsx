@@ -1,20 +1,31 @@
 import React, { useMemo, useState, useRef, useEffect } from 'react';
 import rawScript from '@/data/rawScript.md?raw';
-import { Copy, Check } from 'lucide-react';
+import { scriptVersions, getScriptVersions } from '@/data/scriptVersions';
+import type { ScriptVersion } from '@/data/scriptVersions';
+import { Copy, Check, ChevronDown, GitBranch } from 'lucide-react';
 
 interface ScriptReaderProps {
   onNavigate?: (lineNumber: number) => void;
 }
 
 export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
+  const versions = useMemo(() => getScriptVersions(), []);
+  const [selectedVersionId, setSelectedVersionId] = useState(versions[0]?.id || 'current');
+  const [showVersionMenu, setShowVersionMenu] = useState(false);
+
+  const currentContent = useMemo(() => {
+    const version = versions.find((v) => v.id === selectedVersionId);
+    return version?.content || rawScript;
+  }, [versions, selectedVersionId]);
+
   const lines = useMemo(() => {
-    const arr = rawScript.split('\n');
+    const arr = currentContent.split('\n');
     return arr.map((text, idx) => ({
       lineNumber: idx + 1,
       text: text.replace(/<br\s*\/?>/gi, ''),
       isEmpty: text.trim() === '' || text.replace(/<br\s*\/?>/gi, '').trim() === '',
     }));
-  }, []);
+  }, [currentContent]);
 
   const [searchQuery, setSearchQuery] = useState('');
   const [currentLine, setCurrentLine] = useState(1);
@@ -46,6 +57,16 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
 
   const [matchIndex, setMatchIndex] = useState(0);
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    setCurrentLine(1);
+    setSearchQuery('');
+    setMatchIndex(0);
+    setShowJumpDialog(false);
+    if (containerRef.current) {
+      containerRef.current.scrollTop = 0;
+    }
+  }, [selectedVersionId]);
 
   const scrollToLine = (lineNumber: number) => {
     const el = lineRefs.current.get(lineNumber);
@@ -98,12 +119,12 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
 
   const handleCopyAll = async () => {
     try {
-      await navigator.clipboard.writeText(rawScript);
+      await navigator.clipboard.writeText(currentContent);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
       const textarea = document.createElement('textarea');
-      textarea.value = rawScript;
+      textarea.value = currentContent;
       document.body.appendChild(textarea);
       textarea.select();
       document.execCommand('copy');
@@ -114,22 +135,102 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
   };
 
   const handleExport = () => {
-    const blob = new Blob([rawScript], { type: 'text/plain;charset=utf-8' });
+    const version = versions.find((v) => v.id === selectedVersionId);
+    const versionName = version?.name || '剧本';
+    const blob = new Blob([currentContent], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'The_Hakim_剧本原文.md';
+    a.download = `The_Hakim_${versionName}.md`;
     a.click();
     URL.revokeObjectURL(url);
   };
 
+  const handleFileSelect = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const content = event.target?.result as string;
+      const newVersion: ScriptVersion = {
+        id: `upload-${Date.now()}`,
+        name: file.name.replace(/\.(md|txt)$/i, ''),
+        description: '上传版本',
+        content,
+        updatedAt: new Date().toISOString().split('T')[0],
+      };
+      scriptVersions.push(newVersion);
+      setSelectedVersionId(newVersion.id);
+      setShowVersionMenu(false);
+    };
+    reader.readAsText(file, 'UTF-8');
+    e.target.value = '';
+  };
+
   const showLineNumbers = true;
+  const currentVersion = versions.find((v) => v.id === selectedVersionId);
 
   return (
     <div className="h-screen flex flex-col bg-slate-50">
       <div className="px-4 py-3 bg-white border-b border-slate-200 flex items-center justify-between shrink-0">
         <div className="flex items-center gap-3">
           <h2 className="text-base font-bold text-slate-800">剧本阅读</h2>
+
+          <div className="relative">
+            <button
+              onClick={() => setShowVersionMenu(!showVersionMenu)}
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs bg-sky-50 text-sky-700 hover:bg-sky-100 border border-sky-200 transition-colors"
+            >
+              <GitBranch size={12} />
+              <span className="font-medium">{currentVersion?.name}</span>
+              <span className="text-sky-400">{currentVersion?.description}</span>
+              <ChevronDown size={12} className={`transition-transform ${showVersionMenu ? 'rotate-180' : ''}`} />
+            </button>
+
+            {showVersionMenu && (
+              <>
+                <div className="fixed inset-0 z-40" onClick={() => setShowVersionMenu(false)} />
+                <div className="absolute top-full left-0 mt-1 bg-white border border-slate-200 rounded-lg shadow-lg py-1 z-50 min-w-[200px]">
+                  <div className="px-3 py-1 text-[10px] text-slate-400 uppercase tracking-wider">选择版本</div>
+                  {versions.map((v) => (
+                    <button
+                      key={v.id}
+                      onClick={() => {
+                        setSelectedVersionId(v.id);
+                        setShowVersionMenu(false);
+                      }}
+                      className={`w-full text-left px-3 py-2 text-xs hover:bg-slate-50 flex items-center gap-2 ${
+                        v.id === selectedVersionId ? 'bg-sky-50' : ''
+                      }`}
+                    >
+                      <div className="flex-1">
+                        <div className={`font-medium ${v.id === selectedVersionId ? 'text-sky-700' : 'text-slate-700'}`}>
+                          {v.name}
+                        </div>
+                        <div className="text-slate-400 text-[10px]">{v.description} · 更新于 {v.updatedAt}</div>
+                      </div>
+                      {v.id === selectedVersionId && (
+                        <div className="w-1.5 h-1.5 rounded-full bg-sky-500" />
+                      )}
+                    </button>
+                  ))}
+                  <div className="h-px bg-slate-100 my-1" />
+                  <label className="w-full text-left px-3 py-2 text-xs hover:bg-slate-50 cursor-pointer flex items-center gap-2 text-slate-600">
+                    <span>📥</span>
+                    <span>上传新版本</span>
+                    <input
+                      type="file"
+                      accept=".md,.txt"
+                      className="hidden"
+                      onChange={handleFileSelect}
+                    />
+                  </label>
+                </div>
+              </>
+            )}
+          </div>
+
           <span className="text-xs text-slate-400">
             共 {lines.length} 行
           </span>

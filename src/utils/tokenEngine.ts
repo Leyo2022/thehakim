@@ -23,7 +23,8 @@ function parseScript(rawText: string): Scene[] {
   let currentLines: Line[] = [];
   let emptyLineCount = 0;
 
-  const sceneHeaderRegex = /^\s*(\d{1,3})\s*(?:闪回\s+)?(?:内景|外景|内外景|内景\s*\/\s*外景|外景\s*\/\s*内景)\s+(.+?)\s*$/;
+  // Match scene headers in format: **第N场 SNNN 内景/外景 ...** or **N 内景/外景 ...**
+  const sceneHeaderRegex = /^\s*(?:第(\d+)场\s+)?S(\d{3})\s+(?:闪回\s+)?(内景|外景|内外景|内景\s*\/\s*外景|外景\s*\/\s*内景)\s+(.+?)\s*$/;
 
   for (let i = 0; i < lines.length; i++) {
     const rawLine = lines[i];
@@ -53,7 +54,8 @@ function parseScript(rawText: string): Scene[] {
         currentScene.lines = currentLines;
         scenes.push(currentScene);
       }
-      const sceneNumber = parseInt(headerMatch[1]);
+      // headerMatch[1] is the optional "N" from "第N场", headerMatch[2] is the "NNN" from "SNNN"
+      const sceneNumber = parseInt(headerMatch[2] || headerMatch[1] || '0');
       const sceneCode = `Sc${String(sceneNumber).padStart(3, '0')}`;
       const rawHeader = trimmed.replace(/\*\*/g, '');
       currentScene = {
@@ -109,7 +111,7 @@ function parseScript(rawText: string): Scene[] {
 function detectLineType(text: string, prevLine: string): LineType {
   const trimmed = text.trim();
 
-  if (/^\d+\s*(?:闪回\s+)?(?:内景|外景|内外景|内景\s*\/\s*外景|外景\s*\/\s*内景)/i.test(trimmed)) {
+  if (/^(?:第\d+场\s+)?S\d{3}\s+(?:闪回\s+)?(?:内景|外景|内外景|内景\s*\/\s*外景|外景\s*\/\s*内景)/i.test(trimmed)) {
     return 'scene_header';
   }
 
