@@ -53,17 +53,6 @@ export const TopBar: React.FC<TopBarProps> = ({ viewMode, onViewChange }) => {
           <LayoutGrid size={14} />
           场次资产详情
         </button>
-        <button
-          onClick={() => onViewChange('synopsis')}
-          className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors flex items-center gap-1 ${
-            viewMode === 'synopsis'
-              ? 'bg-slate-900 text-white'
-              : 'text-slate-600 hover:bg-slate-100'
-          }`}
-        >
-          <span className="text-sm">📖</span>
-          剧本概述
-        </button>
       </div>
     </div>
   );

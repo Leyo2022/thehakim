@@ -1,8 +1,11 @@
 import React, { useMemo, useState, useRef, useEffect } from 'react';
 import rawScript from '@/data/rawScript.md?raw';
-import { scriptVersions, getScriptVersions } from '@/data/scriptVersions';
+import v4Script from '@/data/v4Script.md?raw';
+import { scriptVersions, getScriptVersions, getV4Content } from '@/data/scriptVersions';
 import type { ScriptVersion } from '@/data/scriptVersions';
-import { Copy, Check, ChevronDown, GitBranch } from 'lucide-react';
+import { ChevronDown, GitBranch, FileDiff, BookOpen, List } from 'lucide-react';
+import { VersionDiffViewer } from './VersionDiffViewer';
+import { SynopsisView } from './SynopsisView';
 
 interface ScriptReaderProps {
   onNavigate?: (lineNumber: number) => void;
@@ -10,13 +13,28 @@ interface ScriptReaderProps {
 
 export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
   const versions = useMemo(() => getScriptVersions(), []);
-  const [selectedVersionId, setSelectedVersionId] = useState(versions[0]?.id || 'current');
+  const [selectedVersionId, setSelectedVersionId] = useState(versions[0]?.id || 'v3');
   const [showVersionMenu, setShowVersionMenu] = useState(false);
+  const [showDiffViewer, setShowDiffViewer] = useState(false);
+  const [showSynopsis, setShowSynopsis] = useState(false);
+  const [v4Language, setV4Language] = useState<'zh' | 'en'>('zh');
+  
+  // 管理可编辑的V4内容（支持从版本差异面板修改后同步）
+  const [editableV4Content, setEditableV4Content] = useState<string | null>(null);
+
+  const isV4 = selectedVersionId === 'v4';
 
   const currentContent = useMemo(() => {
+    if (isV4) {
+      // 如果有自定义的V4内容，优先使用
+      if (editableV4Content) {
+        return editableV4Content;
+      }
+      return getV4Content(v4Language);
+    }
     const version = versions.find((v) => v.id === selectedVersionId);
     return version?.content || rawScript;
-  }, [versions, selectedVersionId]);
+  }, [versions, selectedVersionId, isV4, v4Language, editableV4Content]);
 
   const lines = useMemo(() => {
     const arr = currentContent.split('\n');
@@ -56,7 +74,6 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
   }, [lines, searchQuery]);
 
   const [matchIndex, setMatchIndex] = useState(0);
-  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     setCurrentLine(1);
@@ -117,57 +134,6 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
     return () => container.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleCopyAll = async () => {
-    try {
-      await navigator.clipboard.writeText(currentContent);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      const textarea = document.createElement('textarea');
-      textarea.value = currentContent;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textarea);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    }
-  };
-
-  const handleExport = () => {
-    const version = versions.find((v) => v.id === selectedVersionId);
-    const versionName = version?.name || '剧本';
-    const blob = new Blob([currentContent], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `The_Hakim_${versionName}.md`;
-    a.click();
-    URL.revokeObjectURL(url);
-  };
-
-  const handleFileSelect = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const content = event.target?.result as string;
-      const newVersion: ScriptVersion = {
-        id: `upload-${Date.now()}`,
-        name: file.name.replace(/\.(md|txt)$/i, ''),
-        description: '上传版本',
-        content,
-        updatedAt: new Date().toISOString().split('T')[0],
-      };
-      scriptVersions.push(newVersion);
-      setSelectedVersionId(newVersion.id);
-      setShowVersionMenu(false);
-    };
-    reader.readAsText(file, 'UTF-8');
-    e.target.value = '';
-  };
-
   const showLineNumbers = true;
   const currentVersion = versions.find((v) => v.id === selectedVersionId);
 
@@ -175,24 +141,79 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
     <div className="h-screen flex flex-col bg-slate-50">
       <div className="px-4 py-3 bg-white border-b border-slate-200 flex items-center justify-between shrink-0">
         <div className="flex items-center gap-3">
-          <h2 className="text-base font-bold text-slate-800">剧本阅读</h2>
+          {/* 剧本概述切换 */}
+          <div className="flex items-center gap-0.5 bg-slate-100 rounded-md p-0.5">
+            <button
+              onClick={() => setShowSynopsis(false)}
+              className={`flex items-center gap-1 px-2.5 py-1 text-xs rounded transition-colors ${
+                !showSynopsis ? 'bg-white text-slate-700 shadow-sm font-medium' : 'text-slate-500'
+              }`}
+            >
+              <BookOpen size={12} />
+              <span>正文</span>
+            </button>
+            <button
+              onClick={() => setShowSynopsis(true)}
+              className={`flex items-center gap-1 px-2.5 py-1 text-xs rounded transition-colors ${
+                showSynopsis ? 'bg-white text-slate-700 shadow-sm font-medium' : 'text-slate-500'
+              }`}
+            >
+              <List size={12} />
+              <span>概述</span>
+            </button>
+          </div>
 
-          <div className="relative">
+          <div className="h-4 w-px bg-slate-200" />
+
+          <div className="relative flex items-center gap-2">
             <button
               onClick={() => setShowVersionMenu(!showVersionMenu)}
               className="flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs bg-sky-50 text-sky-700 hover:bg-sky-100 border border-sky-200 transition-colors"
             >
               <GitBranch size={12} />
               <span className="font-medium">{currentVersion?.name}</span>
-              <span className="text-sky-400">{currentVersion?.description}</span>
               <ChevronDown size={12} className={`transition-transform ${showVersionMenu ? 'rotate-180' : ''}`} />
             </button>
+
+            {/* V4 中英文切换 */}
+            {isV4 && (
+              <>
+                <div className="flex items-center gap-0.5 bg-slate-100 rounded-md p-0.5">
+                  <button
+                    onClick={() => setV4Language('zh')}
+                    className={`px-2 py-0.5 text-xs rounded transition-colors ${
+                      v4Language === 'zh' ? 'bg-white text-slate-700 shadow-sm' : 'text-slate-500'
+                    }`}
+                  >
+                    🇨🇳 中文
+                  </button>
+                  <button
+                    onClick={() => setV4Language('en')}
+                    className={`px-2 py-0.5 text-xs rounded transition-colors ${
+                      v4Language === 'en' ? 'bg-white text-slate-700 shadow-sm' : 'text-slate-500'
+                    }`}
+                  >
+                    🇬🇧 EN
+                  </button>
+                </div>
+
+                {/* 版本差异按钮 */}
+                <button
+                  onClick={() => setShowDiffViewer(true)}
+                  className="flex items-center gap-1 px-2 py-0.5 text-xs rounded-md bg-violet-50 text-violet-700 hover:bg-violet-100 border border-violet-200 transition-colors"
+                  title="查看 V3 与 V4 版本差异"
+                >
+                  <FileDiff size={12} />
+                  <span>版本差异</span>
+                </button>
+              </>
+            )}
 
             {showVersionMenu && (
               <>
                 <div className="fixed inset-0 z-40" onClick={() => setShowVersionMenu(false)} />
-                <div className="absolute top-full left-0 mt-1 bg-white border border-slate-200 rounded-lg shadow-lg py-1 z-50 min-w-[200px]">
-                  <div className="px-3 py-1 text-[10px] text-slate-400 uppercase tracking-wider">选择版本</div>
+                <div className="absolute top-full left-0 mt-1 bg-white border border-slate-200 rounded-lg shadow-lg py-1 z-50 min-w-[250px]">
+                  <div className="px-3 py-1 text-[10px] text-slate-400 uppercase tracking-wider">选择剧本版本</div>
                   {versions.map((v) => (
                     <button
                       key={v.id}
@@ -205,27 +226,18 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
                       }`}
                     >
                       <div className="flex-1">
-                        <div className={`font-medium ${v.id === selectedVersionId ? 'text-sky-700' : 'text-slate-700'}`}>
+                        <div className={`font-medium flex items-center gap-1 ${v.id === selectedVersionId ? 'text-sky-700' : 'text-slate-700'}`}>
                           {v.name}
+                          {v.language === 'zh' && <span className="text-[9px] bg-red-50 text-red-500 px-1 rounded">中</span>}
+                          {v.language === 'en' && <span className="text-[9px] bg-blue-50 text-blue-500 px-1 rounded">EN</span>}
                         </div>
-                        <div className="text-slate-400 text-[10px]">{v.description} · 更新于 {v.updatedAt}</div>
+                        <div className="text-slate-400 text-[10px]">{v.description} · {v.updatedAt}</div>
                       </div>
                       {v.id === selectedVersionId && (
                         <div className="w-1.5 h-1.5 rounded-full bg-sky-500" />
                       )}
                     </button>
                   ))}
-                  <div className="h-px bg-slate-100 my-1" />
-                  <label className="w-full text-left px-3 py-2 text-xs hover:bg-slate-50 cursor-pointer flex items-center gap-2 text-slate-600">
-                    <span>📥</span>
-                    <span>上传新版本</span>
-                    <input
-                      type="file"
-                      accept=".md,.txt"
-                      className="hidden"
-                      onChange={handleFileSelect}
-                    />
-                  </label>
                 </div>
               </>
             )}
@@ -290,38 +302,26 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
           >
             跳转
           </button>
-
-          <button
-            onClick={handleCopyAll}
-            className={`flex items-center gap-1.5 px-2.5 py-1.5 text-sm rounded-lg transition-colors ${
-              copied
-                ? 'bg-emerald-100 text-emerald-700'
-                : 'hover:bg-slate-100 text-slate-600'
-            }`}
-            title="复制全部文本"
-          >
-            {copied ? <Check size={14} /> : <Copy size={14} />}
-            <span>{copied ? '已复制' : '复制全部'}</span>
-          </button>
-
-          <button
-            onClick={handleExport}
-            className="p-1.5 rounded hover:bg-slate-100 text-slate-500 transition-colors"
-            title="导出原文"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-          </button>
         </div>
       </div>
 
-      <div className="flex-1 overflow-auto" ref={containerRef}>
-        <div className="max-w-4xl mx-auto py-6 px-6">
-          <div className="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
-            <div className="flex">
+      {/* 正文 / 概述 切换 */}
+      {showSynopsis ? (
+        <div className="flex-1 overflow-hidden">
+          <SynopsisView onNavigate={(lineNumber) => {
+            const scene = script?.scenes.find((s) =>
+              s.lines.some((l) => l.lineNumber <= lineNumber)
+            );
+            if (scene) {
+              onNavigate?.(lineNumber);
+            }
+          }} />
+        </div>
+      ) : (
+        <div className="flex-1 overflow-auto" ref={containerRef}>
+          <div className="max-w-4xl mx-auto py-6 px-6">
+            <div className="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+              <div className="flex">
               {showLineNumbers && (
                 <div className="shrink-0 select-none text-right py-4 pr-3 pl-3 bg-slate-50 border-r border-slate-100">
                   {filteredLines.map((line) => (
@@ -383,7 +383,8 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
             <span>总行数: {lines.length}</span>
           </div>
         </div>
-      </div>
+        </div>
+      )}
 
       {showJumpDialog && (
         <div className="fixed inset-0 bg-black/30 z-50 flex items-center justify-center" onClick={() => setShowJumpDialog(false)}>
@@ -419,6 +420,18 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
             </div>
           </div>
         </div>
+      )}
+
+      {/* 版本差异对比窗口 */}
+      {showDiffViewer && (
+        <VersionDiffViewer
+          v3Content={rawScript}
+          v4Content={editableV4Content || v4Script}
+          onClose={() => setShowDiffViewer(false)}
+          onSaveV4Content={(content) => {
+            setEditableV4Content(content);
+          }}
+        />
       )}
     </div>
   );
