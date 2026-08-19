@@ -6,10 +6,11 @@ import SceneBlock from '@/components/SceneBlock';
 import SceneNavigator from '@/components/SceneNavigator';
 import InventoryView from '@/components/InventoryView';
 import MindmapView from '@/components/MindmapView';
+import SynopsisView from '@/components/SynopsisView';
 import { useScriptStore } from '@/stores/scriptStore';
 import { TOKEN_TYPE_CONFIGS } from '@/types';
 
-type ViewMode = 'review' | 'inventory' | 'mindmap';
+type ViewMode = 'review' | 'inventory' | 'mindmap' | 'synopsis';
 
 const ReviewPage: React.FC = () => {
   const script = useScriptStore((s) => s.script);
@@ -127,6 +128,15 @@ const ReviewPage: React.FC = () => {
       <div className="h-screen flex flex-col bg-white">
         <TopBar viewMode={viewMode} onViewChange={setViewMode} />
         <MindmapView script={script} />
+      </div>
+    );
+  }
+
+  if (viewMode === 'synopsis') {
+    return (
+      <div className="h-screen flex flex-col bg-white">
+        <TopBar viewMode={viewMode} onViewChange={setViewMode} />
+        <SynopsisView onNavigate={handleNavigate} />
       </div>
     );
   }
