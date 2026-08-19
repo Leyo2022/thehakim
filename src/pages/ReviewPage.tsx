@@ -7,10 +7,13 @@ import SceneNavigator from '@/components/SceneNavigator';
 import InventoryView from '@/components/InventoryView';
 import MindmapView from '@/components/MindmapView';
 import SynopsisView from '@/components/SynopsisView';
+import ScriptReader from '@/components/ScriptReader';
 import { useScriptStore } from '@/stores/scriptStore';
 import { TOKEN_TYPE_CONFIGS } from '@/types';
+import { getAllUniqueEntities } from '@/utils/tokenEngine';
+import { Eye, EyeOff } from 'lucide-react';
 
-type ViewMode = 'review' | 'inventory' | 'mindmap' | 'synopsis';
+type ViewMode = 'review' | 'inventory' | 'mindmap' | 'synopsis' | 'reader';
 
 const ReviewPage: React.FC = () => {
   const script = useScriptStore((s) => s.script);
@@ -18,8 +21,10 @@ const ReviewPage: React.FC = () => {
   const showDrawer = useScriptStore((s) => s.showDrawer);
   const activeFilters = useScriptStore((s) => s.activeFilters);
   const selectedEntities = useScriptStore((s) => s.selectedEntities);
+  const setFilter = useScriptStore((s) => s.setFilter);
+  const setAllFilters = useScriptStore((s) => s.setAllFilters);
 
-  const [viewMode, setViewMode] = useState<ViewMode>('review');
+  const [viewMode, setViewMode] = useState<ViewMode>('reader');
   const [contextMenu, setContextMenu] = useState<{
     visible: boolean;
     x: number;
@@ -114,6 +119,23 @@ const ReviewPage: React.FC = () => {
     );
   }
 
+  if (viewMode === 'reader') {
+    return (
+      <div className="h-screen flex flex-col bg-white">
+        <TopBar viewMode={viewMode} onViewChange={setViewMode} />
+        <ScriptReader onNavigate={(lineNumber) => {
+          const scene = script.scenes.find((s) =>
+            s.lines.some((l) => l.lineNumber <= lineNumber)
+          );
+          if (scene) {
+            handleNavigate(scene.id, lineNumber);
+            setViewMode('review');
+          }
+        }} />
+      </div>
+    );
+  }
+
   if (viewMode === 'inventory') {
     return (
       <div className="h-screen flex flex-col bg-white">
@@ -141,19 +163,67 @@ const ReviewPage: React.FC = () => {
     );
   }
 
+  const entityMap = getAllUniqueEntities(script);
+  const counts: Record<string, number> = {};
+  entityMap.forEach((info, name) => {
+    counts[info.type] = (counts[info.type] || 0) + info.count;
+  });
+
+  const allActive = Object.values(activeFilters).every(Boolean);
+
   return (
     <div className="h-screen flex flex-col bg-white">
       <TopBar viewMode={viewMode} onViewChange={setViewMode} />
 
+      <div className="h-10 bg-slate-50 border-b border-slate-200 flex items-center px-4 gap-2 shrink-0">
+        <span className="text-xs text-slate-500 mr-1">筛选：</span>
+        {(Object.keys(TOKEN_TYPE_CONFIGS) as (keyof typeof TOKEN_TYPE_CONFIGS)[]).map((type) => {
+          const config = TOKEN_TYPE_CONFIGS[type];
+          const active = activeFilters[type];
+          const count = counts[type] || 0;
+          if (count === 0 && !active) return null;
+          return (
+            <button
+              key={type}
+              onClick={() => setFilter(type, !active)}
+              className={`
+                inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-medium
+                transition-all border
+                ${active ? '' : 'opacity-40'}
+              `}
+              style={{
+                backgroundColor: active ? config.bgColor : '#FFFFFF',
+                borderColor: active ? config.borderColor : '#E5E7EB',
+                color: active ? config.textColor : '#9CA3AF',
+              }}
+              title={active ? `隐藏${config.label}` : `显示${config.label}`}
+            >
+              <span>{config.icon}</span>
+              <span>{config.label}</span>
+              <span className="text-[9px] bg-white/60 rounded px-1 py-0.5 font-mono">
+                {count}
+              </span>
+            </button>
+          );
+        })}
+        <div className="flex-1" />
+        <button
+          onClick={() => setAllFilters(!allActive)}
+          className="flex items-center gap-1 px-2 py-0.5 rounded text-[11px] text-slate-500 hover:bg-slate-100 transition-colors"
+          title={allActive ? '全部隐藏' : '全部显示'}
+        >
+          {allActive ? <EyeOff size={12} /> : <Eye size={12} />}
+          <span>{allActive ? '全部隐藏' : '全部显示'}</span>
+        </button>
+      </div>
+
       <div className="flex-1 flex overflow-hidden">
-        {viewMode === 'review' && (
-          <SceneNavigator
-            script={script}
-            onNavigate={handleNavigate}
-            activeFilters={activeFilters}
-            activeSceneId={activeSceneId}
-          />
-        )}
+        <SceneNavigator
+          script={script}
+          onNavigate={handleNavigate}
+          activeFilters={activeFilters}
+          activeSceneId={activeSceneId}
+        />
 
         <div
           ref={scrollRef}
