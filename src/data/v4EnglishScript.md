@@ -297,7 +297,7 @@ swimming towards the flames.
 ALI
 Isa!
 
-**第11场 S011 外景 UNDERWATER**
+**第10A场 S010A 外景 UNDERWATER**
 
 Isa drives down beneath the burning surface. Above him, the sea 
 is on fire — a living ceiling of flame, rippling orange and 
@@ -307,7 +307,7 @@ Isa reaches the dhow - rises inside the ring of flame.
 IBRAHIM (20’s) Ali’s eldest son, leads more riders onto the 
 flaming dock. With swift, brutal discipline, they fall upon 
 pirates who have not escaped. 
-**第12场 S012 外景 ON THE DOCK**
+**第10B场 S010B 外景 ON THE DOCK**
 
 Hassan can barely breathe. He’s terrified.
 Isa scrambles aboard. Flames lick closer across the oil-slick 
@@ -320,7 +320,7 @@ ISA
 (CONT’D)
 Now!
 He hauls him over the side. They plunge beneath the flames.
-**第13场 S013 外景 UNDERWATER - DAY - CONTINUOUS**
+**第11场 S011 外景 UNDERWATER - DAY - CONTINUOUS**
 
 Isa drags Hassan beneath the burning slick.
 Above them, fire rolls across the surface. No escape.
@@ -334,18 +334,18 @@ A DIVING STONE tied to a trailing rope.
 
 Isa grabs the rope with one hand, holds Hassan tight with the 
 other.
-**第14场 S014 外景 DOCK — DAY- CONTINUOUS**
+**第12场 S012 外景 DOCK — DAY- CONTINUOUS**
 
 Ali stands at the far end of the rope, surrounded by his men.
 ALI
 Pull them!
 Ali and the men haul together, dragging the rope hand over hand 
 like a tug of war.
-**第15场 S015 外景 UNDERWATER – DAY- CONTINUOUS**
+**第13场 S013 外景 UNDERWATER – DAY- CONTINUOUS**
 
 Isa clings to the rope, one arm locked around Hassan.
 They’re dragged through water beneath flames - toward shore.
-**第16场 S016 外景 DOCK / SHORELINE – DAY - CONTINUOUS**
+**第14场 S014 外景 DOCK / SHORELINE – DAY - CONTINUOUS**
 
 Ali and his men strain, hauling the rope with all they have.
 Isa and Hassan break through beyond the fire.
@@ -393,7 +393,7 @@ putting out the flames. Ibrahim follows. So does Ahmed.
 Isa is left shaken. He knows how close he came to death.
 SHIEKH ISA  (V.O.)
 A man was trapped. 
-**第17场 S017 内景 ROYAL RESIDENCE / SHEIKH ISA’S PRAYER ROOM - DAY - 1932**
+**第15场 S015 内景 ROYAL RESIDENCE / SHEIKH ISA’S PRAYER ROOM - DAY - 1932**
 
 SHEIKH ISA
 I saw only his life. My father saw 
@@ -415,7 +415,7 @@ Noura smiles. She is enjoying this immensely.
 NOURA
 Tell me more, Grandfather.
 Isa shuts his eyes - remembering again.
-**第18场 S018 内景 BRITISH HMS TEAZER - OFFICE - DAY - 1861**
+**第16场 S016 内景 BRITISH HMS TEAZER - OFFICE - DAY - 1861**
 
 A pen scratches across parchment. 
 SHEIKH MOHAMMED BIN KHALIFA (50s), ruler of Bahrain, Haya’s 
@@ -437,7 +437,7 @@ men offer peace, they also ask you to
 give something up. Your freedom. Your 
 ships. Your choices. I did not 
 understand that then. 
-**第19场 S019 内景 BRITISH HMS TEAZER - OFFICE - DAY - 1868 - TIME CUT**
+**第17场 S017 内景 BRITISH HMS TEAZER - OFFICE - DAY - 1868 - TIME CUT**
 
 The same room. Different British faces. 
 SHEIKH ALI (50s now) sits in the same chair once occupied by his 
@@ -459,7 +459,7 @@ made ruler, but to keep Bahrain safe
 from the danger it would face from 
 every side.
 Young Isa watches his father rise.
-**第20场 S020 内景 ROYAL RESIDENCE - SHEIKH ALI’S PALACE / COURTYARD — DAY —**
+**第18场 S018 内景 ROYAL RESIDENCE - SHEIKH ALI’S PALACE / COURTYARD — DAY —**
 
 Sheikh Ali, Ibrahim and Ahmed sit at a long table in the shaded 
 courtyard, relaxed and content.
@@ -533,7 +533,7 @@ That stings.
 Ali offers the sword back, hilt first.
 Isa takes the sword, chastened but listening, the lesson burning 
 deeper than the reprimand.
-**第21场 S021 外景 TREE OF LIFE - DUSK**
+**第19场 S019 外景 TREE OF LIFE - DUSK**
 
 A majestic FALCON glides across the darkening sky, riding the last 
 warm currents of the day. 
@@ -630,7 +630,7 @@ IBRAHIM
 It will be my duty and my honour, 
 Father.
 Isa hides the hurt, watching the falcon fly into the distance.
-**第22场 S022 外景 ROYAL RESIDENCE - SHEIKH ALI’S PALACE / RAMPARTS - NIGHT**
+**第20场 S020 外景 ROYAL RESIDENCE - SHEIKH ALI’S PALACE / RAMPARTS - NIGHT**
 
 ISA stands alone. Restless. Troubled. The argument at the Tree 
 still burns in him.
@@ -702,7 +702,7 @@ be taught here. I may one day need
 from you what no one else can give.
 At last, Isa nods. Not gladly. But he nods.
 Ali places hands on his shoulders, gently kisses his forehead.
-**第23场 S023 外景 DESERT - DAWN**
+**第21场 S021 外景 DESERT - DAWN**
 
 ISA drives his horse across the sand, trying to outrun his 
 father’s words. He pulls up on a rise, breathing hard. He turns. 
@@ -770,14 +770,14 @@ moves. Then Isa turns his horse toward the horizon. He rides off
 toward the rising sun.
 Haya watches him go, tears held back with difficulty.
 
-**第24场 S024 外景 DESERT - FIRST LIGHT**
+**第22场 S022 外景 DESERT - FIRST LIGHT**
 
 Majeed ON HORSEBACK streaks across the wondrous landscape.
 SHEIKH ISA (V.O.)
 These were difficult lessons for a 
 young man. It seemed life could not 
 present any greater burden. 
-**第25场 S025 外景 ROYAL RESIDENCE - SHEIKH ALI’S PALACE / COURTYARD -**
+**第23场 S023 外景 ROYAL RESIDENCE - SHEIKH ALI’S PALACE / COURTYARD -**
 
 CONTINUOUS - FIRST LIGHT
 Majeed dismounts with urgency and enters the palace.
@@ -785,7 +785,7 @@ SHEIKH ISA (V.O.)
 But young men can hold foolish 
 thoughts. Soon I would learn the 
 hardest lesson of all.
-**第26场 S026 内景 ROYAL RESIDENCE - SHEIKH ALI’S PALACE / BED CHAMBER -**
+**第24场 S024 内景 ROYAL RESIDENCE - SHEIKH ALI’S PALACE / BED CHAMBER -**
 
 CONTINUOUS - FIRST LIGHT
 Majeed rushes in to wake Ali. 
@@ -798,7 +798,7 @@ Scouts report emissaries from
 Zallaq approaching.
 SHEIKH ALI
 Zallaq? At this hour? 
-**第27场 S027 外景 EAST RIFFA - DAWN**
+**第25场 S025 外景 EAST RIFFA - DAWN**
 
 A cold dawn over the dunes. 
 SHEIKH ALI & IBRAHIM lead a large force of fifty fighters. Swords. 
@@ -990,7 +990,7 @@ reins. His horse bolts, carrying him away from the battlefield.
 Mohammed weeps as Abdullah’s men drag him away.
 Abdullah watches Ali’s body for one cold moment. Then he turns his 
 horse and retreats.
-**第28场 S028 外景 DESERT - DAY**
+**第26场 S026 外景 DESERT - DAY**
 
 Isa’s horse - mouth foaming - walks alone through the desert. 
 Exhaustion in every step. Isa is slumped in the saddle, barely 
@@ -1020,14 +1020,14 @@ Jabir’s men climb from their horses - lift Isa from the ground.
 SHEIKH ISA (V.O.)
 My body slowly healed. But something 
 in me would not.
-**第29场 S029 外景 EAST RIFFA - DESERT BATTLEFIELD - NIGHT - DREAM**
+**第27场 S027 外景 EAST RIFFA - DESERT BATTLEFIELD - NIGHT - DREAM**
 
 Sheikh Ali surrounded. 
 A WARRIOR IN BLACK moves through smoke and dust — his face hidden 
 behind an ornate, terrifying MASK. 
 Isa tries to reach his father. Cannot. The Masked Man strikes. 
 Sheikh Ali falls. Isa screams. But no sound comes.
-**第30场 S030 内景 JABIR’S RESIDENCE - NIGHT**
+**第28场 S028 内景 JABIR’S RESIDENCE - NIGHT**
 
 Isa startles awake. A dim room. A flickering lantern. Jabir stands 
 in the doorway with water.
@@ -1044,7 +1044,7 @@ Jabir sets the water beside him.
 JABIR
 (CONT’D)
 Meaning can wait.
-**第31场 S031 外景 JABIR’S RESIDENCE - STABLES - DAY**
+**第29场 S029 外景 JABIR’S RESIDENCE - STABLES - DAY**
 
 Months later. A quiet courtyard beside the stables. 
 ISA, thinner, not fully recovered, helps a young STABLE BOY sit 
@@ -1163,7 +1163,7 @@ AHMED
 Then be what Bahrain needs.
 Isa looks toward the horizon beyond the stables. The country waits 
 out there. Wounded. Calling to him. 
-**第32场 S032 内景 BU MAHER FORT / CELL - NIGHT**
+**第30场 S030 内景 BU MAHER FORT / CELL - NIGHT**
 
 MOHAMMED sleeps on a hard bunk. Moonlight spills through the 
 barred window. 
@@ -1179,7 +1179,7 @@ It was not my doing. I swear before
 Allah. I never wanted your father 
 dead. I never wanted Ibrahim dead.
 Isa’s silence is worse than rage.
-**第33场 S033 外景 OPEN DESERT - PRE-DAWN**
+**第31场 S031 外景 OPEN DESERT - PRE-DAWN**
 
 Two large tents. Horses tethered. A dying fire. TWO GUARDS slump 
 asleep outside. 
@@ -1194,20 +1194,20 @@ ISA
 No blood. Unless there is no choice.
 Isa nods to Jabir. Jabir’s men move. Silent. Low. Fast.
 
-**第34场 S034 外景 ABDULLAH’S CAMP - CONTINUOUS**
+**第32场 S032 外景 ABDULLAH’S CAMP - CONTINUOUS**
 
 One guard wakes too late. A hand over his mouth. A blade to his 
 throat. The second guard reaches for his weapon and is struck down 
 before he can cry out.
 Jabir’s men quickly surround the main tent. 
-**第35场 S035 内景 ABDULLAH’S TENT - CONTINUOUS**
+**第33场 S033 内景 ABDULLAH’S TENT - CONTINUOUS**
 
 ABDULLAH sleeps fully dressed, a sword within reach. 
 Jabir’s men enter like shadows. 
 Abdullah’s eyes snap open. He grabs his sword and lunges. For a 
 moment, he is all fury — dangerous, fast, animal. But there are 
 too many of them. 
-**第36场 S036 外景 ABDULLAH’S CAMP - CONTINUOUS**
+**第34场 S034 外景 ABDULLAH’S CAMP - CONTINUOUS**
 
 Abdullah is dragged from the tent. Fear cuts through his 
 arrogance.
@@ -1228,7 +1228,7 @@ It’s the young Al-Khalifa.
 ROSS
 By God. They’re rallying to him.
 
-**第37场 S037 外景 HMS DAPHNE / DECK - MOMENTS LATER**
+**第35场 S035 外景 HMS DAPHNE / DECK - MOMENTS LATER**
 
 ISA, still carrying the stiffness of his wounds, climbs aboard 
 with AHMED. Behind them: ABDULLAH and MOHAMMED, bound and 
@@ -1276,7 +1276,7 @@ Exile them.
 Mohammed lowers his head. Abdullah’s eyes burn with hatred. 
 ROSS
 As you wish.
-**第38场 S038 外景 STREETS OF MANAMA - DAY**
+**第36场 S036 外景 STREETS OF MANAMA - DAY**
 
 DRUMS. SONG. JUBILATION. A nation rejoices. Streets overflow. 
 Sheikh Isa’s symbol on countless flags. Palm fronds wave.
@@ -1337,7 +1337,7 @@ May love grow between us.
 ISA
 Ameen.
 Isa takes her hand. The crowd erupts in joy.
-**第39场 S039 内景 ROYAL RESIDENCE/ MAJLIS - DAY**
+**第37场 S037 内景 ROYAL RESIDENCE/ MAJLIS - DAY**
 
 TRIBAL LEADERS, ruling family members, merchants, elders, and men 
 from across Bahrain sit shoulder to shoulder. Coffee passes hand 
@@ -1483,7 +1483,7 @@ One Bahrain.
 Isa stands at the centre of it, sobered by what he has accepted. 
 Ahmed & Isa exchange looks.
 The tribes have come together.
-**第40场 S040 外景 WEDDING VENUE - EVENING**
+**第38场 S038 外景 WEDDING VENUE - EVENING**
 
 A field of Bedouin tents glows beneath the falling light. Rugs 
 cover the desert floor. Lanterns sway. Incense smoke curls from a 
@@ -1520,7 +1520,7 @@ Al Khalifa and Al Saud stood together.
 Isa accepts the sword. Firelight runs along the blade.
 Sword dancers move in widening circles, rifles and blades catching 
 firelight as the rhythm builds.
-**第41场 S041 内景 WEDDING TENT - NIGHT**
+**第39场 S039 内景 WEDDING TENT - NIGHT**
 
 The celebration continues. Incense drifts. Music rises. The tent 
 is divided with elegance and custom.
@@ -1626,7 +1626,7 @@ I will raise the matter.
 SHEIKH ISA
 Excellent. 
 Across the screen, Haya watches, proud but composed.
-**第42场 S042 内景 ROYAL RESIDENCE / STUDY - NIGHT**
+**第40场 S040 内景 ROYAL RESIDENCE / STUDY - NIGHT**
 
 By candlelight, ISA writes at his desk. Outside, the stars shimmer 
 across a glassy sea. 
@@ -1639,7 +1639,7 @@ leave something unfinished.
 MAJEED enters, breathless with joy.
 MAJEED
 Your Honour! Your son is born!
-**第43场 S043 内景 ROYAL RESIDENCE / BED CHAMBER - LATER**
+**第41场 S041 内景 ROYAL RESIDENCE / BED CHAMBER - LATER**
 
 SHEIKHA HAYA lies exhausted but radiant. She places their newborn 
 son into Isa’s arms.
@@ -1659,7 +1659,7 @@ Across the sea, a ship burns against the horizon.
 SHEIKH ISA (V.O.)
 And the shape of his fears.
 
-**第44场 S044 外景 VILLAGE HARBOUR / TRADING POST - NIGHT - 1878**
+**第42场 S042 外景 VILLAGE HARBOUR / TRADING POST - NIGHT - 1878**
 
 SUPER: BAHRAIN - 1878
 Dark figures in multiple landing boats emerge from the black sea. 
@@ -1701,7 +1701,7 @@ Isa reaches the edge too late. His horse rears at the flames.
 Khalil retreats on a boat, with the Female Pirate. He sees Isa 
 through the chaos. Their eyes meet across flame and water. 
 For a moment, Khalil smiles. Then vanishes behind a wall of smoke.
-**第45场 S045 内景 BRITISH HMS TEAZER / MEETING ROOM - DAY**
+**第43场 S043 内景 BRITISH HMS TEAZER / MEETING ROOM - DAY**
 
 ISA and AHMED stand before COLONEL ROSS, CAPTAIN STEWART, and 
 CLIVE KIRKPATRICK DALY (25) sharp-eyed and insolent. 
@@ -1770,7 +1770,7 @@ decide that.
 Sheikh Ahmed allows himself the faintest smile. Isa turns and 
 leaves. Ahmed follows.
 The British remain, staring at the letter with dread.
-**第46场 S046 内景 ROYAL RESIDENCE / COURTYARD & GARDEN - DAY**
+**第44场 S044 内景 ROYAL RESIDENCE / COURTYARD & GARDEN - DAY**
 
 ISA plays with toy horses with his young sons, SALMAN (8) and 
 HAMAD (6) as SALEM BIN HAMAD confers with him.
@@ -1840,7 +1840,7 @@ rewarded.
 Majeed looks up from his notes -
 MAJEED
 Immediately, Your Honour.
-**第47场 S047 内景 ROYAL RESIDENCE / LIBRARY - DAY**
+**第45场 S045 内景 ROYAL RESIDENCE / LIBRARY - DAY**
 
 HAYA sits on a low cushion with ZALAIKHA and the CHILDREN 
 gathered around her. An open book rests in her lap. 
@@ -1904,7 +1904,7 @@ SHEIKH ISA
 A wonderful idea indeed. I am 
 pleased I nearly thought of it.
 Haya allows herself the smallest smile. 
-**第48场 S048 外景 MANAMA STREETS - NIGHT / DREAM**
+**第46场 S046 外景 MANAMA STREETS - NIGHT / DREAM**
 
 Sheikh Isa walks alone through sleeping Manama.
 Lantern light. Empty alleys. The hush of a city that trusts him 
@@ -1918,12 +1918,12 @@ back, the figure is closer.
 Isa slips through a narrow lane and emerges into a small square.
 Empty. No figure. Then -
 He’s there - mask removed - No mouth, no eyes. NO FACE.
-**第49场 S049 内景 ROYAL RESIDENCE / BED CHAMBER - NIGHT**
+**第47场 S047 内景 ROYAL RESIDENCE / BED CHAMBER - NIGHT**
 
 Isa wakes, terrified -
 The room is still. Only a hanging lantern swings gently in the 
 night breeze.
-**第50场 S050 外景 TREE OF LIFE - DAWN**
+**第48场 S048 外景 TREE OF LIFE - DAWN**
 
 The desert is vast and still beneath the early light. 
 The TREE stands alone against the emptiness, its branches stirring 
@@ -1944,7 +1944,7 @@ future. But what am I meant to see?
 Silence. The impossible tree breathes above him — alive in a place 
 where nothing should live. 
 Isa waits. Still nothing. 
-**第51场 S051 外景 ROYAL RESIDENCE / COURTYARD - MORNING**
+**第49场 S049 外景 ROYAL RESIDENCE / COURTYARD - MORNING**
 
 ISA rides into the courtyard as MAJEED runs to him, breathless. 
 MAJEED
@@ -1953,7 +1953,7 @@ As Isa dismounts.
 MAJEED
 (CONT’D)
 We’ve found a path to Khalil.
-**第52场 S052 外景 FISHING VILLAGE/DOCK - NIGHT**
+**第50场 S050 外景 FISHING VILLAGE/DOCK - NIGHT**
 
 ISA waits with AHMED, MAJEED and two trusted MEN. A narrow dock 
 stretches into black water. A few oil lamps burn low, their light 
@@ -2030,7 +2030,7 @@ moved?
 Isa looks down at the map in his hand.
 SHEIKH ISA
 I hope they won’t have a choice.
-**第53场 S053 内景 BALMORAL CASTLE, SCOTLAND - MORNING**
+**第51场 S051 内景 BALMORAL CASTLE, SCOTLAND - MORNING**
 
 QUEEN VICTORIA (50) walks slowly along the garden path, a parasol 
 held above her head. Beside her walks JOHN BROWN (50s) solid and 
@@ -2150,7 +2150,7 @@ Little use for false humility. Ha!
 (beat)
 Take a letter, Mr Brown. No. Make that 
 a telegram.
-**第54场 S054 内景 BRITISH HMS TEAZER / OFFICE - DAY**
+**第52场 S052 内景 BRITISH HMS TEAZER / OFFICE - DAY**
 
 SHEIKH ISA and SHEIKH AHMED stand before COLONEL ROSS, CAPTAIN 
 STEWART, and DALY. A map of Bahrain’s waters lies open on the 
@@ -2228,7 +2228,7 @@ chastened. Isa returns the letter to his robe.
 SHEIKH ISA
 (CONT’D)
 Tomorrow night then?
-**第55场 S055 外景 FISHING VILLAGE - NIGHT**
+**第53场 S053 外景 FISHING VILLAGE - NIGHT**
 
 Moonlight over black water. A MERCHANT DHOW moves slowly against 
 a mooring, heavy with false cargo. 
@@ -2264,7 +2264,7 @@ Khalil looks back at Isa with triumph.
 Then — A CANNON FLASH splits the night. The sea beside Khalil’s 
 skiff erupts. Out of the darkness looms a BRITISH WARSHIP. 
 CAPTAIN STEWART stands on deck.
-**第56场 S056 外景 BRITISH WARSHIP - DECK**
+**第54场 S054 外景 BRITISH WARSHIP - DECK**
 
 CAPTAIN STEWART
 Fire across the bow! Drive him back!
@@ -2309,7 +2309,7 @@ SHEIKH AHMED
 The British have cost us the Butcher.
 He coughs once. Then again. The cough catches deep in his chest. 
 Isa watches the black water where Khalil vanished.
-**第57场 S057 内景 BRITISH HMS TEAZER / OFFICE - DAY**
+**第54A场 S054A 内景 BRITISH HMS TEAZER / OFFICE - DAY**
 
 ROSS sits behind his desk. DALY stands to the side, watchful. 
 Ross wears the patient expression of an official withstanding 
@@ -2362,7 +2362,7 @@ Fear asks for protection. Trade
 accepts control. A frightened 
 country is easier to manage.
 Isa heads for the door without another word. Ahmed follows. 
-**第58场 S058 外景 MANAMA PORT – DAY**
+**第55场 S055 外景 MANAMA PORT – DAY**
 
 A British vessel prepares to depart. CAPTAIN STEWART stands on 
 deck, stiff with humiliation. Reassigned. Removed. 
@@ -2412,7 +2412,7 @@ Khalil will return. It is only a
 matter of how long.
 Isa, troubled, watches Ahmed go. 
 
-**第59场 S059 内景 ROYAL RESIDENCE / SHEIKH ISA'S PRAYER ROOM - DAY - 1932**
+**第56场 S056 内景 ROYAL RESIDENCE / SHEIKH ISA'S PRAYER ROOM - DAY - 1932**
 
 NOURA
 So you did not vanquish the pirates, 
@@ -2444,7 +2444,7 @@ SHEIKH ISA
 Though that same day brought 
 something I had prayed never to 
 see.
-**第60场 S060 外景 ROYAL RESIDENCE / COURTYARD GARDEN - DAY.**
+**第57场 S057 外景 ROYAL RESIDENCE / COURTYARD GARDEN - DAY.**
 
 SUPER: MANAMA - 1888
 Ahmed (now 40s) tends to his Frangipani tree - still without 
@@ -2452,7 +2452,7 @@ bloom. He looks unwell. Slow, congested breathing, pale skin.
 He goes to lift the water-tin, it slips from his hand and falls 
 to the ground. Water absorbs into the thirsty soil.
 
-**第61场 S061 内景 ROYAL RESIDENCE / LIBRARY - CONTINUOUS**
+**第58场 S058 内景 ROYAL RESIDENCE / LIBRARY - CONTINUOUS**
 
 SHEIKHA HAYA (Late 30s) sits with AISHA (Late 20s) composed, 
 intelligent, and unmistakably accustomed to rooms of authority. 
@@ -2574,7 +2574,7 @@ Haya.
 Haya gives the smallest nod. She smiles.
 Suddenly yelling from the garden -
 
-**第62场 S062 外景 ROYAL RESIDENCE / COURTYARD GARDEN - CONTINUOUS**
+**第59场 S059 外景 ROYAL RESIDENCE / COURTYARD GARDEN - CONTINUOUS**
 
 SHEIKH ISA and SHEIKHA HAYA hurry out into the garden. AISHA 
 follows, but holds back in the doorway, sensing this is not her 
@@ -2587,7 +2587,7 @@ She falls into Haya’s arms, sobbing.
 Isa freezes for the smallest instant. Then he goes to Ahmed. The 
 servants look up as Isa kneels beside his brother. 
 Isa knows. It is already too late.
-**第63场 S063 内景 ROYAL RESIDENCE / SHEIKH AHMED’S ROOM - DAY**
+**第60场 S060 内景 ROYAL RESIDENCE / SHEIKH AHMED’S ROOM - DAY**
 
 Sheikh Ahmed lies on his bed, gaunt and still. Sheikh Isa kneels 
 by the bed. Salem Bin Hamad stands nearby, shaken. He gives Isa a 
@@ -2617,7 +2617,7 @@ The British promised... The last
 shipment did not come. 
 The sorrow in Isa’s face hardens into something else. Rage. 
 Abruptly he stands and pushes past Majeed -
-**第64场 S064 外景 TREE OF LIFE - SUNSET**
+**第61场 S061 外景 TREE OF LIFE - SUNSET**
 
 A thunder of hooves, as Isa drives his horse toward the TREE OF 
 LIFE ahead of him. Like he’s charging an enemy.
@@ -2662,7 +2662,7 @@ wood. Even in fury, he cannot wound it.
 He drops to one knee, breath ragged.
 The sun dies behind the horizon. As Isa remains beneath the Tree, 
 alone with the weight of all he has inherited.
-**第65场 S065 外景 ROYAL RESIDENCE / COURTYARD - EVENING / DREAM**
+**第62场 S062 外景 ROYAL RESIDENCE / COURTYARD - EVENING / DREAM**
 
 ISA watches AHMED tend his frangipani tree. Both young men again. 
 The tree in full blossom. White flowers stir in the evening wind. 
@@ -2682,12 +2682,12 @@ robes fall empty to the ground. Only the mask remains.
 Isa stands over it, chest heaving. Slowly, he kneels and lifts the 
 mask. Behind it: nothing. No face. No man.
 Only darkness. 
-**第66场 S066 内景 ROYAL RESIDENCE / BED CHAMBER - FIRST LIGHT**
+**第63场 S063 内景 ROYAL RESIDENCE / BED CHAMBER - FIRST LIGHT**
 
 Isa wakes violently. He sits up, breathing hard. For a moment, he 
 does not know where he is. 
 
-**第67场 S067 外景 ROYAL RESIDENCE / COURTYARD GARDEN - CONTINUOUS**
+**第64场 S064 外景 ROYAL RESIDENCE / COURTYARD GARDEN - CONTINUOUS**
 
 The palace garden lies still in the faint glow of dawn. ISA alone, 
 shaken from sleep, trying to steady himself. 
@@ -2738,7 +2738,7 @@ Ride slower, my Sheikh. You cannot
 catch life by chasing it harder.
 A faint echo of another time. He looks back at the frangipani 
 blossoms. Beautiful. Alive.
-**第68场 S068 外景 ROYAL RESIDENCE / RAMPARTS - DAWN**
+**第65场 S065 外景 ROYAL RESIDENCE / RAMPARTS - DAWN**
 
 A sweeping view across Manama and the harbour. The coast we once 
 saw through young Isa’s eyes — now grown, prosperous, crowded with 
@@ -2792,7 +2792,7 @@ SHEIKH SALMAN
 May I prove worthy of what you built.
 SHEIKH ISA
 That is all a father can ask.
-**第69场 S069 外景 PORT MANAMA - DAY**
+**第66场 S066 外景 PORT MANAMA - DAY**
 
 A STEAMER pulls in.
 Passengers disembark into the heat and noise of the port. Among 
@@ -2874,7 +2874,7 @@ wish to deal in pearls, you should
 first meet the sea that makes them.
 CARTIER
 I shall be delighted, Your Honour.
-**第70场 S070 外景 OFF THE BAHRAINI COAST - DAY**
+**第67场 S067 外景 OFF THE BAHRAINI COAST - DAY**
 
 A dhow rocks gently on clear blue water. Pearl banks shimmer 
 beneath the surface.
@@ -2931,7 +2931,7 @@ Fish cutting through shafts of sun.
 The world beneath Bahrain. Quiet. Vast. Alive.
 A diver lifts a shell and places it in Cartier’s gloved hand.
 Cartier stares through the glass, awestruck.
-**第71场 S071 外景 DHOW - DAY - MOMENTS LATER**
+**第68场 S068 外景 DHOW - DAY - MOMENTS LATER**
 
 Cartier is hauled back aboard. The helmet is removed. He gasps in 
 the open air, face flushed, transformed.
@@ -2951,7 +2951,7 @@ Cartier laughs, still catching his breath.
 CARTIER
 My friend, I have seen the mind of 
 God.
-**第72场 S072 外景 BAB AL-BAHRAIN / HARBOUR ADJACENT SOUK - MANAMA - DAY**
+**第69场 S069 外景 BAB AL-BAHRAIN / HARBOUR ADJACENT SOUK - MANAMA - DAY**
 
 A thriving marketplace. Spice, silk, copper, pearls. Traders from 
 across the Gulf and beyond. Boys carry tea through the crowd. The 
@@ -3012,7 +3012,7 @@ SAAD AL HAZZANI
 As you see, business here is good.
 CARTIER
 Yes. I see. Very good indeed.
-**第73场 S073 内景 THUKAIR’S HOME - DINING AREA - NIGHT**
+**第70场 S070 内景 THUKAIR’S HOME - DINING AREA - NIGHT**
 
 A magnificent meal. Bowls of leben. A great platter of QUZI — 
 whole lamb over rice, roasted chickens arranged around it. 
@@ -3134,7 +3134,7 @@ A FLASH of magnesium light fills the room.
 MAJEED appears, crosses quietly to Isa and whispers in his ear. 
 Isa’s expression darkens. As the others continue smiling for the 
 photograph.
-**第74场 S074 内景 BRITISH HMS TEAZER / OFFICE - DAY**
+**第71场 S071 内景 BRITISH HMS TEAZER / OFFICE - DAY**
 
 COLONEL ROSS stands behind his desk, incredulous. DALY sits 
 nearby, composed, almost amused. SHEIKH ISA faces them, 
@@ -3233,7 +3233,7 @@ The ship?
 DALY
 Enough rope.
 Ross looks toward the closed door.
-**第75场 S075 外景 SEA OFF BAHRAIN - SUNRISE**
+**第72场 S072 外景 SEA OFF BAHRAIN - SUNRISE**
 
 A low red sun burns across the water.
 KHALIL’S STOLEN BRITISH WARSHIP rides heavy in the swell, patched 
@@ -3265,7 +3265,7 @@ Isa stares at the oncoming pirate ship. He raises his sword.
 SHEIKH ISA
 We must stop Khalil. With as few 
 lives lost as possible.
-**第76场 S076 外景 KHALIL’S WARSHIP / DECK - SAME**
+**第73场 S073 外景 KHALIL’S WARSHIP / DECK - SAME**
 
 Khalil lowers the spyglass. The smile drains from his face.
 KHALIL
@@ -3273,7 +3273,7 @@ Turn us.
 Too late. The warship comes straight at them.
 A full-frontal assault.
 The Bahraini fighters roar.
-**第77场 S077 外景 BRITISH WARSHIP / BOW - CONTINUOUS**
+**第74场 S074 外景 BRITISH WARSHIP / BOW - CONTINUOUS**
 
 SHEIKH ISA
 Brace!
@@ -3281,7 +3281,7 @@ The two ships SLAM together with a violent crack of timber. Hooks
 fly. Ropes bite. Planks crash across the gap.
 Isa is the first across.
 
-**第78场 S078 外景 KHALIL’S WARSHIP / DECK - CONTINUOUS**
+**第75场 S075 外景 KHALIL’S WARSHIP / DECK - CONTINUOUS**
 
 Isa knocks down the first pirate before he can lift his blade. 
 Hamad and the Bahraini fighters pour in behind him. The deck 
@@ -3346,7 +3346,7 @@ Isa looks from Khalil’s body to Majeed. He lowers the pistol.
 MAJEED
 Forgive me, Your Honour. There was no 
 choice.
-**第79场 S079 内景 ROYAL RESIDENCE / LIBRARY - DAY**
+**第76场 S076 内景 ROYAL RESIDENCE / LIBRARY - DAY**
 
 HAYA kneels before an arched window overlooking the sea, 
 shattered. ZALAIKHA kneels beside her, trying to comfort her. 
@@ -3403,7 +3403,7 @@ That strikes deeper than anger would.
 Haya stands, walks past him - leaves without an embrace. Without 
 another word.
 The note trembles in Isa’s hand, then drops to the floor.
-**第80场 S080 外景 MANAMA STREETS / VARIOUS - EVENING**
+**第77场 S077 外景 MANAMA STREETS / VARIOUS - EVENING**
 
 The funeral procession for Sheikh Salman.
 WOMEN with lanterns. Candles along the streets leading to the 
@@ -3418,7 +3418,7 @@ An inconsolable Haya leans on Zalaikha and other women from
 every community around her as they comfort her.
 Isa watches from a distance. Alone. Stoic, solemn and with an 
 ocean of grief reflected in his eyes. 
-**第81场 S081 外景 ROYAL RESIDENCE / RAMPARTS - NIGHT**
+**第78场 S078 外景 ROYAL RESIDENCE / RAMPARTS - NIGHT**
 
 Isa alone, looks out over Manama, silent in the dark.
 AISHA (O.S.)
@@ -3457,7 +3457,7 @@ willing to come to Bahrain.
 Isa looks at Aisha with immense gratitude in his eyes.
 SHEIKH ISA (V.O.)
 Aisha could see the true path. 
-**第82场 S082 内景 ROYAL RESIDENCE / LIBRARY - DAY**
+**第79场 S079 内景 ROYAL RESIDENCE / LIBRARY - DAY**
 
 Sheikh Isa watches Aisha talking with a husband who is resistant 
 to letting his daughter be educated. 
@@ -3479,7 +3479,7 @@ them of their future - and yours.
 It’s clear Isa is impressed by her. Something else is growing. 
 SHEIKH ISA (V.O.)
 Aisha entered my house as counsel.
-**第83场 S083 外景 ROYAL RESIDENCE / COURTYARD - DAY**
+**第80场 S080 外景 ROYAL RESIDENCE / COURTYARD - DAY**
 
 The courtyard is dressed for ceremony. Men of the ruling family, 
 elders, witnesses, and attendants gathered in solemn expectation. 
@@ -3516,7 +3516,7 @@ SHEIKH ISA (V.O.)
 And Bahrain, like any house asked 
 to endure, would need both memory 
 and mind.
-**第84场 S084 内景 ROYAL RESIDENCE / STUDY – DAY**
+**第81场 S081 内景 ROYAL RESIDENCE / STUDY – DAY**
 
 A map of Bahrain lies open on Isa’s desk. 
 HOLMES, 50s, broad-shouldered - a man who has argued with the 
@@ -3604,7 +3604,7 @@ I suppose that is where I come in too?
 Aisha has the smallest smile. 
 Holmes looks again at the map. The old hunger to test the 
 impossible is already awake in him.
-**第85场 S085 内景 BUCKINGHAM PALACE / STUDY - DAY**
+**第82场 S082 内景 BUCKINGHAM PALACE / STUDY - DAY**
 
 VICTORIA, older now, sits in a wheelchair by the fire, wrapped 
 in a blanket against the cold. BROWN stands nearby with a 
@@ -3707,7 +3707,7 @@ goodness sake, send some hospital
 builders. Before Sheikh Isa decides to 
 rebuild the entire Empire by himself.
 Brown bows and heads for the door.
-**第86场 S086 外景 PORT MANAMA - DAY**
+**第83场 S083 外景 PORT MANAMA - DAY**
 
 A SERIES OF TIME CUTS:
 The port expands before us. More warehouses. More cranes. More 
@@ -3799,7 +3799,7 @@ Bahrain.
 As the men make their way towards the town.
 
 SUPER: PORT MANAMA - 1913
-**第87场 S087 内景 THE BRITISH AGENCY / DINING ROOM - DAY**
+**第84场 S084 内景 THE BRITISH AGENCY / DINING ROOM - DAY**
 
 The men at a dining table have lunch. LORIMER sits opposite ISA & 
 HAMAD. DALY is by Lorimer’s side.
@@ -3886,7 +3886,7 @@ Isa studies him. Something like trust begins.
 SHEIKH ISA
 Then allow me to show you how we are 
 starting to build it.
-**第88场 S088 外景 VICTORIA MEMORIAL HOSPITAL - DAY**
+**第85场 S085 外景 VICTORIA MEMORIAL HOSPITAL - DAY**
 
 The newly opened hospital stands in the heat. Nurses attend to 
 PATIENTS beneath the shaded entrance.
@@ -3907,7 +3907,7 @@ Mr. Lorimer is the new Political
 Resident.
 LORIMER
 It is a great pleasure. 
-**第89场 S089 内景 VICTORIA MEMORIAL HOSPITAL - LATER**
+**第86场 S086 内景 VICTORIA MEMORIAL HOSPITAL - LATER**
 
 Isa & Lorimer walk the ward. Nurses move between patients resting 
 in clean beds. A child is examined nearby.
@@ -3931,7 +3931,7 @@ He seems very cordial with them.
 SHEIKH ISA
 Raindrops, Mr. Lorimer.
 Lorimer smiles at their private joke.
-**第90场 S090 外景/内景 KHADIJA AL KOBRA SCHOOL / CONSTRUCTION SITE - DAY**
+**第87场 S087 外景/内景 KHADIJA AL KOBRA SCHOOL / CONSTRUCTION SITE - DAY**
 
 A school under construction. Fresh painted walls. Builders work on 
 the interior. Isa enters with Hamad, Lorimer, and Daly.
@@ -3963,7 +3963,7 @@ wishes to endure.
 SHEIKH ISA
 And of course we shall require a 
 reliable fresh water supply. 
-**第91场 S091 外景 EXPLORATORY WELL - DESERT - DAY**
+**第88场 S088 外景 EXPLORATORY WELL - DESERT - DAY**
 
 DRILLING RIGS stand against the horizon — timber and metal 
 derricks clank in the heat. Workers haul pipes. Camels wait beside 
@@ -4012,7 +4012,7 @@ Isa smiles wryly.
 SHEIKH ISA
 Fear is permitted, Mr Holmes. 
 Surrender is not.
-**第92场 S092 内景 THE BRITISH AGENCY /LORIMER’S OFFICE – DAY**
+**第89场 S089 内景 THE BRITISH AGENCY /LORIMER’S OFFICE – DAY**
 
 - MONTAGE BEGINS -
 LORIMER pores over accounts, ledgers, concession papers, 
@@ -4023,7 +4023,7 @@ Mr Lorimer wasted little time
 proving his friendship to Bahrain.
 Lorimer stops at one clause. Reads it again. His pencil marks 
 the page.
-**第93场 S093 内景 THE BRITISH AGENCY/ DALY’S OFFICE – EVENING**
+**第90场 S090 内景 THE BRITISH AGENCY/ DALY’S OFFICE – EVENING**
 
 The King’s portrait watches over DALY, seated behind his desk, 
 comfortable in his authority.
@@ -4037,7 +4037,7 @@ LORIMER
 (CONT’D)
 I have some questions.
 Daly’s smile remains. Only his eyes change.
-**第94场 S094 内景 THE BRITISH AGENCY / BOARDROOM – DAY**
+**第91场 S091 内景 THE BRITISH AGENCY / BOARDROOM – DAY**
 
 Lorimer argues with BRITISH ACCOUNTANTS over stacked ledgers. 
 One accountant points to a column. Another shakes his head.
@@ -4050,7 +4050,7 @@ agreement could move more wealth
 than a fleet of ships.
 Lorimer copies figures from one ledger into his notebook. He 
 compares signatures. Something does not balance.
-**第95场 S095 内景 THE BRITISH AGENCY / DALY’S OFFICE – DAY**
+**第92场 S092 内景 THE BRITISH AGENCY / DALY’S OFFICE – DAY**
 
 Another day. Another file.
 LORIMER
@@ -4066,7 +4066,7 @@ DALY
 Bahrain requires water. Eastern and 
 General require incentive. Such 
 arrangements are rarely poetic.
-**第96场 S096 外景 OIL FIELD – DAY**
+**第93场 S093 外景 OIL FIELD – DAY**
 
 Heat shimmers over the rigs. Lorimer follows HOLMES through the 
 drilling site, notebook in hand. Holmes is too busy to stop.
@@ -4080,7 +4080,7 @@ And how much is the penalty?
 Holmes stops just long enough to look at him.
 HOLMES
 Penalty? What penalty?
-**第97场 S097 内景 THE BRITISH AGENCY / LORIMER’S OFFICE – NIGHT**
+**第94场 S094 内景 THE BRITISH AGENCY / LORIMER’S OFFICE – NIGHT**
 
 A lamp burns low. Lorimer lays several documents side by side. 
 The concession. The water clause. Company correspondence. A 
@@ -4117,7 +4117,7 @@ Thank you for now, Major.
 Lorimer gathers the documents. He turns for the door.
 Daly remains behind his desk, staring at the closing door.
 For the first time, fear in his eyes.
-**第98场 S098 外景 LORIMER RESIDENCE - NIGHT**
+**第95场 S095 外景 LORIMER RESIDENCE - NIGHT**
 
 Lorimer’s house stands in shadow. Shutters half-open. Lamps 
 guttering in the humid air. 
@@ -4133,7 +4133,7 @@ OFFICER #1
 We notified the palace as soon as 
 we found out, Your Honour.
 Isa pushes past the officers and enters. Hamad follows.
-**第99场 S099 内景 LORIMER RESIDENCE - STUDY - CONTINUOUS**
+**第96场 S096 内景 LORIMER RESIDENCE - STUDY - CONTINUOUS**
 
 Ambulance attendants lift Lorimer’s body onto a stretcher, 
 mercifully drawing a sheet over the bloodied head. A rifle lies on 
@@ -4159,7 +4159,7 @@ his weapon and it misfired.
 Isa looks now to the weapon on the floor.
 SHEIKH ISA
 Mr Lorimer was not a careless man. 
-**第100场 S100 外景 LORIMER RESIDENCE - CONTINUOUS**
+**第97场 S097 外景 LORIMER RESIDENCE - CONTINUOUS**
 
 Isa and Hamad watch as Lorimer’s body is placed into the 
 ambulance. It has started to rain.
@@ -4170,7 +4170,7 @@ A crack of lighting. Thunder.
 SHEIKH ISA
 Come, Hamad. A storm is coming. 
 More thunder rolls over Bahrain as father and son ride away.
-**第101场 S101 外景 TOOBLI BAY - DAWN**
+**第98场 S098 外景 TOOBLI BAY - DAWN**
 
 The fleet is far from shore. The wind has risen. Dark weather 
 builds fast. A DHOW CAPTAIN looks to the horizon.
@@ -4186,7 +4186,7 @@ Fear moves from face to face.
 
 SHEIKH ISA (V.O.)
 The storm to end all storms.
-**第102场 S102 外景 MANAMA STREETS - MORNING**
+**第99场 S099 外景 MANAMA STREETS - MORNING**
 
 The storm has made landfall. Isa rides through the rising chaos.
 SHEIKH ISA
@@ -4194,7 +4194,7 @@ Take shelter! To high ground!
 Isa’s men move street by street, helping residents indoors.
 Doors slam. Shutters close. Stalls are abandoned. The wind builds 
 with frightening speed. People run for shelter.
-**第103场 S103 内景/外景 ROYAL RESIDENCE / VARIOUS - CONTINUOUS**
+**第100场 S100 内景/外景 ROYAL RESIDENCE / VARIOUS - CONTINUOUS**
 
 SHEIKHA AISHA and the household staff batten doors and windows.
 CITIZENS plead for shelter at the palace entrance.
@@ -4208,7 +4208,7 @@ HAYA on a balcony. Rain lashes her. She grips the stone wall,
 helpless before the scale of it. She looks out over the town -
 Below, Manama is being torn apart — roofs lifting, palms bending, 
 people running through flooded lanes.
-**第104场 S104 外景 OPEN SEA / PEARL DIVING FLEET - EVENING**
+**第101场 S101 外景 OPEN SEA / PEARL DIVING FLEET - EVENING**
 
 Day has turned to night. Dhows pitches violently. Divers huddle on 
 deck. The captain shouts, but the wind devours his words.
@@ -4217,7 +4217,7 @@ Men panic and scramble. Dhows rock and collide. Sails snap loose.
 Brave pearl divers stare terrified at the churning water. And are 
 thrown overboard. Timbers split. Pearls spill into the angry sea.
 
-**第105场 S105 外景 MANAMA SHORE - NIGHT**
+**第102场 S102 外景 MANAMA SHORE - NIGHT**
 
 The storm arrives with full fury.
 Homes buckle. Palm trees tear loose. People scramble from 
@@ -4239,7 +4239,7 @@ YOUNG MOTHER
 (CONT’D)
 Help him! Please! My boy!
 She points back toward a half-collapsed house.
-**第106场 S106 外景 COLLAPSED HOUSE FRONT - CONTINUOUS**
+**第103场 S103 外景 COLLAPSED HOUSE FRONT - CONTINUOUS**
 
 Isa pushes through the storm toward the damaged house.
 A BOY of eight lies pinned, a heavy WOODEN BEAM across his legs. 
@@ -4286,7 +4286,7 @@ Hamad catches his arm. Rain streams down Hamad’s face. His eyes
 are steady. Clear.
 Father and son turn together. And disappear back into the storm
 
-**第107场 S107 外景 MANAMA / VARIOUS - MORNING**
+**第104场 S104 外景 MANAMA / VARIOUS - MORNING**
 
 On horseback, SHEIKH ISA moves through what remains of his world. 
 Fragments of boats. Fishing nets. Palm fronds. The lifeblood of 
@@ -4303,10 +4303,10 @@ Nearby, NURSES help the wounded. RABBI JOSEF and members of his
 synagogue hand out blankets. SHEIKHA HAYA and her female servants 
 beckon women to join in prayer. 
 Isa nods to her. She holds his gaze a moment.
-**第108场 S108 外景 ROYAL RESIDENCE / COURTYARD GARDEN - CONTINUOUS**
+**第105场 S105 外景 ROYAL RESIDENCE / COURTYARD GARDEN - CONTINUOUS**
 
 Ahmed’s Frangipani Tree is being righted by the palace staff.
-**第109场 S109 内景 ROYAL RESIDENCE / RAMPARTS - DAWN**
+**第106场 S106 内景 ROYAL RESIDENCE / RAMPARTS - DAWN**
 
 HAMAD looks over the devastated town. 
 Roofs torn off. Streets choked with mud and wreckage. 
@@ -4394,7 +4394,7 @@ SHEIKH ISA
 Come. Let us give Bahrain 
 certainty.
 Hamad holds the sword to his chest. Father and son embrace.
-**第110场 S110 内景 ROYAL RESIDENCE / STUDY - DAY**
+**第107场 S107 内景 ROYAL RESIDENCE / STUDY - DAY**
 
 ISA stands at his desk, reading a letter. HOLMES waits before 
 him, uneasy. 
@@ -4458,7 +4458,7 @@ Isa sighs with profound disappointment.
 SHEIKH ISA
 And Bahrain shall miss you, Mr 
 Holmes.
-**第111场 S111 外景 TREE OF LIFE - DUSK**
+**第108场 S108 外景 TREE OF LIFE - DUSK**
 
 Sheikh Isa leads his horse across the sand towards the TREE OF 
 LIFE. Miraculously still standing after the storm. 
@@ -4484,7 +4484,7 @@ Isa lowers his hands.
 Drained, he settles against the roots, prayer beads still in his 
 hand. His eyes close.
 Above him, a shooting star cuts across the sky and vanishes.
-**第112场 S112 外景 DESERT / TREE OF LIFE - NIGHT - DREAM**
+**第109场 S109 外景 DESERT / TREE OF LIFE - NIGHT - DREAM**
 
 Isa opens his eyes.
 A WHITE DEER stands before him. Pale. Luminous. Impossible.
@@ -4518,7 +4518,7 @@ Young Isa is overcome with relief. A burden has been lifted.
 Isa helps Young Isa to his feet. For a moment, they stand together 
 in the desert.
 Then Young Isa turns and walks away into the dawn light.
-**第113场 S113 外景 TREE OF LIFE - DAWN**
+**第110场 S110 外景 TREE OF LIFE - DAWN**
 
 Isa wakes beneath the tree. The prayer beads still in his hand. 
 First light touches the bark above him.
@@ -4533,7 +4533,7 @@ He goes to his horse, climbs onto the saddle and rides off.
 SHEIKH ISA (V.O.)
 That morning, I awoke at peace with 
 the boy I had been. 
-**第114场 S114 外景 SHORELINE - MORNING**
+**第111场 S111 外景 SHORELINE - MORNING**
 
 A DATE FARMER pulls a DEAD CHILD from the water. 
 A YOUNG GIRL, MARYAM, six, sits in the sand, crying out to sea for 
@@ -4548,7 +4548,7 @@ Aisha moves on, shaken, walking along the ruined shore.
 She stops at a boat that lies half-buried in the sand.
 Aisha touches the hull. Her fingers come away stained with BLACK 
 RESIDUE.
-**第115场 S115 内景 ROYAL RESIDENCE / COURTYARD - DAY**
+**第112场 S112 内景 ROYAL RESIDENCE / COURTYARD - DAY**
 
 AISHA hurries forward as ISA rides into the courtyard.
 SHEIKHA AISHA
@@ -4584,7 +4584,7 @@ Isa stops. Realises what he’s just said.
 SHEIKHA AISHA
 A dream. Do you truly believe that?
 Once again, Isa cannot answer.
-**第116场 S116 外景 MOUNTAIN OF SMOKE / OIL FIELDS - DAY**
+**第113场 S113 外景 MOUNTAIN OF SMOKE / OIL FIELDS - DAY**
 
 The storm has torn through the oil field. Derricks lean broken. 
 Debris lies in the sand. Ripped canvas snaps in the wind. 
@@ -4595,7 +4595,7 @@ Where is Holmes?
 Workers salvage what they can. 
 WORKER
 He’s left for the port, Your Honour.
-**第117场 S117 外景 PORT MANAMA - DAY**
+**第114场 S114 外景 PORT MANAMA - DAY**
 
 The port is wounded by the storm. Broken crates. Torn sailcloth. 
 Men repair what they can. 
@@ -4651,7 +4651,7 @@ to honour what Daly arranged.
 Isa’s eyes do not waver.
 SHEIKH ISA
 We needn’t be concerned about Daly.
-**第118场 S118 内景 THE BRITISH AGENCY / DALY’S OFFICE – DAY**
+**第115场 S115 内景 THE BRITISH AGENCY / DALY’S OFFICE – DAY**
 
 The office bears the scars of the storm. A broken shutter. Damp 
 papers. Sand and rain blown across the floor. Servants have 
@@ -4781,7 +4781,7 @@ that.
 The door opens. SHEIKH HAMAD enters with two BRITISH OFFICERS 
 carrying pistols.
 For the first time, Daly has no words.
-**第119场 S119 内景 THE BRITISH AGENCY / BOARDROOM ROOM - DAY**
+**第116场 S116 内景 THE BRITISH AGENCY / BOARDROOM ROOM - DAY**
 
 A TEAM OF LAWYERS from the Eastern and General Syndicate sit 
 before SHEIKH ISA and SHEIKH HAMAD. HOLMES stands beside them.
@@ -4853,7 +4853,7 @@ Holmes smiles back. And paces to the door with renewed purpose.
 SHEIKH ISA (V.O.)
 But the earth does not give up its 
 secrets because men are impatient. 
-**第120场 S120 外景 JABAL AL-DUKHAN – DESERT DRILL SITE – DAY**
+**第117场 S117 外景 JABAL AL-DUKHAN – DESERT DRILL SITE – DAY**
 
 A drill turns against a hard, white sky.
 HOLMES stands beside the rig, face burned by sun and failure, 
@@ -4871,7 +4871,7 @@ You must ask again, Mr Holmes.
 Holmes nods with determination.
 HOLMES
 Yes, Your Honour.
-**第121场 S121 外景 ANOTHER DRILL SITE – ANOTHER DAY**
+**第118场 S118 外景 ANOTHER DRILL SITE – ANOTHER DAY**
 
 Men haul pipe. Sweat. Flies. Heat. The drill breaks through.
 A violent surge of WATER erupts — but the men recoil. A worker 
@@ -4884,7 +4884,7 @@ Holmes turns away, furious.
 SHEIKH ISA (V.O.)
 And when the earth did speak, 
 sometimes it mocked us.
-**第122场 S122 外景 WORKERS’ CAMP – DAY**
+**第119场 S119 外景 WORKERS’ CAMP – DAY**
 
 Holmes storms through the camp, shouting at exhausted men.
 HOLMES
@@ -4898,7 +4898,7 @@ not stand here and call yourself a
 driller!
 The man lowers his eyes. Holmes catches himself. His rage is 
 really fear.
-**第123场 S123 外景 ANOTHER DRILL SITE – NIGHT**
+**第120场 S120 外景 ANOTHER DRILL SITE – NIGHT**
 
 The brake wheel screams as a drill line runs too fast.
 Men shout as a WORKER grabs the spinning handle and it smashes him 
@@ -4909,7 +4909,7 @@ SHEIKH ISA (V.O.)
 There were injuries. Accidents. Days 
 when men cursed the work. Nights when 
 they thought morning wouldn’t come.
-**第124场 S124 外景 DRILL SITE – DAY**
+**第121场 S121 外景 DRILL SITE – DAY**
 
 Another bore hole. Another failure. Abandoned wells across the 
 desert — crude timber scars against the stone.
@@ -4921,7 +4921,7 @@ Holmes cannot quite meet Isa’s eye.
 
 HOLMES
 Yes, Your Honour.
-**第125场 S125 外景 PARIS - DAY**
+**第122场 S122 外景 PARIS - DAY**
 
 An aerial view of Paris. Boulevards, bridges, the Seine, smoke 
 rising from chimneys, motorcars and carriages move through the 
@@ -4933,7 +4933,7 @@ In the distance - rapidly approaching - the Tour Eiffel.
 SUPER: PARIS, SPRING - 1930
 Move toward the structure, closer - through girders and platforms, 
 toward the first level -
-**第126场 S126 内景 EIFFEL TOWER RESTAURANT - FIRST PLATFORM - DAY**
+**第123场 S123 内景 EIFFEL TOWER RESTAURANT - FIRST PLATFORM - DAY**
 
 Through the window — and toward -
 JACQUES CARTIER sits alone at a table overlooking the city of 
@@ -4990,7 +4990,7 @@ lips. He spits into the napkin. Looks down.
 We do not see what rests within his hands. But Cartier does. 
 His annoyance vanishes. His face breaks into awe. He beholds the 
 wonder of wonders.
-**第127场 S127 内景 ROYAL RESIDENCE / STUDY - DAY**
+**第124场 S124 内景 ROYAL RESIDENCE / STUDY - DAY**
 
 Sea light dapples the walls as SHEIKH ISA (72) awaits. Majeed 
 appears at the doorway.
@@ -5108,7 +5108,7 @@ Cartier bows his head.
 CARTIER
 Thank you. For teaching me where 
 beauty begins.
-**第128场 S128 内景 WORKER’S SHACK/JABAL AL-DUKHAN – OIL FIELD – DAWN**
+**第125场 S125 内景 WORKER’S SHACK/JABAL AL-DUKHAN – OIL FIELD – DAWN**
 
 Holmes (60s) sleeps exhausted at a rough desk inside a workers’ 
 shack. His desk cluttered with maps, drilling records, failed 
@@ -5125,7 +5125,7 @@ WORKER
 (CONT’D)
 Mr Holmes!
 Holmes runs outside.
-**第129场 S129 外景 JABAL AL-DUKHAN/WELL NUMBER 1 – CONTINUOUS**
+**第126场 S126 外景 JABAL AL-DUKHAN/WELL NUMBER 1 – CONTINUOUS**
 
 The men are backing away from the well.
 A low rumble from beneath the earth. The ground trembles.
@@ -5134,12 +5134,12 @@ The workers erupt — shouting, laughing, dancing in the oil. Some
 fall to their knees. Some embrace.
 Holmes stands in the spray, soaked. Overwhelmed with joy -
 SUPER: JEBEL/JABAL AL-DUKHAN “MOUNTAIN OF SMOKE” 2 JUNE 1932
-**第130场 S130 外景 DESERT ROAD – DAY**
+**第127场 S127 外景 DESERT ROAD – DAY**
 
 Open-top limousines cut across the desert toward Jabal Al-Dukhan.
 Isa (80s) rides in the first car with HAYA, AISHA, and HAMAD.
 Behind them: family, advisers, guards.
-**第131场 S131 外景 JABAL AL-DUKHAN – OIL FIELD – DAY**
+**第128场 S128 外景 JABAL AL-DUKHAN – OIL FIELD – DAY**
 
 The cars arrive.
 Isa steps out slowly. Haya follows. Then Aisha. Hamad.
@@ -5161,7 +5161,7 @@ Now the fire beneath us had risen.
 Haya & Hamad watch the plume with quiet astonishment. Aisha 
 watches Isa.
 Isa’s eyes are fixed on the well — not triumph, but awe.
-**第132场 S132 内景 ROYAL RESIDENCE / STUDY – DAY**
+**第129场 S129 内景 ROYAL RESIDENCE / STUDY – DAY**
 
 The black pearl sits on Isa’s desk. Beside it now: the vial of 
 dark oil.
@@ -5169,12 +5169,12 @@ Two small objects. Two eras.
 SHEIKH ISA (V.O.)
 The pearl had fed us. The oil would 
 change us.
-**第133场 S133 外景 BAHRAIN SHORE – MORNING**
+**第130场 S130 外景 BAHRAIN SHORE – MORNING**
 
 Cannon fire rolls across the water.
 The majestic ship HMS LUPIN enters the bay. Flags snap in the 
 wind.
-**第134场 S134 外景 MANAMA – PUBLIC SPACE – DAY**
+**第131场 S131 外景 MANAMA – PUBLIC SPACE – DAY**
 
 The whole of Bahrain seems to have gathered.
 Drums. Rifles raised. Men cheering. Women singing. Children 
@@ -5185,7 +5185,7 @@ KING AL-SA’UD
 Congratulations to you both.
 
 The crowd cheer.
-**第135场 S135 外景 STREETS OF MANAMA – DAY**
+**第132场 S132 外景 STREETS OF MANAMA – DAY**
 
 ZALAIKHA leads a group of women in a song of jubilation.
 Haya stands with Aisha near Isa, both moved in different ways.
@@ -5219,7 +5219,7 @@ CROWD
 Hakim! Hakim!
 Haya and Aisha stand beside him as the chant rises over Manama.
 
-**第136场 S136 内景 ROYAL RESIDENCE / SHEIKH ISA’S PRAYER ROOM - 1932**
+**第133场 S133 内景 ROYAL RESIDENCE / SHEIKH ISA’S PRAYER ROOM - 1932**
 
 The room is quiet now. Noura sits beside her grandfather. The 
 story has changed her.
@@ -5260,7 +5260,7 @@ YOUNG ISA
 I promise you.
 Ali smiles. His hand releases. He is gone.
 
-**第137场 S137 内景 ROYAL RESIDENCE / SHEIKH ISA’S PRAYER ROOM - 1932 - RESUME**
+**第134场 S134 内景 ROYAL RESIDENCE / SHEIKH ISA’S PRAYER ROOM - 1932 - RESUME**
 
 Noura understands.
 NOURA

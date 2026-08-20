@@ -139,7 +139,7 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
 
   return (
     <div className="h-screen flex flex-col bg-slate-50">
-      <div className="px-4 py-3 bg-white border-b border-slate-200 flex items-center justify-between shrink-0">
+      <div className="px-4 py-3 bg-white border-b border-slate-200 flex items-center justify-between shrink-0 sticky top-0 z-10">
         <div className="flex items-center gap-3">
           {/* 剧本概述切换 */}
           <div className="flex items-center gap-0.5 bg-slate-100 rounded-md p-0.5">

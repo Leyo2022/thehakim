@@ -120,7 +120,7 @@ export function parseScenes(text: string) {
 
   // Regex supports: S<number>[optional uppercase letters]
   // Examples: S1, S001, S001A, S001AA, S001B
-  const sceneRegex = /\*\*第(\d+)场\s+S(\d+[A-Z]*)\s+(内景|外景|闪回|内景\s*\/\s*外景|外景\s*\/\s*内景)\s*(.+?)\*\*/;
+  const sceneRegex = /\*\*第(\d+[A-Z]*)场\s+S(\d+[A-Z]*)\s+(内景|外景|闪回|内景\s*\/\s*外景|外景\s*\/\s*内景|内\s*\/\s*外景|外\s*\/\s*内景)\s*(.+?)\*\*/;
 
   for (const line of lines) {
     const sceneMatch = line.match(sceneRegex);

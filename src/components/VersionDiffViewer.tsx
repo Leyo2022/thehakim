@@ -425,7 +425,7 @@ export const VersionDiffViewer: React.FC<VersionDiffViewerProps> = ({
                 新增场次 ({diff.stats.added} 个)：请确认编号符合插入式命名规则
               </span>
               <span className="text-amber-600">
-                格式：S<数字>[大写字母]，如 S001A (S001之后)、S001AA (S001之前)
+                格式：S{'<数字>'}[大写字母]，如 S001A (S001之后)、S001AA (S001之前)
               </span>
             </div>
           </div>
