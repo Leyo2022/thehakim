@@ -4,6 +4,8 @@ export interface DiffLine {
   type: 'unchanged' | 'added' | 'removed' | 'modified';
   left?: string;
   right?: string;
+  leftZh?: string;  // Chinese translation for left side
+  rightZh?: string; // Chinese translation for right side
   leftLineNum?: number;
   rightLineNum?: number;
   isNormalizedMatch?: boolean; // 标记为归一化后实质相同
@@ -333,7 +335,13 @@ export function validateSceneIdConvention(sceneId: string): string | null {
 
 // Compute line diff using the `diff` npm package (Myers algorithm)
 // With normalization to detect semantic matches
-function computeLineDiff(leftLines: string[], rightLines: string[]): DiffLine[] {
+// Optionally maps Chinese translation lines to each English line by line number
+function computeLineDiff(
+  leftLines: string[], 
+  rightLines: string[], 
+  zhLeftLines?: string[], 
+  zhRightLines?: string[]
+): DiffLine[] {
   // Normalize lines: trim trailing whitespace (common PDF vs manual formatting difference)
   const normLeft = leftLines.map(l => l.replace(/\s+$/, ''));
   const normRight = rightLines.map(l => l.replace(/\s+$/, ''));
@@ -360,6 +368,7 @@ function computeLineDiff(leftLines: string[], rightLines: string[]): DiffLine[] 
         diff.push({
           type: 'removed',
           left: part,
+          leftZh: zhLeftLines ? zhLeftLines[leftLineNum - 1] : undefined,
           leftLineNum,
         });
       }
@@ -369,6 +378,7 @@ function computeLineDiff(leftLines: string[], rightLines: string[]): DiffLine[] 
         diff.push({
           type: 'added',
           right: part,
+          rightZh: zhRightLines ? zhRightLines[rightLineNum - 1] : undefined,
           rightLineNum,
         });
       }
@@ -380,6 +390,8 @@ function computeLineDiff(leftLines: string[], rightLines: string[]): DiffLine[] 
           type: 'unchanged',
           left: part,
           right: part,
+          leftZh: zhLeftLines ? zhLeftLines[leftLineNum - 1] : undefined,
+          rightZh: zhRightLines ? zhRightLines[rightLineNum - 1] : undefined,
           leftLineNum,
           rightLineNum,
         });
@@ -418,6 +430,8 @@ function computeLineDiff(leftLines: string[], rightLines: string[]): DiffLine[] 
           type: same ? 'unchanged' : 'modified',
           left: removedLine.left,
           right: addedLine.right,
+          leftZh: removedLine.leftZh,
+          rightZh: addedLine.rightZh,
           leftLineNum: removedLine.leftLineNum,
           rightLineNum: addedLine.rightLineNum,
           isNormalizedMatch: same,
@@ -530,7 +544,9 @@ function countLineChanges(lines: DiffLine[]): { added: number; removed: number; 
 function createSceneDiff(
   v3Scene: ReturnType<typeof parseScenes>[0] | null,
   v4Scene: ReturnType<typeof parseScenes>[0] | null,
-  type: 'added' | 'removed' | 'modified' | 'unchanged'
+  type: 'added' | 'removed' | 'modified' | 'unchanged',
+  zhV3Scene?: ReturnType<typeof parseScenes>[0] | null,
+  zhV4Scene?: ReturnType<typeof parseScenes>[0] | null
 ): SceneDiff {
   let lines: DiffLine[] = [];
   let addedLines = 0, removedLines = 0, modifiedLines = 0;
@@ -539,6 +555,7 @@ function createSceneDiff(
     lines = v4Scene.content.map((line, idx) => ({
       type: 'added' as const,
       right: line,
+      rightZh: zhV4Scene ? zhV4Scene.content[idx] : undefined,
       rightLineNum: idx + 1,
     }));
     addedLines = lines.length;
@@ -546,11 +563,17 @@ function createSceneDiff(
     lines = v3Scene.content.map((line, idx) => ({
       type: 'removed' as const,
       left: line,
+      leftZh: zhV3Scene ? zhV3Scene.content[idx] : undefined,
       leftLineNum: idx + 1,
     }));
     removedLines = lines.length;
   } else if (v3Scene && v4Scene) {
-    lines = computeLineDiff(v3Scene.content, v4Scene.content);
+    lines = computeLineDiff(
+      v3Scene.content, 
+      v4Scene.content,
+      zhV3Scene?.content,
+      zhV4Scene?.content
+    );
     const counts = countLineChanges(lines);
     addedLines = counts.added;
     removedLines = counts.removed;
@@ -579,9 +602,23 @@ function createSceneDiff(
 // Compare two script versions
 // Uses scene ID matching for Chinese-marked format, and fuzzy location matching for English original format
 // Pre-computes line diffs and change counts for all scenes
-export function compareVersions(v3Text: string, v4Text: string): VersionDiff {
+// Optionally accepts Chinese translations for display (not used for diff computation)
+export function compareVersions(
+  v3Text: string, 
+  v4Text: string, 
+  v3ZhText?: string, 
+  v4ZhText?: string
+): VersionDiff {
   const v3Scenes = parseScenes(v3Text);
   const v4Scenes = parseScenes(v4Text);
+
+  // Parse Chinese translations if provided (for display only, not diff matching)
+  const v3ZhScenes = v3ZhText ? parseScenes(v3ZhText) : [];
+  const v4ZhScenes = v4ZhText ? parseScenes(v4ZhText) : [];
+  const v3ZhById = new Map<string, typeof v3ZhScenes[0]>();
+  const v4ZhById = new Map<string, typeof v4ZhScenes[0]>();
+  v3ZhScenes.forEach(s => v3ZhById.set(s.sceneId, s));
+  v4ZhScenes.forEach(s => v4ZhById.set(s.sceneId, s));
 
   // Sort V4 scenes by the custom insertion-sort rule
   const sortedV4Scenes = sortScenesById(v4Scenes);
@@ -620,14 +657,18 @@ export function compareVersions(v3Text: string, v4Text: string): VersionDiff {
         v3Processed.add(v3Scene.sceneId);
         v4Processed.add(v4Scene.sceneId);
         
-        const sceneDiff = createSceneDiff(v3Scene, v4Scene, 'modified');
+        const zhV3Scene = v3ZhById.get(v3Scene.sceneId);
+        const zhV4Scene = v4ZhById.get(v4Scene.sceneId);
+        
+        const sceneDiff = createSceneDiff(v3Scene, v4Scene, 'modified', zhV3Scene, zhV4Scene);
         if (sceneDiff.type === 'modified') {
           modifiedCount++;
         }
         sceneDiffs.push(sceneDiff);
       } else {
         addedCount++;
-        sceneDiffs.push(createSceneDiff(null, v4Scene, 'added'));
+        const zhV4Scene = v4ZhById.get(v4Scene.sceneId);
+        sceneDiffs.push(createSceneDiff(null, v4Scene, 'added', null, zhV4Scene));
         v4Processed.add(v4Scene.sceneId);
       }
     }
@@ -636,7 +677,8 @@ export function compareVersions(v3Text: string, v4Text: string): VersionDiff {
     for (const v3Scene of v3Scenes) {
       if (!v4Processed.has(v3Scene.sceneId)) {
         removedCount++;
-        sceneDiffs.push(createSceneDiff(v3Scene, null, 'removed'));
+        const zhV3Scene = v3ZhById.get(v3Scene.sceneId);
+        sceneDiffs.push(createSceneDiff(v3Scene, null, 'removed', zhV3Scene, null));
       }
     }
   } else {
@@ -736,14 +778,18 @@ export function compareVersions(v3Text: string, v4Text: string): VersionDiff {
           if (!v3Processed.has(v3Scenes[k].sceneId)) {
             v3Processed.add(v3Scenes[k].sceneId);
             removedCount++;
-            sceneDiffs.push(createSceneDiff(v3Scenes[k], null, 'removed'));
+            const zhV3Scene = v3ZhById.get(v3Scenes[k].sceneId);
+            sceneDiffs.push(createSceneDiff(v3Scenes[k], null, 'removed', zhV3Scene, null));
           }
         }
         
         v3Processed.add(v3Scene.sceneId);
         v4Processed.add(v4Scene.sceneId);
         
-        const sceneDiff = createSceneDiff(v3Scene, v4Scene, 'modified');
+        const zhV3Scene = v3ZhById.get(v3Scene.sceneId);
+        const zhV4Scene = v4ZhById.get(v4Scene.sceneId);
+        
+        const sceneDiff = createSceneDiff(v3Scene, v4Scene, 'modified', zhV3Scene, zhV4Scene);
         if (sceneDiff.type === 'modified') {
           modifiedCount++;
         }
@@ -754,7 +800,8 @@ export function compareVersions(v3Text: string, v4Text: string): VersionDiff {
       } else {
         // No match - added scene
         addedCount++;
-        sceneDiffs.push(createSceneDiff(null, v4Scene, 'added'));
+        const zhV4Scene = v4ZhById.get(v4Scene.sceneId);
+        sceneDiffs.push(createSceneDiff(null, v4Scene, 'added', null, zhV4Scene));
         v4Processed.add(v4Scene.sceneId);
       }
     }
@@ -764,7 +811,8 @@ export function compareVersions(v3Text: string, v4Text: string): VersionDiff {
       if (!v3Processed.has(v3Scenes[v3Ptr].sceneId)) {
         v3Processed.add(v3Scenes[v3Ptr].sceneId);
         removedCount++;
-        sceneDiffs.push(createSceneDiff(v3Scenes[v3Ptr], null, 'removed'));
+        const zhV3Scene = v3ZhById.get(v3Scenes[v3Ptr].sceneId);
+        sceneDiffs.push(createSceneDiff(v3Scenes[v3Ptr], null, 'removed', zhV3Scene, null));
       }
     }
   }

@@ -423,11 +423,14 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
         </div>
       )}
 
-      {/* 版本差异对比窗口 - 始终使用英文原版对比（根据script-diff技能原则，避免翻译干扰） */}
+      {/* 版本差异对比窗口 - 始终使用英文原版对比（根据script-diff技能原则，避免翻译干扰）
+          同时传入中文翻译用于辅助阅读，中文不参与差异计算 */}
       {showDiffViewer && (
         <VersionDiffViewer
           v3Content={getV3EnglishOriginal()}
-          v4Content={getV4EnglishOriginal()}
+          v4Content={editableV4Content || getV4EnglishOriginal()}
+          v3ZhContent={rawScript}
+          v4ZhContent={v4Script}
           onClose={() => setShowDiffViewer(false)}
           onSaveV4Content={(content) => {
             setEditableV4Content(content);

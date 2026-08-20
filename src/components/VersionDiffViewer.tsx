@@ -5,6 +5,8 @@ import { X, ChevronDown, ChevronRight, Plus, Minus, GitCompare, Check, MinusCirc
 interface VersionDiffViewerProps {
   v3Content: string;
   v4Content: string;
+  v3ZhContent?: string;
+  v4ZhContent?: string;
   onClose: () => void;
   onSaveV4Content?: (content: string) => void;
 }
@@ -87,6 +89,8 @@ const getMarker = (line: DiffLine, side: 'left' | 'right') => {
 export const VersionDiffViewer: React.FC<VersionDiffViewerProps> = ({
   v3Content,
   v4Content: initialV4Content,
+  v3ZhContent,
+  v4ZhContent,
   onClose,
   onSaveV4Content,
 }) => {
@@ -105,7 +109,7 @@ export const VersionDiffViewer: React.FC<VersionDiffViewerProps> = ({
     setComputing(true);
     const timer = setTimeout(() => {
       try {
-        const result = compareVersions(v3Content, v4Content);
+        const result = compareVersions(v3Content, v4Content, v3ZhContent, v4ZhContent);
         setDiff(result);
       } catch (e) {
         console.error('Error computing diff:', e);
@@ -114,7 +118,7 @@ export const VersionDiffViewer: React.FC<VersionDiffViewerProps> = ({
       }
     }, 0);
     return () => clearTimeout(timer);
-  }, [v3Content, v4Content]);
+  }, [v3Content, v4Content, v3ZhContent, v4ZhContent]);
 
   const [filter, setFilter] = useState<FilterType>('all');
   const [expandedScenes, setExpandedScenes] = useState<Set<string>>(new Set());
@@ -555,6 +559,8 @@ const DiffView: React.FC<{
     const lineNum = line.leftLineNum;
     const textClass = line.type === 'removed' ? 'text-red-700' : 
                       line.type === 'modified' ? 'text-slate-800' : 'text-slate-600';
+    // Chinese translation: smaller font, neutral gray, no diff highlighting
+    const zhContent = line.leftZh?.trim();
 
     return (
       <div key={`left-${idx}`} className={`flex items-stretch border-b border-slate-100 ${bgClass}`}>
@@ -565,8 +571,13 @@ const DiffView: React.FC<{
         <div className="w-6 shrink-0 py-1 text-center text-sm font-mono select-none">
           <span className={markerClass(line)}>{mk}</span>
         </div>
-        <div className={`flex-1 py-1 px-2 text-sm font-mono whitespace-pre-wrap break-words leading-relaxed ${textClass}`}>
-          {content.trim() || '\u00A0'}
+        <div className={`flex-1 py-1 px-2 whitespace-pre-wrap break-words leading-relaxed ${textClass}`}>
+          <div className="text-sm font-mono">{content.trim() || '\u00A0'}</div>
+          {zhContent && (
+            <div className="text-xs font-sans text-slate-500 mt-0.5 leading-snug opacity-80">
+              {zhContent}
+            </div>
+          )}
         </div>
       </div>
     );
@@ -598,9 +609,11 @@ const DiffView: React.FC<{
     const lineNum = line.rightLineNum;
     const textClass = line.type === 'added' ? 'text-emerald-700' : 
                       line.type === 'modified' ? 'text-slate-800' : 'text-slate-600';
+    // Chinese translation: smaller font, neutral gray, no diff highlighting
+    const zhContent = line.rightZh?.trim();
 
     return (
-      <div key={`right-${idx}`} className={`flex items-center border-b border-slate-100 ${bgClass} ${markStatus === 'confirmed' ? 'ring-2 ring-inset ring-emerald-400' : ''} ${markStatus === 'dismissed' ? 'ring-2 ring-inset ring-slate-300 opacity-60' : ''}`}>
+      <div key={`right-${idx}`} className={`flex items-stretch border-b border-slate-100 ${bgClass} ${markStatus === 'confirmed' ? 'ring-2 ring-inset ring-emerald-400' : ''} ${markStatus === 'dismissed' ? 'ring-2 ring-inset ring-slate-300 opacity-60' : ''}`}>
         <div className="w-10 shrink-0 text-right pr-2 py-1 text-xs text-slate-400 font-mono select-none border-r border-slate-200 bg-slate-50/50">
           {lineNum || ''}
         </div>
@@ -608,12 +621,19 @@ const DiffView: React.FC<{
         <div className="w-6 shrink-0 py-1 text-center text-sm font-mono select-none">
           <span className={markerClass(line)}>{mk}</span>
         </div>
-        <div className={`flex-1 py-1 px-2 text-sm font-mono whitespace-pre-wrap break-words leading-relaxed ${textClass}`}>
-          {content.trim() || '\u00A0'}
-          {isNormalized && (
-            <span className="ml-2 inline-flex items-center px-1.5 py-0.5 bg-purple-100 text-purple-700 text-[10px] rounded font-sans">
-              ≈ 格式差异
-            </span>
+        <div className={`flex-1 py-1 px-2 whitespace-pre-wrap break-words leading-relaxed ${textClass}`}>
+          <div className="text-sm font-mono">
+            {content.trim() || '\u00A0'}
+            {isNormalized && (
+              <span className="ml-2 inline-flex items-center px-1.5 py-0.5 bg-purple-100 text-purple-700 text-[10px] rounded font-sans">
+                ≈ 格式差异
+              </span>
+            )}
+          </div>
+          {zhContent && (
+            <div className="text-xs font-sans text-slate-500 mt-0.5 leading-snug opacity-80">
+              {zhContent}
+            </div>
           )}
         </div>
         {showMarkButtons && (
