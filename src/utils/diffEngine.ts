@@ -15,6 +15,10 @@ export interface SceneDiff {
   title?: string;
   type: 'added' | 'removed' | 'modified' | 'unchanged';
   lines: DiffLine[];
+  // Pre-computed change counts (available without expanding the scene)
+  addedLines?: number;
+  removedLines?: number;
+  modifiedLines?: number;
 }
 
 export interface VersionDiff {
@@ -109,8 +113,10 @@ function isNormalizedMatch(left: string, right: string): boolean {
 }
 
 // Parse scenes from script text
-// Supports flexible scene IDs: S1, S001, S001A, S001AA, S001B, etc.
-// The format is: S<digits>[<uppercase_letters>]
+// Supports three formats (priority order):
+// 1. Explicit scene marker: <!-- SCENE: Sxxx --> followed by INT./EXT. heading
+// 2. Chinese marked format: **第X场 S<digits>[letters] 内景/外景 ...**
+// 3. English original format: lines starting with INT. or EXT. (standard screenplay format)
 // Examples: S1, S001, S001A, S001AA, S001B, S001C, S002
 export function parseScenes(text: string) {
   const lines = text.split('\n');
@@ -118,28 +124,102 @@ export function parseScenes(text: string) {
     sceneNum: number;
     sceneId: string;
     title: string;
+    locationKey: string; // Normalized location for fuzzy matching
     content: string[];
   }[] = [];
 
   let currentScene: typeof scenes[0] | null = null;
+  let pendingSceneId: string | null = null; // Scene ID from <!-- SCENE: --> marker waiting for heading
 
-  // Regex supports: S<number>[optional uppercase letters]
-  // Examples: S1, S001, S001A, S001AA, S001B
-  const sceneRegex = /\*\*第(\d+[A-Z]*)场\s+S(\d+[A-Z]*)\s+(内景|外景|闪回|内景\s*\/\s*外景|外景\s*\/\s*内景|内\s*\/\s*外景|外\s*\/\s*内景)\s*(.+?)\*\*/;
+  // Regex for explicit scene marker: <!-- SCENE: Sxxx -->
+  const sceneMarkerRegex = /^<!--\s*SCENE:\s*(S\d+[A-Z]*)\s*-->$/i;
+  
+  // Regex for Chinese marked format: **第X场 SXXX 内景/外景 ...**
+  const chineseSceneRegex = /\*\*第(\d+[A-Z]*)场\s+S(\d+[A-Z]*)\s+(内景|外景|闪回|内景\s*\/\s*外景|外景\s*\/\s*内景|内\s*\/\s*外景|外\s*\/\s*内景)\s*(.+?)\*\*/;
+  
+  // Regex for English original format: lines starting with INT. or EXT.
+  // Allow optional whitespace after dot (handles PDF artifacts like "EXT.HMS")
+  const englishSceneRegex = /^(INT\.|EXT\.|INT\.\/EXT\.|EXT\.\/INT\.)\s*(.+)$/i;
+  
+  let englishSceneCounter = 0;
+
+  // Normalize a location string for fuzzy matching
+  const normalizeLocation = (loc: string): string => {
+    return loc
+      .toLowerCase()
+      .replace(/[\u2018\u2019\u201A\u201B]/g, "'")
+      .replace(/[\u201C\u201D\u201E\u201F]/g, '"')
+      .replace(/[\u2013\u2014\u2015]/g, '-')
+      .replace(/[.,;:!?'"()[\]{}\-_—\/\\]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  };
+
+  // Parse scene ID into numeric part for sceneNum
+  const parseSceneIdNum = (sid: string): number => {
+    const m = sid.match(/^S(\d+)/);
+    return m ? parseInt(m[1]) : englishSceneCounter;
+  };
 
   for (const line of lines) {
-    const sceneMatch = line.match(sceneRegex);
-    if (sceneMatch) {
+    const trimmedLine = line.trim();
+    
+    // 1. Check for explicit scene marker: <!-- SCENE: Sxxx -->
+    const markerMatch = trimmedLine.match(sceneMarkerRegex);
+    if (markerMatch) {
+      pendingSceneId = markerMatch[1];
+      continue; // Don't add marker line to content
+    }
+    
+    // 2. Check for Chinese marked format
+    const chineseMatch = trimmedLine.match(chineseSceneRegex);
+    if (chineseMatch) {
       if (currentScene) {
         scenes.push(currentScene);
       }
+      const numMatch = chineseMatch[1].match(/^(\d+)/);
+      const sceneNum = numMatch ? parseInt(numMatch[1]) : scenes.length + 1;
+      const location = chineseMatch[4];
       currentScene = {
-        sceneNum: parseInt(sceneMatch[1]),
-        sceneId: 'S' + sceneMatch[2],
-        title: line.trim().replace(/\*\*/g, ''),
+        sceneNum: sceneNum,
+        sceneId: 'S' + chineseMatch[2],
+        title: trimmedLine.replace(/\*\*/g, ''),
+        locationKey: normalizeLocation(location),
         content: [line],
       };
-    } else if (currentScene) {
+      pendingSceneId = null;
+      continue;
+    }
+    
+    // 3. Check for English scene heading (INT./EXT.)
+    if (trimmedLine) {
+      const englishMatch = trimmedLine.match(englishSceneRegex);
+      if (englishMatch) {
+        englishSceneCounter++;
+        if (currentScene) {
+          scenes.push(currentScene);
+        }
+        const fullHeading = englishMatch[2];
+        // Extract location by stripping time-of-day suffixes
+        const timeSuffixRegex = /\s*[—\-–]\s*(?:DAY|NIGHT|MORNING|EVENING|CONTINUOUS|SAME|LATER|DAWN|DUSK|AFTERNOON|MOMENTS|CUT|SUNRISE|SUNSET|DAYS|NIGHTS|RESUME|FIRST\s+LIGHT)\s*.*$/i;
+        const location = fullHeading.replace(timeSuffixRegex, '').trim();
+        
+        // Use pending scene ID from marker if available, otherwise generate sequential
+        const sceneId = pendingSceneId || ('S' + String(englishSceneCounter).padStart(3, '0'));
+        
+        currentScene = {
+          sceneNum: parseSceneIdNum(sceneId),
+          sceneId: sceneId,
+          title: trimmedLine,
+          locationKey: normalizeLocation(location),
+          content: [line],
+        };
+        pendingSceneId = null;
+        continue;
+      }
+    }
+    
+    if (currentScene) {
       currentScene.content.push(line);
     }
   }
@@ -162,7 +242,7 @@ export function parseScenes(text: string) {
 // - "AA" (S001AA) comes BEFORE empty
 // - Single letters A, B, C come AFTER empty
 // This ensures: S001AA < S001 < S001A < S001B
-export function sortScenesById(scenes: Array<{ sceneId: string }>): Array<{ sceneId: string }> {
+export function sortScenesById<T extends { sceneId: string }>(scenes: T[]): T[] {
   return [...scenes].sort((a, b) => {
     const idA = a.sceneId;
     const idB = b.sceneId;
@@ -371,21 +451,149 @@ function computeLineDiff(leftLines: string[], rightLines: string[]): DiffLine[] 
   return result;
 }
 
-// Compare two script versions using scene ID matching (not positional)
+// Calculate similarity between two location strings (0 to 1)
+function locationSimilarity(a: string, b: string): number {
+  if (!a || !b) return 0;
+  const wordsA = new Set(a.split(/\s+/).filter(w => w.length > 2));
+  const wordsB = new Set(b.split(/\s+/).filter(w => w.length > 2));
+  
+  if (wordsA.size === 0 || wordsB.size === 0) return 0;
+  
+  let intersection = 0;
+  wordsA.forEach(w => {
+    if (wordsB.has(w)) intersection++;
+  });
+  
+  const union = wordsA.size + wordsB.size - intersection;
+  return intersection / union;
+}
+
+// Calculate content similarity between two scenes (0 to 1)
+// Uses bag-of-words on the scene body (excluding the heading line itself)
+function contentSimilarity(
+  v3Content: string[],
+  v4Content: string[]
+): number {
+  // Skip the first line (it's the scene heading itself, which we already compare via location)
+  // Take up to first 15 lines of body content for fingerprinting
+  const bodyA = v3Content.slice(1, Math.min(v3Content.length, 16));
+  const bodyB = v4Content.slice(1, Math.min(v4Content.length, 16));
+  
+  const getWords = (lines: string[]) => {
+    const words = new Set<string>();
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (!trimmed) continue;
+      // Extract dialogue/action words, skip character names in ALL CAPS
+      const isAllCaps = /^[A-Z\s\(\)'\.\-]+$/.test(trimmed) && trimmed.length > 3;
+      if (isAllCaps && !trimmed.includes(' ')) continue; // Skip standalone character names
+      
+      const lineWords = trimmed
+        .toLowerCase()
+        .replace(/[.,;:!?'"()\[\]{}\-_—\/\\]/g, ' ')
+        .split(/\s+/)
+        .filter(w => w.length > 3); // Only significant words (length > 3)
+      lineWords.forEach(w => words.add(w));
+    }
+    return words;
+  };
+  
+  const wordsA = getWords(bodyA);
+  const wordsB = getWords(bodyB);
+  
+  if (wordsA.size === 0 || wordsB.size === 0) return 0;
+  
+  let intersection = 0;
+  wordsA.forEach(w => {
+    if (wordsB.has(w)) intersection++;
+  });
+  
+  const union = wordsA.size + wordsB.size - intersection;
+  return intersection / union;
+}
+
+// Count change types in diff lines
+function countLineChanges(lines: DiffLine[]): { added: number; removed: number; modified: number } {
+  let added = 0, removed = 0, modified = 0;
+  for (const line of lines) {
+    if (line.isNormalizedMatch) continue; // Skip normalized matches (not real changes)
+    switch (line.type) {
+      case 'added': added++; break;
+      case 'removed': removed++; break;
+      case 'modified': modified++; break;
+    }
+  }
+  return { added, removed, modified };
+}
+
+// Helper to create a SceneDiff with pre-computed stats from matched scenes
+function createSceneDiff(
+  v3Scene: ReturnType<typeof parseScenes>[0] | null,
+  v4Scene: ReturnType<typeof parseScenes>[0] | null,
+  type: 'added' | 'removed' | 'modified' | 'unchanged'
+): SceneDiff {
+  let lines: DiffLine[] = [];
+  let addedLines = 0, removedLines = 0, modifiedLines = 0;
+  
+  if (type === 'added' && v4Scene) {
+    lines = v4Scene.content.map((line, idx) => ({
+      type: 'added' as const,
+      right: line,
+      rightLineNum: idx + 1,
+    }));
+    addedLines = lines.length;
+  } else if (type === 'removed' && v3Scene) {
+    lines = v3Scene.content.map((line, idx) => ({
+      type: 'removed' as const,
+      left: line,
+      leftLineNum: idx + 1,
+    }));
+    removedLines = lines.length;
+  } else if (v3Scene && v4Scene) {
+    lines = computeLineDiff(v3Scene.content, v4Scene.content);
+    const counts = countLineChanges(lines);
+    addedLines = counts.added;
+    removedLines = counts.removed;
+    modifiedLines = counts.modified;
+    // Determine actual type based on real changes
+    if (addedLines === 0 && removedLines === 0 && modifiedLines === 0) {
+      type = 'unchanged';
+    } else {
+      type = 'modified';
+    }
+  }
+  
+  const scene = v4Scene || v3Scene;
+  return {
+    sceneNum: scene?.sceneNum,
+    sceneId: scene?.sceneId,
+    title: scene?.title,
+    type,
+    lines,
+    addedLines,
+    removedLines,
+    modifiedLines,
+  };
+}
+
+// Compare two script versions
+// Uses scene ID matching for Chinese-marked format, and fuzzy location matching for English original format
+// Pre-computes line diffs and change counts for all scenes
 export function compareVersions(v3Text: string, v4Text: string): VersionDiff {
   const v3Scenes = parseScenes(v3Text);
   const v4Scenes = parseScenes(v4Text);
 
   // Sort V4 scenes by the custom insertion-sort rule
-  // This ensures S001AA < S001 < S001A < S001B
   const sortedV4Scenes = sortScenesById(v4Scenes);
 
-  // Build maps by scene ID for accurate matching
-  const v3ById = new Map<string, typeof v3Scenes[0]>();
-  const v4ById = new Map<string, typeof v4Scenes[0]>();
-  
-  v3Scenes.forEach(s => v3ById.set(s.sceneId, s));
-  v4Scenes.forEach(s => v4ById.set(s.sceneId, s));
+  // Detect if scenes have explicit S-ID markers (from <!-- SCENE: Sxxx --> comments)
+  // If most scenes have SIDs, use strict ID matching for perfect accuracy
+  const v3WithSid = v3Scenes.filter(s => s.sceneId).length;
+  const v4WithSid = v4Scenes.filter(s => s.sceneId).length;
+  const hasExplicitSids = v3WithSid > v3Scenes.length * 0.8 && v4WithSid > v4Scenes.length * 0.8;
+
+  // Also detect Chinese marked format
+  const hasChineseMarks = v3Text.includes('**第') || v4Text.includes('**第');
 
   const sceneDiffs: SceneDiff[] = [];
   let addedCount = 0;
@@ -396,60 +604,168 @@ export function compareVersions(v3Text: string, v4Text: string): VersionDiff {
   const v3Processed = new Set<string>();
   const v4Processed = new Set<string>();
 
-  // First pass: match scenes by ID using sorted V4 order
-  for (const v4Scene of sortedV4Scenes) {
-    const v3Scene = v3ById.get(v4Scene.sceneId);
+  if (hasExplicitSids || hasChineseMarks) {
+    // Use strict ID matching when we have explicit S-IDs (perfect accuracy)
+    const v3ById = new Map<string, typeof v3Scenes[0]>();
+    const v4ById = new Map<string, typeof v4Scenes[0]>();
     
-    if (v3Scene) {
-      v3Processed.add(v3Scene.sceneId);
-      v4Processed.add(v4Scene.sceneId);
+    v3Scenes.forEach(s => v3ById.set(s.sceneId, s));
+    v4Scenes.forEach(s => v4ById.set(s.sceneId, s));
+
+    // First pass: match scenes by ID using sorted V4 order
+    for (const v4Scene of sortedV4Scenes) {
+      const v3Scene = v3ById.get(v4Scene.sceneId);
       
-      // Both exist - check for changes
-      const hasChanges = !isSceneContentSame(v3Scene.content, v4Scene.content);
-
-      if (hasChanges) {
-        modifiedCount++;
-        sceneDiffs.push({
-          sceneNum: v4Scene.sceneNum,
-          sceneId: v4Scene.sceneId,
-          title: v4Scene.title,
-          type: 'modified',
-          lines: [], // Lazy computed
-        });
+      if (v3Scene) {
+        v3Processed.add(v3Scene.sceneId);
+        v4Processed.add(v4Scene.sceneId);
+        
+        const sceneDiff = createSceneDiff(v3Scene, v4Scene, 'modified');
+        if (sceneDiff.type === 'modified') {
+          modifiedCount++;
+        }
+        sceneDiffs.push(sceneDiff);
       } else {
-        sceneDiffs.push({
-          sceneNum: v4Scene.sceneNum,
-          sceneId: v4Scene.sceneId,
-          title: v4Scene.title,
-          type: 'unchanged',
-          lines: [],
-        });
+        addedCount++;
+        sceneDiffs.push(createSceneDiff(null, v4Scene, 'added'));
+        v4Processed.add(v4Scene.sceneId);
       }
-    } else {
-      // Only in V4 - it's a new scene
-      addedCount++;
-      sceneDiffs.push({
-        sceneNum: v4Scene.sceneNum,
-        sceneId: v4Scene.sceneId,
-        title: v4Scene.title,
-        type: 'added',
-        lines: [],
-      });
-      v4Processed.add(v4Scene.sceneId);
     }
-  }
 
-  // Second pass: find scenes only in V3 (removed)
-  for (const v3Scene of v3Scenes) {
-    if (!v4Processed.has(v3Scene.sceneId)) {
-      removedCount++;
-      sceneDiffs.push({
-        sceneNum: v3Scene.sceneNum,
-        sceneId: v3Scene.sceneId,
-        title: v3Scene.title,
-        type: 'removed',
-        lines: [],
-      });
+    // Second pass: find scenes only in V3 (removed)
+    for (const v3Scene of v3Scenes) {
+      if (!v4Processed.has(v3Scene.sceneId)) {
+        removedCount++;
+        sceneDiffs.push(createSceneDiff(v3Scene, null, 'removed'));
+      }
+    }
+  } else {
+    // English original format: use dynamic programming for longest common subsequence-style matching
+    // Combines location similarity + content similarity with positional preference
+    // This handles location renames (like "ROYAL RESIDENCE" -> "GATES OF PALACE") when content matches
+    
+    const m = v3Scenes.length;
+    const n = sortedV4Scenes.length;
+    
+    // Pre-compute similarity matrix
+    const sim: number[][] = [];
+    for (let i = 0; i < m; i++) {
+      sim[i] = [];
+      for (let j = 0; j < n; j++) {
+        const locSim = locationSimilarity(v3Scenes[i].locationKey, sortedV4Scenes[j].locationKey);
+        const contSim = contentSimilarity(v3Scenes[i].content, sortedV4Scenes[j].content);
+        // Weighted combination: location is primary, content is secondary
+        // If location match is strong (>=0.5), trust it; else use content to disambiguate
+        const combined = locSim >= 0.5 ? locSim : (locSim * 0.4 + contSim * 0.6);
+        sim[i][j] = combined;
+      }
+    }
+    
+    // DP table: dp[i][j] = best score matching first i V3 scenes to first j V4 scenes
+    // We use a simple LCS-like DP with gap penalties for insertions/deletions
+    const dp: number[][] = Array(m + 1).fill(null).map(() => Array(n + 1).fill(0));
+    // For backtracking
+    const bt: ('match' | 'skipV3' | 'skipV4')[][] = Array(m + 1).fill(null).map(() => Array(n + 1).fill('match'));
+    
+    // Initialize boundaries: cost of skipping all V3 (all added) or all V4 (all removed)
+    for (let i = 1; i <= m; i++) {
+      dp[i][0] = dp[i - 1][0] - 0.1;
+      bt[i][0] = 'skipV3';
+    }
+    for (let j = 1; j <= n; j++) {
+      dp[0][j] = dp[0][j - 1] - 0.1;
+      bt[0][j] = 'skipV4';
+    }
+    
+    // Fill DP table
+    for (let i = 1; i <= m; i++) {
+      for (let j = 1; j <= n; j++) {
+        // Option 1: match v3[i-1] with v4[j-1]
+        const scoreMatch = dp[i - 1][j - 1] + sim[i - 1][j - 1];
+        // Option 2: skip V3 scene (it was deleted) - small penalty
+        const scoreSkipV3 = dp[i - 1][j] - 0.1;
+        // Option 3: skip V4 scene (it was added) - small penalty
+        const scoreSkipV4 = dp[i][j - 1] - 0.1;
+        
+        dp[i][j] = Math.max(scoreMatch, scoreSkipV3, scoreSkipV4);
+        
+        if (dp[i][j] === scoreMatch) {
+          bt[i][j] = 'match';
+        } else if (dp[i][j] === scoreSkipV3) {
+          bt[i][j] = 'skipV3';
+        } else {
+          bt[i][j] = 'skipV4';
+        }
+      }
+    }
+    
+    // Backtrack to find matches
+    const matches: Array<{ v3Idx: number; v4Idx: number }> = [];
+    let i = m, j = n;
+    while (i > 0 && j > 0) {
+      switch (bt[i][j]) {
+        case 'match':
+          if (sim[i - 1][j - 1] > 0.25) { // Only accept match if similarity above threshold
+            matches.push({ v3Idx: i - 1, v4Idx: j - 1 });
+          }
+          i--; j--;
+          break;
+        case 'skipV3':
+          i--;
+          break;
+        case 'skipV4':
+          j--;
+          break;
+      }
+    }
+    matches.reverse();
+    
+    // Build scene diffs in V4 order
+    let matchPtr = 0;
+    let v3Ptr = 0;
+    
+    for (let v4Idx = 0; v4Idx < n; v4Idx++) {
+      const v4Scene = sortedV4Scenes[v4Idx];
+      
+      if (matchPtr < matches.length && matches[matchPtr].v4Idx === v4Idx) {
+        const match = matches[matchPtr];
+        const v3Scene = v3Scenes[match.v3Idx];
+        
+        // Mark any V3 scenes between v3Ptr and match.v3Idx as removed
+        for (let k = v3Ptr; k < match.v3Idx; k++) {
+          if (!v3Processed.has(v3Scenes[k].sceneId)) {
+            v3Processed.add(v3Scenes[k].sceneId);
+            removedCount++;
+            sceneDiffs.push(createSceneDiff(v3Scenes[k], null, 'removed'));
+          }
+        }
+        
+        v3Processed.add(v3Scene.sceneId);
+        v4Processed.add(v4Scene.sceneId);
+        
+        const sceneDiff = createSceneDiff(v3Scene, v4Scene, 'modified');
+        if (sceneDiff.type === 'modified') {
+          modifiedCount++;
+        }
+        sceneDiffs.push(sceneDiff);
+        
+        v3Ptr = match.v3Idx + 1;
+        matchPtr++;
+      } else {
+        // No match - added scene
+        addedCount++;
+        sceneDiffs.push(createSceneDiff(null, v4Scene, 'added'));
+        v4Processed.add(v4Scene.sceneId);
+      }
+    }
+    
+    // Any remaining V3 scenes are removed
+    for (; v3Ptr < m; v3Ptr++) {
+      if (!v3Processed.has(v3Scenes[v3Ptr].sceneId)) {
+        v3Processed.add(v3Scenes[v3Ptr].sceneId);
+        removedCount++;
+        sceneDiffs.push(createSceneDiff(v3Scenes[v3Ptr], null, 'removed'));
+      }
     }
   }
 

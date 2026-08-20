@@ -119,23 +119,9 @@ export const VersionDiffViewer: React.FC<VersionDiffViewerProps> = ({
   const [filter, setFilter] = useState<FilterType>('all');
   const [expandedScenes, setExpandedScenes] = useState<Set<string>>(new Set());
   const [showUnchanged, setShowUnchanged] = useState(false);
-  const [loadedScenes, setLoadedScenes] = useState<Map<number, SceneDiff>>(new Map());
   const contentRef = useRef<HTMLDivElement>(null);
 
-  // Load scene diff by scene ID (more accurate than index-based)
-  const loadSceneDiff = (sceneId: string, originalIdx: number) => {
-    if (loadedScenes.has(originalIdx)) {
-      return;
-    }
-    const sceneDiff = computeSceneDiff(v3Content, v4Content, sceneId);
-    if (sceneDiff) {
-      setLoadedScenes(prev => {
-        const newMap = new Map(prev);
-        newMap.set(originalIdx, sceneDiff);
-        return newMap;
-      });
-    }
-  };
+  // No more lazy loading - lines are pre-computed in compareVersions
 
   // Filtered scenes with original indices preserved
   const filteredScenes = useMemo(() => {
@@ -163,7 +149,6 @@ export const VersionDiffViewer: React.FC<VersionDiffViewerProps> = ({
     filteredScenes.forEach(({ scene, originalIdx }) => {
       const sceneId = `${scene.sceneId || String(scene.sceneNum)}-${originalIdx}`;
       ids.add(sceneId);
-      loadSceneDiff(scene.sceneId || String(scene.sceneNum), originalIdx);
     });
     setExpandedScenes(ids);
   };
@@ -196,42 +181,17 @@ export const VersionDiffViewer: React.FC<VersionDiffViewerProps> = ({
   // Apply dismissed marks to revert V4 content back to V3
   const handleApplyMarks = () => {
     // Build revertedLines map from marks
-    const revertedLines = new Map<string, Set<number>>();
-    
-    marks.forEach((sceneMap, sceneId) => {
-      const revertedSet = new Set<number>();
-      sceneMap.forEach((status, diffIdx) => {
-        if (status === 'dismissed') {
-          // Find the rightLineNum for this diffIdx
-          // We need to look up the scene to find the actual rightLineNum
-          // Since diffIdx is relative to loadedScenes, we need to find it
-        }
-      });
-      if (revertedSet.size > 0) {
-        revertedLines.set(sceneId, revertedSet);
-      }
-    });
-    
-    // Actually, we need to iterate through each scene's loaded diff to get rightLineNum
     const revertedLinesMap = new Map<string, Set<number>>();
     
     marks.forEach((sceneMap, sceneId) => {
       const revertedSet = new Set<number>();
       
-      // Find which scene index this sceneId maps to
-      const sceneIdx = diff?.scenes.findIndex(s => (s.sceneId || String(s.sceneNum)) === sceneId);
-      if (sceneIdx === undefined || sceneIdx === -1) return;
-      
-      // Get the scene diff
-      let sceneDiff = loadedScenes.get(sceneIdx);
-      if (!sceneDiff) {
-        // Load it if not loaded
-        sceneDiff = computeSceneDiff(v3Content, v4Content, sceneIdx);
-        if (!sceneDiff) return;
-      }
+      // Find which scene this sceneId maps to
+      const sceneDiff = diff?.scenes.find(s => (s.sceneId || String(s.sceneNum)) === sceneId);
+      if (!sceneDiff) return;
       
       sceneMap.forEach((status, diffIdx) => {
-        if (status === 'dismissed' && sceneDiff) {
+        if (status === 'dismissed' && sceneDiff.lines) {
           const line = sceneDiff.lines[diffIdx];
           if (line && line.rightLineNum !== undefined) {
             revertedSet.add(line.rightLineNum);
@@ -251,9 +211,6 @@ export const VersionDiffViewer: React.FC<VersionDiffViewerProps> = ({
     setV4Content(adjustedContent);
     setMarks(new Map());
     setHasUnsavedChanges(false);
-    
-    // Clear cached scenes
-    setLoadedScenes(new Map());
     
     // Save to parent if callback exists
     if (onSaveV4Content) {
@@ -275,21 +232,23 @@ export const VersionDiffViewer: React.FC<VersionDiffViewerProps> = ({
       });
     });
     
-    // Count total modified lines across all loaded scenes
-    loadedScenes.forEach(scene => {
-      scene.lines.forEach(line => {
-        if (line.type === 'modified' && !line.isNormalizedMatch) {
-          total++;
-          const sceneId = scene.sceneId || '';
-          const idx = scene.lines.indexOf(line);
-          const status = marks.get(sceneId)?.get(idx);
-          if (!status || status === 'pending') pending++;
-        }
+    // Count total modified lines across all scenes from pre-computed diff
+    if (diff) {
+      diff.scenes.forEach(scene => {
+        if (!scene.lines) return;
+        const sceneId = scene.sceneId || '';
+        scene.lines.forEach((line, idx) => {
+          if (line.type === 'modified' && !line.isNormalizedMatch) {
+            total++;
+            const status = marks.get(sceneId)?.get(idx);
+            if (!status || status === 'pending') pending++;
+          }
+        });
       });
-    });
+    }
     
     return { total, confirmed, dismissed, pending };
-  }, [marks, loadedScenes]);
+  }, [marks, diff]);
 
   return (
     <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center">
@@ -451,12 +410,11 @@ export const VersionDiffViewer: React.FC<VersionDiffViewerProps> = ({
                 const uniqueSceneId = `${sceneId}-${originalIdx}`;
                 const isExpanded = expandedScenes.has(uniqueSceneId);
                 
-                const cachedDiff = loadedScenes.get(originalIdx);
-                
-                // Count real changes (excluding normalized matches)
-                const changeLineCount = cachedDiff 
-                  ? cachedDiff.lines.filter(l => l.type !== 'unchanged' && !l.isNormalizedMatch).length
-                  : scene.type === 'modified' ? '...' : scene.type === 'added' ? 'new' : 'removed';
+                // Use pre-computed change counts
+                const addedCount = scene.addedLines || 0;
+                const removedCount = scene.removedLines || 0;
+                const modifiedCount = scene.modifiedLines || 0;
+                const totalChanges = addedCount + removedCount + modifiedCount;
 
                 return (
                   <div
@@ -465,12 +423,7 @@ export const VersionDiffViewer: React.FC<VersionDiffViewerProps> = ({
                   >
                     {/* Scene Header */}
                     <button
-                      onClick={() => {
-                        if (!isExpanded) {
-                          loadSceneDiff(scene.sceneId || String(scene.sceneNum), originalIdx);
-                        }
-                        toggleScene(uniqueSceneId);
-                      }}
+                      onClick={() => toggleScene(uniqueSceneId)}
                       className="w-full px-4 py-3 flex items-center gap-3 hover:bg-slate-50 transition-colors"
                     >
                       {isExpanded ? (
@@ -491,32 +444,42 @@ export const VersionDiffViewer: React.FC<VersionDiffViewerProps> = ({
                         {scene.title}
                       </span>
 
-                      {typeof changeLineCount === 'number' && changeLineCount > 0 && (
-                        <span className="text-xs text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">
-                          {changeLineCount} 处变更
-                        </span>
-                      )}
-                      {typeof changeLineCount === 'string' && (
-                        <span className="text-xs text-slate-400 bg-slate-50 px-2 py-0.5 rounded-full">
-                          {changeLineCount}
-                        </span>
+                      {/* Pre-computed change counts */}
+                      {totalChanges > 0 && (
+                        <div className="flex items-center gap-2 text-xs">
+                          {addedCount > 0 && (
+                            <span className="inline-flex items-center gap-1 text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">
+                              <Plus size={10} />{addedCount}
+                            </span>
+                          )}
+                          {removedCount > 0 && (
+                            <span className="inline-flex items-center gap-1 text-red-600 bg-red-50 px-1.5 py-0.5 rounded">
+                              <Minus size={10} />{removedCount}
+                            </span>
+                          )}
+                          {modifiedCount > 0 && (
+                            <span className="inline-flex items-center gap-1 text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded">
+                              ~{modifiedCount}
+                            </span>
+                          )}
+                        </div>
                       )}
                     </button>
 
-                    {/* Diff Content */}
-                    {isExpanded && cachedDiff && (
+                    {/* Diff Content - lines are pre-computed, no lazy loading needed */}
+                    {isExpanded && scene.lines && scene.lines.length > 0 && (
                       <div className="border-t border-slate-200">
                         <DiffView 
-                          scene={cachedDiff} 
+                          scene={scene} 
                           sceneId={sceneId}
                           marks={marks.get(sceneId) || new Map()}
                           onLineMark={(diffIdx, status) => handleLineMark(sceneId, diffIdx, status)}
                         />
                       </div>
                     )}
-                    {isExpanded && !cachedDiff && (
-                      <div className="border-t border-slate-200 px-4 py-8 text-center text-slate-400 text-sm">
-                        加载中...
+                    {isExpanded && (!scene.lines || scene.lines.length === 0) && scene.type === 'unchanged' && (
+                      <div className="border-t border-slate-200 px-4 py-4 text-center text-slate-400 text-sm">
+                        该场次无内容变更
                       </div>
                     )}
                   </div>

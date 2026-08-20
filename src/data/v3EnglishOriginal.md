@@ -1,9 +1,27 @@
+THE HAKIM
+Based on true events
+Screenplay by
+Fahar Faizaan and Peter C. Nelson
+May 18, 2026
+Revised screenplay by
+Alex Proyas
+June 21st, 2026
+2ND Revision by
+Alex Proyas
+July 1st, 2026
+3rd Revision
+Alex Proyas
+July 17th, 2026
+
+ii.
+
 Over darkness, the distant sound of children playing. Beneath it,
 the frail murmur of an old man’s prayer.
 SHEIKH ISA (O.S.)
 Ya Allah... guide what remains of me.
-**第1场 S001 内景 ROYAL RESIDENCE / SHEIKH ISA’S PRAYER ROOM — DAY — 1932**
 
+<!-- SCENE: S001 -->
+INT. SHEIKH ISA’S PRAYER ROOM — DAY — 1932
 A Qur’an rests open on a carved wooden stand. Prayer beads hang
 from the wrist of aged hands cupped in prayer.
 SHEIKH ISA (O.S.)
@@ -14,7 +32,7 @@ the window. The sounds of children drift in from outside -
 laughter, the bright chaos of life continuing.
 SUPER: MANAMA/BAHRAIN — 1932
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 And before I return to You... let me
 know whether I honoured the trust that
 was given to me.
@@ -24,7 +42,7 @@ caught between childhood and the first stirrings of duty. She
 sidles inside, trying to hide.
 Sheikh Isa lifts his weathered face, his eyes still sharp.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 (teasing)
 I know you are there, Noura.
 Noura freezes, embarrassed.
@@ -36,7 +54,7 @@ Then you chose a poor hiding place. I
 found you too easily.
 A small smile. He gestures to her -
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 Come. Sit with me a while.
 
 Noura enters and settles beside him. She notices the open Qur’an,
@@ -66,7 +84,7 @@ change the world are different.
 Noura listens with the solemn attention of a child sensing she
 is being trusted with something important.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 I’ve spent my life trying to
 understand my father’s dream.
 Trying to unravel its meaning.
@@ -91,11 +109,12 @@ learned.
 Isa turns back toward the window. His old eyes drift past the
 children, past the sunlight, into memory.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 Maybe together we can solve the
 puzzle of my father’s dream -
-**第2场 S002 内景 YOUNG ISA’S BEDROOM - MORNING - 1861**
 
+<!-- SCENE: S002 -->
+INT. YOUNG ISA’S BEDROOM - MORNING - 1861
 The eyes of young ISA (13) open at the CALL OF A CRIER.
 He’s slept in. He throws himself from the bed, pulls on his
 clothes, splashes water on his face, rushes to the door, as -
@@ -103,8 +122,9 @@ Through the window -
 MANAMA sprawls below. Smoke from ovens. Masts in the harbour. A
 place made of labour, trade, tide and ambition.
 SUPER: MANAMA/BAHRAIN - 1861
-**第3场 S003 外景 MANAMA - MORNING - CONTINUOUS**
 
+<!-- SCENE: S003 -->
+EXT. MANAMA - CONTINUOUS
 MERCHANTS lifting shutters, dragging crates, counting yesterday’s
 fortunes and today’s risks.
 SHEIKH ISA (V.O.)
@@ -135,15 +155,15 @@ tells us how both burdens and
 blessings can be part of the same
 journey.
 The twin minarets of AL-KHAMIS MOSQUE rise in the distance.
-**第4场 S004 外景 GATES OF PALACE - MORNING - CONTINUOUS**
 
+<!-- SCENE: S004 -->
+EXT. ROYAL RESIDENCE - CONTINUOUS
 As Isa rides past the gates of the palace, HAYA (12) daughter of
 the ruler, runs out from the courtyard.
 HAYA
 Isa! Wait!
 He pulls up, smiling, as she hurries to his side.
-HAYA
-(CONT’D)
+HAYA (CONT'D)
 Dates. For the breakfast you clearly
 never ever eat.
 She hands him a small cloth bundle. He takes it. For a moment,
@@ -159,15 +179,17 @@ to catch it.
 
 He spurs forward. Haya watches him ride away, smiling —
 admiration, and something more.
-**第5场 S005 外景 COASTAL ROAD — MORNING - MOMENTS LATER**
 
+<!-- SCENE: S005 -->
+EXT. COASTAL ROAD — MOMENTS LATER
 Three BAHRAINI BOYS ride toward the harbour. Isa effortlessly
 sweeps up beside them.
 ISA
 You ride like old men on turtles!
 He rockets ahead, as the boys roar with laughter and give chase.
-**第6场 S006 外景 PEARLING VILLAGE / DOCK – MORNING - CONTINUOUS**
 
+<!-- SCENE: S006 -->
+EXT. PEARLING VILLAGE / DOCK – CONTINUOUS
 On the outskirts of Manama, a small village by the water - modest
 in its dwellings, rich in pearls. Dhows ghost through the morning
 mist. Pearl divers haul ropes along the dock.
@@ -198,8 +220,9 @@ clutching ropes and baskets.
 Isa beams.
 ISA
 See? Perfect timing.
-**第7场 S007 外景 ROWBOAT / NEAR COAST — DAY -LATER**
 
+<!-- SCENE: S007 -->
+EXT. ROWBOAT / NEAR COAST — LATER
 An anchor is dropped.
 The small rowboat bobs a hundred metres from shore, surrounded by
 working dhows. Pearl divers vanish beneath the surface one by one,
@@ -219,8 +242,9 @@ That is only a legend.
 AHMED
 Tell that to Isa.
 Ahmed sighs, then dives after his brother.
-**第8场 S008 外景 BELOW THE SURFACE - DAY - CONTINUOUS**
 
+<!-- SCENE: S008 -->
+EXT. BELOW THE SURFACE - CONTINUOUS
 Another world. Blue-green light. Coral. Fish scattering like
 thrown jewels.
 Isa is at home in the sea.
@@ -240,8 +264,9 @@ does not know what.
 His hand brushes coral. Silt blooms. Then he sees it.
 A shell wedged beneath rock.
 Isa reaches for it. Fingers close around it. He pulls it free.
-**第9场 S009 外景 SEA SURFACE / ROWBOAT — DAY - MOMENTS LATER**
 
+<!-- SCENE: S009 -->
+EXT. SEA SURFACE / ROWBOAT — MOMENTS LATER
 Ahmed bursts up first. Then one boy. Then another. They wipe water
 from their faces, gasping.
 No Isa. A flicker of concern. Ahmed scans the water.
@@ -266,8 +291,7 @@ A ship at anchor by the bend. Low. Fast. Sinister.
 AHMED
 Pirates.
 The boys turn.
-ON THE DOCK
-Figures run. Screams carry faintly over the water.
+ON THE DOCK - Figures run. Screams carry faintly over the water.
 SOMALI PIRATES HURL jars of naphtha — a crude local “fire oil”
 made from pitch/bitumen, resin, and sulphur. The jars smash. A
 pirate’s torch arcs through the air. Lands.
@@ -278,8 +302,7 @@ Pirates retreat with stolen goods toward their boats.
 On the trapped dhow, Hassan chokes in smoke as the flames close
 in.
 Isa steps to the edge of the boat. Ahmed grabs him by the arm.
-AHMED
-(CONT’D)
+AHMED (CONT'D)
 You cannot reach him through that.
 ISA
 Then I’ll go under it.
@@ -287,8 +310,9 @@ Isa tears free and dives.
 AHMED
 Isa!
 Isa swims towards the burning dhow.
-**第10场 S010 外景 DOCK — DAY- SAME**
 
+<!-- SCENE: S010 -->
+EXT. DOCK — SAME
 BAHRAINI FIGHTERS charge into the chaos, swords drawn.
 At their head is ALI BIN KHALIFA AL KHALIFA (40s) — father to
 Ahmed and Isa. He cuts through the pirates with controlled
@@ -296,8 +320,7 @@ ferocity, then sees the nakhuda, the burning water. Sees Isa
 swimming towards the flames.
 ALI
 Isa!
-
-**第10A场 S010A 外景 UNDERWATER**
+UNDERWATER
 
 Isa drives down beneath the burning surface. Above him, the sea
 is on fire — a living ceiling of flame, rippling orange and
@@ -307,21 +330,19 @@ Isa reaches the dhow - rises inside the ring of flame.
 IBRAHIM (20’s) Ali’s eldest son, leads more riders onto the
 flaming dock. With swift, brutal discipline, they fall upon
 pirates who have not escaped.
-**第10B场 S010B 外景 ON THE DOCK**
-
-Hassan can barely breathe. He’s terrified.
+ON THE DHOW - Hassan can barely breathe. He’s terrified.
 Isa scrambles aboard. Flames lick closer across the oil-slick
 water. The dock is fully ablaze.
 Isa looks to shore. No path. Only fire.
 ISA
 Hold your breath.
 The old man is frozen with fear. Isa grabs him.
-ISA
-(CONT’D)
+ISA (CONT'D)
 Now!
 He hauls him over the side. They plunge beneath the flames.
-**第11场 S011 外景 UNDERWATER - DAY - CONTINUOUS**
 
+<!-- SCENE: S011 -->
+EXT. UNDERWATER - CONTINUOUS
 Isa drags Hassan beneath the burning slick.
 Above them, fire rolls across the surface. No escape.
 Isa kicks hard. Too hard.
@@ -331,22 +352,24 @@ burn. His limbs slow. His body begins to convulse.
 A stream of air escapes him.
 Then — a shape cuts through the water.
 A DIVING STONE tied to a trailing rope.
-
 Isa grabs the rope with one hand, holds Hassan tight with the
 other.
-**第12场 S012 外景 DOCK — DAY- CONTINUOUS**
 
+<!-- SCENE: S012 -->
+EXT. DOCK — CONTINUOUS
 Ali stands at the far end of the rope, surrounded by his men.
 ALI
 Pull them!
 Ali and the men haul together, dragging the rope hand over hand
 like a tug of war.
-**第13场 S013 外景 UNDERWATER – DAY- CONTINUOUS**
 
+<!-- SCENE: S013 -->
+EXT. UNDERWATER – CONTINUOUS
 Isa clings to the rope, one arm locked around Hassan.
 They’re dragged through water beneath flames - toward shore.
-**第14场 S014 外景 DOCK / SHORELINE – DAY - CONTINUOUS**
 
+<!-- SCENE: S014 -->
+EXT. DOCK / SHORELINE – CONTINUOUS
 Ali and his men strain, hauling the rope with all they have.
 Isa and Hassan break through beyond the fire.
 Men rush into the shallows and drag them from the sea.
@@ -365,16 +388,16 @@ ALI
 So you chose to give two lives to
 the fire.
 Beyond them, men stamp at the flames still eating the dock.
-
 ALI
-(CONT’D)
+(CONT'D)
 Courage without thought is
 foolishness. Do you understand?
+
 Isa lowers his eyes. He nods.
 Ahmed and the other boys have landed their boat nearby. Ahmed
 runs forward, relieved his brother is alive.
 ALI
-(CONT’D)
+(CONT'D)
 And you, Ahmed. You didn’t have the
 sense to stop your brother?
 Ahmed bows his head, ashamed.
@@ -391,10 +414,11 @@ And preserve him from himself.
 Ali spins on his heels and heads to the dock to help with
 putting out the flames. Ibrahim follows. So does Ahmed.
 Isa is left shaken. He knows how close he came to death.
-SHIEKH ISA  (V.O.)
+SHIEKH ISA (V.O.)
 A man was trapped.
-**第15场 S015 内景 ROYAL RESIDENCE / SHEIKH ISA’S PRAYER ROOM - DAY - 1932**
 
+<!-- SCENE: S015 -->
+INT. SHEIKH ISA’S PRAYER ROOM - DAY - 1932
 SHEIKH ISA
 I saw only his life. My father saw
 mine as well. That was the first
@@ -404,10 +428,12 @@ NOURA
 Was that his dream? To be rid of the
 pirates?
 Isa smiles faintly.
-
 SHEIKH ISA
 Perhaps one piece of it.
 (a beat)
+(MORE)
+
+SHEIKH ISA (CONT'D)
 But a good puzzle is never so generous
 as to give itself away at the
 beginning.
@@ -415,8 +441,9 @@ Noura smiles. She is enjoying this immensely.
 NOURA
 Tell me more, Grandfather.
 Isa shuts his eyes - remembering again.
-**第16场 S016 内景 BRITISH HMS TEAZER - OFFICE - DAY - 1861**
 
+<!-- SCENE: S016 -->
+INT. BRITISH OFFICE - DAY - 1861
 A pen scratches across parchment.
 SHEIKH MOHAMMED BIN KHALIFA (50s), ruler of Bahrain, Haya’s
 father, signs the British agreement. Across the room, British
@@ -437,15 +464,16 @@ men offer peace, they also ask you to
 give something up. Your freedom. Your
 ships. Your choices. I did not
 understand that then.
-**第17场 S017 内景 BRITISH HMS TEAZER - OFFICE - DAY - 1868 - TIME CUT**
 
+<!-- SCENE: S017 -->
+INT. BRITISH OFFICE - DAY - 1868 - TIME CUT
 The same room. Different British faces.
 SHEIKH ALI (50s now) sits in the same chair once occupied by his
 brother. He signs another declaration.
 Behind him stand IBRAHIM (30s), AHMED (21), and ISA (19) — no
 longer boys.
-
 SUPER: BAHRAIN - 1868
+
 SHEIKH ISA (V.O.)
 Years passed. Relations between the
 British and Sheikh Mohammed soured,
@@ -459,8 +487,9 @@ made ruler, but to keep Bahrain safe
 from the danger it would face from
 every side.
 Young Isa watches his father rise.
-**第18场 S018 内景 ROYAL RESIDENCE - SHEIKH ALI’S PALACE / COURTYARD — DAY —**
 
+<!-- SCENE: S018 -->
+INT. ROYAL RESIDENCE / COURTYARD — DAY — 1868
 Sheikh Ali, Ibrahim and Ahmed sit at a long table in the shaded
 courtyard, relaxed and content.
 SHEIKH ISA (V.O.)
@@ -483,8 +512,8 @@ MAJEED, 21, Ali’s assistant — almost invisible.
 SALEH
 The first harvest reports are strong,
 Your Honour. The best in years.
-
 Sheikh Ali nods, troubled.
+
 Across the courtyard, Isa and Ahmed have already drawn practice
 swords, circling one another. Isa moves with flourish. Ahmed with
 easy amusement.
@@ -518,8 +547,7 @@ Enough.
 Isa stands breathing hard. Ibrahim steps back, no longer smiling.
 Ali takes the sword from Isa’s hand.
 
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 The Prophet said the strong man is not
 the one who overcomes others by force,
 but the one who controls himself in
@@ -533,8 +561,9 @@ That stings.
 Ali offers the sword back, hilt first.
 Isa takes the sword, chastened but listening, the lesson burning
 deeper than the reprimand.
-**第19场 S019 外景 TREE OF LIFE - DUSK**
 
+<!-- SCENE: S019 -->
+EXT. TREE OF LIFE - DUSK
 A majestic FALCON glides across the darkening sky, riding the last
 warm currents of the day.
 Beneath the vast canopy of the TREE OF LIFE, SHEIKH ALI stands
@@ -548,38 +577,32 @@ While nothing around it does. Its
 roots reach where the eye cannot.
 The boys listen. Ibrahim calm authority. Ahmed quiet attention.
 Isa restless, eager to understand, but even more to be noticed.
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 Bahrain is not only what we see.
 He offers a water bladder to Ibrahim first. Ibrahim drinks, then
 passes it to Ahmed. Ahmed drinks and passes it to Isa.
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 The country provides. Even where the
 eye sees only sand.
 Isa drinks, watching his father.
 
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 Fresh water springs beneath the waves.
 Allah’s miracle. Two seas. One salt,
 one fresh.
 Isa passes the bladder back to his father.
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 Since our ancestors founded Al-
 Zubarah, we have known peace and
 challenge. Wisdom secures allies.
 Wealth invites rivals.
 He pours a thin stream of water onto the soil beneath the Tree.
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 This is why we build bridges, not
 walls. Why we keep our alliances
 strong.
 Isa watches the water vanish instantly into the thirsty ground.
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 Even when the British speak of peace
 as though it were theirs to give.
 Their treaties are written on shifting
@@ -605,23 +628,22 @@ You speak as though courage and
 patience are enemies.
 (MORE)
 
+SHEIKH ALI (CONT'D)
 (a beat)
 You must also learn to listen. That is
 where wisdom begins.
 The rebuke lands hard.
-SHEIKH ALI
-(CONT’D)
+17.
+SHEIKH ALI (CONT'D)
 There is more to our land than pearls,
 or how the British measure us. More
 than fresh water beneath the sea.
 Isa listens, not fully understanding, but feeling the weight in
 his father’s voice.
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 I believe it. I dream of it.
 Ibrahim raises his arm. The falcon launches into the dusk.
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 One day, Ibrahim, you will carry forth
 that dream.
 The words strike Isa harder than any reprimand.
@@ -630,8 +652,9 @@ IBRAHIM
 It will be my duty and my honour,
 Father.
 Isa hides the hurt, watching the falcon fly into the distance.
-**第20场 S020 外景 ROYAL RESIDENCE - SHEIKH ALI’S PALACE / RAMPARTS - NIGHT**
 
+<!-- SCENE: S020 -->
+EXT. ROYAL RESIDENCE / RAMPARTS - NIGHT
 ISA stands alone. Restless. Troubled. The argument at the Tree
 still burns in him.
 The sky is a canopy of stars. In the distant harbour, a ship’s
@@ -640,15 +663,13 @@ SHEIKH ALI (O.S.)
 Bahrain is a ship, Isa.
 Isa turns as his father approaches.
 SHEIKH ALI
-(CONT’D)
+(CONT'D)
 Some men pull the ropes. Some dive
 beneath the water. Some watch the
 stars. Some pray on the shore.
 He places a hand on Isa’s shoulder.
-SHEIKH ALI (CONT’D)
 
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 But if any one loses his nerve, all
 of them drown.
 ISA
@@ -659,8 +680,7 @@ Ibrahim has his path. Ahmed has
 his. And you - you shall play your
 part in time.
 The weight of what his father is to say sits heavily between them.
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 You must study. Beyond our shores.
 In England.
 The words hit Isa like exile.
@@ -684,26 +704,26 @@ then let me fight it with you.
 SHEIKH ALI
 Anger is a poor navigator, Isa.
 Isa has no answer. Only hurt.
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 The sea has fed us. Pearls are the
 blessing we know. There are other
 blessings to be found.
 (MORE)
 
+SHEIKH ALI (CONT'D)
 The land has not yet spoken. When
 it does, someone must know how to
 listen.
 He studies Isa’s face - his youth, his fire, his impatience.
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 Isa, you must learn what cannot yet
 be taught here. I may one day need
 from you what no one else can give.
 At last, Isa nods. Not gladly. But he nods.
 Ali places hands on his shoulders, gently kisses his forehead.
-**第21场 S021 外景 DESERT - DAWN**
 
+<!-- SCENE: S021 -->
+EXT. DESERT - DAWN
 ISA drives his horse across the sand, trying to outrun his
 father’s words. He pulls up on a rise, breathing hard. He turns.
 Behind him, another horse and rider approach from the distance.
@@ -717,8 +737,7 @@ ISA
 My father wants to send me away, Haya.
 To study.
 Anger breaks through.
-ISA
-(CONT’D)
+ISA (CONT'D)
 As if there is no use for me here.
 HAYA
 Is that what he said? Or are those
@@ -727,7 +746,6 @@ It stings because it is true.
 ISA
 (bitter)
 My future no longer belongs to me.
-SHEIKH ALI (CONT’D)
 
 HAYA
 Your father is not punishing you, Isa.
@@ -746,15 +764,13 @@ HAYA
 Poor Isa. Always rushing to catch life
 before it escapes you.
 The old phrase sparks between them.
-HAYA
-(CONT’D)
+HAYA (CONT'D)
 Life is a long road ahead of you. You
 must learn to ride more slowly.
 ISA
 I have never been good at that.
 Isa gathers his reins, then hesitates.
-ISA
-(CONT’D)
+ISA (CONT'D)
 Haya. If I was away a long time...
 would you remember me kindly?
 Haya’s composure falters only slightly.
@@ -770,36 +786,36 @@ moves. Then Isa turns his horse toward the horizon. He rides off
 toward the rising sun.
 Haya watches him go, tears held back with difficulty.
 
-**第22场 S022 外景 DESERT - FIRST LIGHT**
-
+<!-- SCENE: S022 -->
+EXT. DESERT - FIRST LIGHT
 Majeed ON HORSEBACK streaks across the wondrous landscape.
 SHEIKH ISA (V.O.)
 These were difficult lessons for a
 young man. It seemed life could not
 present any greater burden.
-**第23场 S023 外景 ROYAL RESIDENCE - SHEIKH ALI’S PALACE / COURTYARD -**
 
-CONTINUOUS - FIRST LIGHT
+<!-- SCENE: S023 -->
+EXT. ROYAL RESIDENCE / COURTYARD - CONTINUOUS
 Majeed dismounts with urgency and enters the palace.
 SHEIKH ISA (V.O.)
 But young men can hold foolish
 thoughts. Soon I would learn the
 hardest lesson of all.
-**第24场 S024 内景 ROYAL RESIDENCE - SHEIKH ALI’S PALACE / BED CHAMBER -**
 
-CONTINUOUS - FIRST LIGHT
+<!-- SCENE: S024 -->
+INT. ROYAL RESIDENCE / BED CHAMBER - CONTINUOUS
 Majeed rushes in to wake Ali.
 MAJEED
 Your Honour, Your Honour.
 But Ali is already stirring. Staff accumulate in the hallway.
-MAJEED
-(CONT’D)
+MAJEED (CONT'D)
 Scouts report emissaries from
 Zallaq approaching.
 SHEIKH ALI
 Zallaq? At this hour?
-**第25场 S025 外景 EAST RIFFA - DAWN**
 
+<!-- SCENE: S025 -->
+EXT. EAST RIFF'A - DAWN
 A cold dawn over the dunes.
 SHEIKH ALI & IBRAHIM lead a large force of fifty fighters. Swords.
 Rifles.
@@ -832,8 +848,7 @@ Sheikh Ali looks past him toward his brother.
 SHEIKH ALI
 I will hear it from his lips.
 A thunder of hooves and Isa is there, ready to fight.
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 This is not your place, Son.
 ISA
 But, Father -
@@ -841,16 +856,14 @@ SHEIKH ALI
 Go back, Isa.
 Isa bows his head but does not yet retreat.
 Ali has no time. He turns to Ibrahim.
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 Ibrahim.
 Ali and Ibrahim ride forward. Saleh and two FIGHTERS follow.
 
 Across the field, Mohammed and Abdullah ride out to meet them.
 Several of Abdullah’s mercenaries drift close behind. The two
 parties halt within speaking distance.
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 Brother.
 MOHAMMED
 Ali.
@@ -877,8 +890,7 @@ This does not concern you, Ibrahim.
 ABDULLAH
 Enough.
 All eyes shift to Abdullah.
-ABDULLAH
-(CONT’D)
+ABDULLAH (CONT'D)
 We did not cross the sand to discuss
 family disputes.
 Abdullah gives the slightest signal. Saleh crosses over and joins
@@ -930,8 +942,7 @@ Through the chaos, Mohammed - horrified at what he’s unleashed.
 MOHAMMED
 Abdullah! Stop this!
 Saleh moves toward the wounded Ibrahim.
-MOHAMMED
-(CONT’D)
+MOHAMMED (CONT'D)
 Saleh! No!
 Saleh fires his pistol. Ibrahim’s body jerks, then lies still.
 Sheikh Ali’s grief becomes fury. He cuts down Abdullah’s men
@@ -942,8 +953,7 @@ Isa raises his sword to run him through — A FIELD CANNON erupts
 nearby. The blast kills Saleh and hurls Isa into the sand.
 Isa is deafened. Only RINGING amidst dust and blood.
 Through the haze, Mohammed shouts to men who no longer obey him.
-MOHAMMED
-(CONT’D)
+MOHAMMED (CONT'D)
 Stop this!
 Abdullah points toward Sheikh Ali.
 ABDULLAH
@@ -958,8 +968,7 @@ into his leg. Another cuts across his side. He keeps moving.
 Ali is shot in the chest. He falls heavily into the sand.
 Isa collapses beside Ali. The battle rages around them.
 
-SHEIKH ALI
-(CONT’D)
+SHEIKH ALI (CONT'D)
 No more blood.
 Ali struggles to breathe, blood on his lips. He looks beyond Isa.
 Ibrahim dead. His fighters decimated. His house broken.
@@ -990,8 +999,9 @@ reins. His horse bolts, carrying him away from the battlefield.
 Mohammed weeps as Abdullah’s men drag him away.
 Abdullah watches Ali’s body for one cold moment. Then he turns his
 horse and retreats.
-**第26场 S026 外景 DESERT - DAY**
 
+<!-- SCENE: S026 -->
+EXT. DESERT - DAY
 Isa’s horse - mouth foaming - walks alone through the desert.
 Exhaustion in every step. Isa is slumped in the saddle, barely
 conscious, blood dried across his robes.
@@ -1020,15 +1030,17 @@ Jabir’s men climb from their horses - lift Isa from the ground.
 SHEIKH ISA (V.O.)
 My body slowly healed. But something
 in me would not.
-**第27场 S027 外景 EAST RIFFA - DESERT BATTLEFIELD - NIGHT - DREAM**
 
+<!-- SCENE: S027 -->
+EXT. DESERT BATTLEFIELD - NIGHT - DREAM
 Sheikh Ali surrounded.
 A WARRIOR IN BLACK moves through smoke and dust — his face hidden
 behind an ornate, terrifying MASK.
 Isa tries to reach his father. Cannot. The Masked Man strikes.
 Sheikh Ali falls. Isa screams. But no sound comes.
-**第28场 S028 内景 JABIR’S RESIDENCE - NIGHT**
 
+<!-- SCENE: S028 -->
+INT. JABIR’S RESIDENCE - NIGHT
 Isa startles awake. A dim room. A flickering lantern. Jabir stands
 in the doorway with water.
 JABIR
@@ -1042,10 +1054,11 @@ JABIR
 Rest.
 Jabir sets the water beside him.
 JABIR
-(CONT’D)
+(CONT'D)
 Meaning can wait.
-**第29场 S029 外景 JABIR’S RESIDENCE - STABLES - DAY**
 
+<!-- SCENE: S029 -->
+EXT. JABIR’S RESIDENCE - STABLES - DAY
 Months later. A quiet courtyard beside the stables.
 ISA, thinner, not fully recovered, helps a young STABLE BOY sit
 properly in the saddle. He moves carefully, hiding pain.
@@ -1058,8 +1071,7 @@ ISA
 Not so tight. A horse is not a
 prisoner.
 He adjusts the boy’s hands.
-ISA
-(CONT’D)
+ISA (CONT'D)
 Guide him. Let him feel your trust.
 The boy tries again. Better. Isa gives the smallest nod.
 Jabir watches from a distance with several men. He sees what Isa
@@ -1068,16 +1080,14 @@ A RIDER approaches fast. The courtyard turns.
 AHMED. Changed by months in hiding. Leaner. Worn down. Travel-
 stained. Eyes alert from too long expecting betrayal.
 Ahmed dismounts. Isa crosses to him. They embrace fiercely.
-ISA
-(CONT’D)
+ISA (CONT'D)
 Ahmed.
 
 AHMED
 Alhamdulillah.
 Ahmed grips his brother’s shoulders, looking at him as though
 confirming he is real. Alive.
-AHMED
-(CONT’D)
+AHMED (CONT'D)
 I prayed it was true.
 ISA
 I was told nothing of you.
@@ -1107,18 +1117,19 @@ believe Abdullah would have spared
 him? Spared Ibrahim? Spared any of us?
 Isa looks away, raw.
 AHMED
-(CONT’D)
+(CONT'D)
 Manama is in fear. Abdullah takes what
 he wants. His mercenaries bleed the
 merchants, threaten the divers, insult
 the chiefs.
 (MORE)
 
+AHMED (CONT'D)
 Men who served Father now bow because
 they fear the sword at their throat.
+30.
 Isa says nothing.
-AHMED
-(CONT’D)
+AHMED (CONT'D)
 Mohammed was cast aside and resides in
 Bu Maher Fort. He opened a door and
 found a fire behind it. And the
@@ -1133,8 +1144,7 @@ And Haya? Does she know I lived?
 AHMED
 I am not certain.
 Ahmed steps closer.
-AHMED
-(CONT’D)
+AHMED (CONT'D)
 They speak your name, Isa. In Manama.
 In Muharraq. Among the divers. Among
 the merchants. They thought you dead
@@ -1144,7 +1154,8 @@ know you live.
 You must lead.
 ISA
 He died in my arms, Ahmed. He said,
-‘All is not lost’.
+‘All is not lost’
+.
 Ahmed is deeply moved.
 AHMED
 Isa, he meant you. He looked to you as
@@ -1155,7 +1166,6 @@ am not strong enough.
 AHMED
 You are our hope. Father knew it.
 Isa walks away a few steps, needing distance.
-AHMED (CONT’D)
 
 ISA
 I cannot be what he wanted.
@@ -1163,8 +1173,9 @@ AHMED
 Then be what Bahrain needs.
 Isa looks toward the horizon beyond the stables. The country waits
 out there. Wounded. Calling to him.
-**第30场 S030 内景 BU MAHER FORT / CELL - NIGHT**
 
+<!-- SCENE: S030 -->
+INT. BU MAHER FORT / CELL - NIGHT
 MOHAMMED sleeps on a hard bunk. Moonlight spills through the
 barred window.
 Keys rattle in the door-lock and the door swings open.
@@ -1173,14 +1184,14 @@ held captive by Jabir. Isa stands beside him.
 MOHAMMED
 Isa!
 He slips from the bed and falls to the floor, terrified.
-MOHAMMED
-(CONT’D)
+MOHAMMED (CONT'D)
 It was not my doing. I swear before
 Allah. I never wanted your father
 dead. I never wanted Ibrahim dead.
 Isa’s silence is worse than rage.
-**第31场 S031 外景 OPEN DESERT - PRE-DAWN**
 
+<!-- SCENE: S031 -->
+EXT. OPEN DESERT - PRE-DAWN
 Two large tents. Horses tethered. A dying fire. TWO GUARDS slump
 asleep outside.
 From behind a low ridge, ISA, AHMED, JABIR, and JABIR’S MEN watch
@@ -1194,28 +1205,32 @@ ISA
 No blood. Unless there is no choice.
 Isa nods to Jabir. Jabir’s men move. Silent. Low. Fast.
 
-**第32场 S032 外景 ABDULLAH’S CAMP - CONTINUOUS**
-
+<!-- SCENE: S032 -->
+EXT. ABDULLAH’S CAMP - CONTINUOUS
 One guard wakes too late. A hand over his mouth. A blade to his
 throat. The second guard reaches for his weapon and is struck down
 before he can cry out.
 Jabir’s men quickly surround the main tent.
-**第33场 S033 内景 ABDULLAH’S TENT - CONTINUOUS**
 
+<!-- SCENE: S033 -->
+INT. ABDULLAH’S TENT - CONTINUOUS
 ABDULLAH sleeps fully dressed, a sword within reach.
 Jabir’s men enter like shadows.
 Abdullah’s eyes snap open. He grabs his sword and lunges. For a
 moment, he is all fury — dangerous, fast, animal. But there are
 too many of them.
-**第34场 S034 外景 ABDULLAH’S CAMP - CONTINUOUS**
 
+<!-- SCENE: S034 -->
+EXT. ABDULLAH’S CAMP - CONTINUOUS
 Abdullah is dragged from the tent. Fear cuts through his
 arrogance.
 ABDULLAH
 I do not fear death, son of Ali.
 Isa steps closer trembling with rage. He glares at the man who
 destroyed his family.
-EXT. HMS DAPHNE - BRIDGE / OFF THE COAST OF MANAMA - DAY
+
+<!-- SCENE: S035 -->
+EXT. BRIDGE, HMS DAPHNE / OFF THE COAST OF MANAMA - DAY
 A young soldier looks through a spyglass.
 SOLDIER
 Vessels approaching, Sir.
@@ -1228,8 +1243,8 @@ It’s the young Al-Khalifa.
 ROSS
 By God. They’re rallying to him.
 
-**第35场 S035 外景 HMS DAPHNE / DECK - MOMENTS LATER**
-
+<!-- SCENE: S036 -->
+EXT. HMS DAPHNE / DECK - MOMENTS LATER
 ISA, still carrying the stiffness of his wounds, climbs aboard
 with AHMED. Behind them: ABDULLAH and MOHAMMED, bound and
 shackled, escorted by JABIR and two of his men. Beyond, the sea
@@ -1276,8 +1291,9 @@ Exile them.
 Mohammed lowers his head. Abdullah’s eyes burn with hatred.
 ROSS
 As you wish.
-**第36场 S036 外景 STREETS OF MANAMA - DAY**
 
+<!-- SCENE: S037 -->
+EXT. STREETS OF MANAMA - DAY
 DRUMS. SONG. JUBILATION. A nation rejoices. Streets overflow.
 Sheikh Isa’s symbol on countless flags. Palm fronds wave.
 CROWD
@@ -1337,8 +1353,9 @@ May love grow between us.
 ISA
 Ameen.
 Isa takes her hand. The crowd erupts in joy.
-**第37场 S037 内景 ROYAL RESIDENCE/ MAJLIS - DAY**
 
+<!-- SCENE: S038 -->
+INT. ROYAL RESIDENCE / MAJLIS - DAY
 TRIBAL LEADERS, ruling family members, merchants, elders, and men
 from across Bahrain sit shoulder to shoulder. Coffee passes hand
 to hand. Respectful. Uneasy.
@@ -1400,19 +1417,16 @@ To the widows of those who stood with
 us, I say, no child is to go hungry
 because his father answered our call.
 Majeed takes notes as a ripple moves through the room.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 The poor will be provided for. Houses
 broken by Abdullah’s violence will be
 restored.
 Ahmed watches him, impressed but wary.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 And the Al-Naiem, who sheltered me,
 will not be forgotten.
 Jabir lowers his eyes, moved.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 Forty-one purebred horses. Weapons.
 Garments. Coin.
 The room reacts. Generous. Perhaps too generous.
@@ -1427,8 +1441,7 @@ generosity does not build wells.
 SHEIKH ISA
 No. Men do.
 The room quiets.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 So each tribe will give what it can:
 men, routes, protection. The merchants
 will help fund what serves all trade.
@@ -1442,16 +1455,14 @@ And what do you ask in return?
 SHEIKH ISA
 Unity.
 Isa looks from face to face.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 If one tribe thirsts, Bahrain is
 weaker. If one fleet is preyed upon,
 every merchant pays. If loyalty is
 forgotten, no man will risk loyalty
 again.
 Ahmed watches his brother now with quiet pride.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 Stand with me, and I will stand with
 you. Question me in this room, not
 behind my back. Bring me your troubles
@@ -1474,8 +1485,7 @@ The room answers.
 VOICES
 One Bahrain.
 More join.
-VOICES
-(CONT’D)
+VOICES (CONT'D)
 One Bahrain.
 The call grows until the whole majlis speaks as one.
 ALL
@@ -1483,8 +1493,9 @@ One Bahrain.
 Isa stands at the centre of it, sobered by what he has accepted.
 Ahmed & Isa exchange looks.
 The tribes have come together.
-**第38场 S038 外景 WEDDING VENUE - EVENING**
 
+<!-- SCENE: S039 -->
+EXT. WEDDING VENUE - EVENING
 A field of Bedouin tents glows beneath the falling light. Rugs
 cover the desert floor. Lanterns sway. Incense smoke curls from a
 MUGBASS as a man wafts it through the air. Drums rise.
@@ -1503,8 +1514,7 @@ grandfather, Imam Turki bin Abdullah
 Al Saud.
 He unwraps the silk, revealing the legendary blade.
 
-IMAM SAUD
-(CONT’D)
+IMAM SAUD (CONT'D)
 Now it is passed to you.
 (a beat)
 Your father, Sheikh Ali, was a true
@@ -1520,8 +1530,9 @@ Al Khalifa and Al Saud stood together.
 Isa accepts the sword. Firelight runs along the blade.
 Sword dancers move in widening circles, rifles and blades catching
 firelight as the rhythm builds.
-**第39场 S039 内景 WEDDING TENT - NIGHT**
 
+<!-- SCENE: S040 -->
+INT. WEDDING TENT - LATER
 The celebration continues. Incense drifts. Music rises. The tent
 is divided with elegance and custom.
 On one side, MEN gather in greetings and formal congratulations.
@@ -1543,6 +1554,7 @@ A woman who marries a ruler does not
 marry only a man.
 (MORE)
 
+SHEIKHA HAYA (CONT'D)
 She marries his people, his burdens,
 and the weight they place upon his
 shoulders.
@@ -1573,7 +1585,7 @@ I sit past my fiftieth, still
 breathing.
 The men listen with interest.
 THUKAIR
-(CONT’D)
+(CONT'D)
 So when I see him, do I kiss his head,
 or does he kiss mine?
 The men roar with laughter. Isa laughs too.
@@ -1581,7 +1593,6 @@ Haya waits until Isa glances her way.
 She touches two fingers lightly to her wrist - a private reminder.
 Then places that hand over her heart.
 Isa understands. He turns back to the men.
-SHEIKHA HAYA (CONT’D)
 
 SHEIKH ISA
 Mr. Pelly.
@@ -1591,8 +1602,7 @@ SHEIKH ISA
 On such a happy evening, I hesitate to
 speak of sickness. However -
 Pelly offers a courteous smile, sensing the trap.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 The medicines promised by your
 government have not arrived.
 PELLY
@@ -1626,8 +1636,9 @@ I will raise the matter.
 SHEIKH ISA
 Excellent.
 Across the screen, Haya watches, proud but composed.
-**第40场 S040 内景 ROYAL RESIDENCE / STUDY - NIGHT**
 
+<!-- SCENE: S041 -->
+INT. ROYAL RESIDENCE / STUDY - NIGHT
 By candlelight, ISA writes at his desk. Outside, the stars shimmer
 across a glassy sea.
 SHEIKH ISA (V.O.)
@@ -1639,8 +1650,9 @@ leave something unfinished.
 MAJEED enters, breathless with joy.
 MAJEED
 Your Honour! Your son is born!
-**第41场 S041 内景 ROYAL RESIDENCE / BED CHAMBER - LATER**
 
+<!-- SCENE: S042 -->
+INT. ROYAL RESIDENCE / BED CHAMBER - LATER
 SHEIKHA HAYA lies exhausted but radiant. She places their newborn
 son into Isa’s arms.
 SHEIKH ISA (V.O.)
@@ -1659,8 +1671,8 @@ Across the sea, a ship burns against the horizon.
 SHEIKH ISA (V.O.)
 And the shape of his fears.
 
-**第42场 S042 外景 VILLAGE HARBOUR / TRADING POST - NIGHT - 1878**
-
+<!-- SCENE: S043 -->
+EXT. VILLAGE HARBOUR / TRADING POST - NIGHT - 1878
 SUPER: BAHRAIN - 1878
 Dark figures in multiple landing boats emerge from the black sea.
 They climb onto the dock silently, with practiced purpose. One
@@ -1680,7 +1692,7 @@ provisions, rifles, powder.
 At the centre of it all stands KHALIL (30s) broad-shouldered,
 watchful. Commanding. A brutal scar runs across his face. Not
 enough merely to steal. He wants Bahrain afraid.
-Beside him, a CHINESE FEMALE PIRATE - BAMEI (20s) fierce and
+Beside him, a CHINESE FEMALE PIRATE - HAN YU (20s) fierce and
 exhilarated - joins the plunder.
 Khalil gives a signal. The pirates retreat to their waiting boats,
 leaving fire, panic, and sabotaged boats sinking into the sea —
@@ -1701,8 +1713,9 @@ Isa reaches the edge too late. His horse rears at the flames.
 Khalil retreats on a boat, with the Female Pirate. He sees Isa
 through the chaos. Their eyes meet across flame and water.
 For a moment, Khalil smiles. Then vanishes behind a wall of smoke.
-**第43场 S043 内景 BRITISH HMS TEAZER / MEETING ROOM - DAY**
 
+<!-- SCENE: S044 -->
+INT. BRITISH HMS TEAZER / MEETING ROOM - DAY
 ISA and AHMED stand before COLONEL ROSS, CAPTAIN STEWART, and
 CLIVE KIRKPATRICK DALY (25) sharp-eyed and insolent.
 SHEIKH ISA
@@ -1754,8 +1767,7 @@ there is another British face. Another
 man who assures me he understands.
 Another man to whom I must answer.
 Isa removes a sealed letter from his robe and hands it to Ross.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 Perhaps it is time I addressed someone
 less temporary.
 Ross looks at the envelope. His expression changes.
@@ -1770,8 +1782,9 @@ decide that.
 Sheikh Ahmed allows himself the faintest smile. Isa turns and
 leaves. Ahmed follows.
 The British remain, staring at the letter with dread.
-**第44场 S044 内景 ROYAL RESIDENCE / COURTYARD & GARDEN - DAY**
 
+<!-- SCENE: S045 -->
+INT. ROYAL RESIDENCE / COURTYARD & GARDEN - DAY
 ISA plays with toy horses with his young sons, SALMAN (8) and
 HAMAD (6) as SALEM BIN HAMAD confers with him.
 MAJEED takes notes, while AHMED keeps an ear on the conversation
@@ -1803,8 +1816,7 @@ Why does it never bloom?
 SHEIKH AHMED
 I live in hope.
 Ahmed puts down the water-tin and crosses to them.
-SHEIKH AHMED
-(CONT’D)
+SHEIKH AHMED (CONT'D)
 Our father trusted family networks. If
 Bahrain is to see clearly, she must
 look through more eyes than our own.
@@ -1840,8 +1852,9 @@ rewarded.
 Majeed looks up from his notes -
 MAJEED
 Immediately, Your Honour.
-**第45场 S045 内景 ROYAL RESIDENCE / LIBRARY - DAY**
 
+<!-- SCENE: S046 -->
+INT. ROYAL RESIDENCE / LIBRARY - DAY
 HAYA sits on a low cushion with ZALAIKHA and the CHILDREN
 gathered around her. An open book rests in her lap.
 Haya guides Hamad’s finger along the line.
@@ -1861,8 +1874,7 @@ These are beautiful words, Sheikha.
 SHEIKHA HAYA
 They belong to Hattem Al-Tayyi.
 She turns the book gently toward Zalaikha.
-SHEIKHA HAYA
-(CONT’D)
+SHEIKHA HAYA (CONT'D)
 Now you.
 Zalaikha stiffens, embarrassed.
 ZALAIKHA
@@ -1904,8 +1916,9 @@ SHEIKH ISA
 A wonderful idea indeed. I am
 pleased I nearly thought of it.
 Haya allows herself the smallest smile.
-**第46场 S046 外景 MANAMA STREETS - NIGHT / DREAM**
 
+<!-- SCENE: S047 -->
+EXT. STREETS, MANAMA - NIGHT / DREAM
 Sheikh Isa walks alone through sleeping Manama.
 Lantern light. Empty alleys. The hush of a city that trusts him
 enough to sleep.
@@ -1918,13 +1931,15 @@ back, the figure is closer.
 Isa slips through a narrow lane and emerges into a small square.
 Empty. No figure. Then -
 He’s there - mask removed - No mouth, no eyes. NO FACE.
-**第47场 S047 内景 ROYAL RESIDENCE / BED CHAMBER - NIGHT**
 
+<!-- SCENE: S048 -->
+INT. ROYAL RESIDENCE / BED CHAMBER - NIGHT
 Isa wakes, terrified -
 The room is still. Only a hanging lantern swings gently in the
 night breeze.
-**第48场 S048 外景 TREE OF LIFE - DAWN**
 
+<!-- SCENE: S049 -->
+EXT. TREE OF LIFE - DAWN
 The desert is vast and still beneath the early light.
 The TREE stands alone against the emptiness, its branches stirring
 in the evening wind.
@@ -1934,8 +1949,7 @@ says nothing. Then, quietly —
 SHEIKH ISA
 Father. I try to honour you.
 He looks up at the ancient branches above him.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 I try to be the ruler you would want
 me to be.
 (A beat)
@@ -1944,31 +1958,32 @@ future. But what am I meant to see?
 Silence. The impossible tree breathes above him — alive in a place
 where nothing should live.
 Isa waits. Still nothing.
-**第49场 S049 外景 ROYAL RESIDENCE / COURTYARD - MORNING**
 
+<!-- SCENE: S050 -->
+EXT. ROYAL RESIDENCE / COURTYARD - MORNING
 ISA rides into the courtyard as MAJEED runs to him, breathless.
 MAJEED
 Forgive me, Your Honour.
 As Isa dismounts.
-MAJEED
-(CONT’D)
+MAJEED (CONT'D)
 We’ve found a path to Khalil.
-**第50场 S050 外景 FISHING VILLAGE/DOCK - NIGHT**
 
+<!-- SCENE: S051 -->
+EXT. FISHING VILLAGE/DOCK - NIGHT
 ISA waits with AHMED, MAJEED and two trusted MEN. A narrow dock
 stretches into black water. A few oil lamps burn low, their light
 trembling in the sea wind. The village sleeps behind them.
 A small boat knocks against the dock. A figure climbs out.
-BAMEI steps into the lamplight. One hand beneath her cloak.
+HAN YU steps into the lamplight. One hand beneath her cloak.
 Ahmed’s hand moves to his sword. She notices.
-BAMEI
+HAN YU
 If I wanted you dead, Sheikh Isa, I
 would not come alone.
 SHEIKH ISA
 What do we call you?
 
-BAMEI
-Bamei.
+HAN YU
+Han Yu.
 (steps closer)
 I offer a simple exchange. I’ll
 give you Khalil. For Passage.
@@ -1976,38 +1991,38 @@ Silver. And no British rope around
 my neck when it’s done.
 SHEIKH AHMED
 Why do you help us?
-BAMEI
+HAN YU
 Because Khalil knows I know too much.
 (a beat)
 And because I prefer to be paid by men
 who might keep their word.
 SHEIKH ISA
 First, you tell me what you know.
-BAMEI
+HAN YU
 First, you promise.
 SHEIKH ISA
 If your information is true, you will
 have passage, payment, and my word
 that no British hand touches you.
-BAMEI
+HAN YU
 Your word is worth more than theirs?
 SHEIKH ISA
 In Bahrain, yes.
 Accepting, she removes a scrap of sailcloth from within her
 cloak. She lays it on a crate. A rough map drawn in charcoal.
-BAMEI
+HAN YU
 Tomorrow night. After moonrise. Khalil
 will strike a merchant dhow here.
 She taps the map.
-BAMEI
-(CONT’D)
+HAN YU
+(CONT'D)
 He will burn one boat, take the cargo
 from another, then run through this
 channel before dawn.
 SHEIKH AHMED
 Beyond the reef.
 
-BAMEI
+HAN YU
 Yes. That is where he always escapes.
 His men know the shallows. Your men
 cannot follow fast enough.
@@ -2015,12 +2030,12 @@ SHEIKH ISA
 But a British ship can wait beyond
 them.
 Isa folds the map.
-BAMEI
+HAN YU
 If Khalil sees me before tomorrow
 night, your trap dies with me.
 SHEIKH ISA
 Then do not be seen.
-BAMEI
+HAN YU
 That is what I do best.
 She climbs into the boat and rows back into the dark. Ahmed
 watches her vanish.
@@ -2030,8 +2045,9 @@ moved?
 Isa looks down at the map in his hand.
 SHEIKH ISA
 I hope they won’t have a choice.
-**第51场 S051 内景 BALMORAL CASTLE, SCOTLAND - MORNING**
 
+<!-- SCENE: S052 -->
+INT. BALMORAL CASTLE, SCOTLAND - MORNING
 QUEEN VICTORIA (50) walks slowly along the garden path, a parasol
 held above her head. Beside her walks JOHN BROWN (50s) solid and
 watchful, carrying a small leather dispatch case. He removes a
@@ -2042,8 +2058,7 @@ Ma’am.
 QUEEN VICTORIA
 Bahrain.
 She considers the name with interest.
-QUEEN VICTORIA
-(CONT’D)
+QUEEN VICTORIA (CONT'D)
 I have often wished to see it. Islands
 of pearls, is it not? And seas within
 seas.
@@ -2066,7 +2081,8 @@ JOHN BROWN
 Victoria, Sovereign of Great
 Britain and Ireland, whose name
 travels farther than even your
-ships...”
+ships...
+”
 QUEEN VICTORIA
 (eyebrow raised)
 Does it indeed?
@@ -2075,7 +2091,8 @@ JOHN BROWN
 your officers have placed themselves
 very near, and therefore I take the
 liberty of writing to the source from
-which their promises descend.”
+which their promises descend.
+”
 Brown clears his throat, uncertain.
 QUEEN VICTORIA
 Go on, Mr Brown.
@@ -2085,7 +2102,8 @@ me Britain desires peace in the Gulf.
 I am grateful for peace. My people are
 extremely fond of peace. We would
 enjoy it even more if pirates did not
-keep interrupting it.”
+keep interrupting it.
+”
 QUEEN VICTORIA
 Oh, he is bold.
 JOHN BROWN
@@ -2098,7 +2116,8 @@ JOHN BROWN
 residents and their delays, respectful
 of their explanations, and impressed
 by the number of Englishmen required
-to say very little. But while -”
+to say very little. But while -
+”
 The Queen snatches the letter from Brown.
 QUEEN VICTORIA
 (commences to read)
@@ -2107,10 +2126,10 @@ ask that promises made in Britain’s
 name be made real in Bahrain’s waters.
 My father believed friendship between
 rulers must mean more than fine
-language.”
+language.
+”
 She stops. Turns to Brown.
-QUEEN VICTORIA
-(CONT’D)
+QUEEN VICTORIA (CONT'D)
 Can you believe he would have the
 audacity to write such a letter?
 JOHN BROWN
@@ -2126,10 +2145,10 @@ and to ensure that Britain’s
 friendship is known to Bahrain not
 merely by its flag, but by its deeds.
 There is no honour in a great empire
-being outpaced by a pirate.”
+being outpaced by a pirate.
+”
 She lowers the letter. Then she laughs, genuine, surprised.
-QUEEN VICTORIA
-(CONT’D)
+QUEEN VICTORIA (CONT'D)
 It’s rather excellent.
 JOHN BROWN
 Ma’am?
@@ -2144,14 +2163,14 @@ QUEEN VICTORIA
 Of course it is the intention. That is
 what makes it interesting.
 She reads a line silently, then smiles again.
-QUEEN VICTORIA
-(CONT’D)
+QUEEN VICTORIA (CONT'D)
 Little use for false humility. Ha!
 (beat)
 Take a letter, Mr Brown. No. Make that
 a telegram.
-**第52场 S052 内景 BRITISH HMS TEAZER / OFFICE - DAY**
 
+<!-- SCENE: S053 -->
+INT. BRITISH HMS TEAZER / OFFICE - DAY
 SHEIKH ISA and SHEIKH AHMED stand before COLONEL ROSS, CAPTAIN
 STEWART, and DALY. A map of Bahrain’s waters lies open on the
 table. Isa points to a narrow passage beyond the reef.
@@ -2192,8 +2211,7 @@ afraid there is little -
 BRITISH ASSISTANT (O.S.)
 Sir. An urgent telegram.
 A BRITISH ASSISTANT at the door holds a sealed envelope.
-BRITISH ASSISTANT
-(CONT’D)
+BRITISH ASSISTANT (CONT'D)
 From Her Highness.
 The room stills. Ross extends a hand.
 ROSS
@@ -2214,22 +2232,22 @@ The Queen kindly thanks me for my
 letter.
 (MORE)
 
+SHEIKH ISA (CONT'D)
 She says her representatives are to
 give Bahrain every proper assistance.
 Sheikh Ahmed smiles.
 Isa looks from Ross to Stewart to Daly.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 I imagine that means you? She also
 says, if necessary, I am to remind you
 that you work for her.
 Ahmed unable to contain himself, laughs briefly. The British stand
 chastened. Isa returns the letter to his robe.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 Tomorrow night then?
-**第53场 S053 外景 FISHING VILLAGE - NIGHT**
 
+<!-- SCENE: S054 -->
+EXT. FISHING VILLAGE - NIGHT
 Moonlight over black water. A MERCHANT DHOW moves slowly against
 a mooring, heavy with false cargo.
 ISA watches with AHMED, from two small boats hidden beneath the
@@ -2245,15 +2263,13 @@ Take the cargo. Burn the rest.
 The dock erupts. Isa’s men leap from their hiding spots and
 attack. Steel flashes. Pirates fall. A torch is kicked into the
 sea before it can touch the sail.
-KHALIL
-(CONT’D)
+KHALIL (CONT'D)
 Back! To the boats!
 The pirates break for their craft.
 SHEIKH ISA
 He’s running!
 Isa and his men give chase in their boats - but the pirates’
 craft are too fast.
-SHEIKH ISA (CONT’D)
 
 Across the water, Isa sees Khalil. For one charged moment, they
 face each other. Then Khalil smiles, raises a pistol. BLAM!
@@ -2264,8 +2280,6 @@ Khalil looks back at Isa with triumph.
 Then — A CANNON FLASH splits the night. The sea beside Khalil’s
 skiff erupts. Out of the darkness looms a BRITISH WARSHIP.
 CAPTAIN STEWART stands on deck.
-**第54场 S054 外景 BRITISH WARSHIP - DECK**
-
 CAPTAIN STEWART
 Fire across the bow! Drive him back!
 Another cannon blast. Too close. The shot throws up a wall of
@@ -2284,8 +2298,7 @@ Hold fire! He is turning back!
 But Khalil is not turning back. He is slipping past them. A
 British boat drops too late, splashing clumsily into the water.
 Sailors fumble with oars in the dark.
-CAPTAIN STEWART
-(CONT’D)
+CAPTAIN STEWART (CONT'D)
 Cut him off!
 Too late. Khalil’s skiff shoots through the open channel toward
 his waiting ship beyond the reef.
@@ -2293,9 +2306,9 @@ Isa’s men try to follow, but the churn from the cannon fire and
 the British boats has broken their line.
 Ahmed’s boat surges forward — then another cannon blast lands
 close enough to force them back.
-
 SHEIKH AHMED
 They will kill our own men!
+
 Isa turns toward the British warship, fury controlled only by
 discipline.
 On the far water, Khalil reaches his ship. Ropes drop. Hands
@@ -2309,8 +2322,9 @@ SHEIKH AHMED
 The British have cost us the Butcher.
 He coughs once. Then again. The cough catches deep in his chest.
 Isa watches the black water where Khalil vanished.
-**第54A场 S054A 内景 BRITISH HMS TEAZER / OFFICE - DAY**
 
+<!-- SCENE: S055 -->
+INT. BRITISH HMS TEAZER / OFFICE - DAY
 ROSS sits behind his desk. DALY stands to the side, watchful.
 Ross wears the patient expression of an official withstanding
 complaint. SHEIKH ISA and SHEIKH AHMED stand before them.
@@ -2356,14 +2370,14 @@ SHEIKH ISA
 Her Majesty should be told what
 those words become on our coast.
 Ross and Daly hold their silence.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 Fear asks for protection. Trade
 accepts control. A frightened
 country is easier to manage.
 Isa heads for the door without another word. Ahmed follows.
-**第55场 S055 外景 MANAMA PORT – DAY**
 
+<!-- SCENE: S056 -->
+EXT. MANAMA PORT – DAY
 A British vessel prepares to depart. CAPTAIN STEWART stands on
 deck, stiff with humiliation. Reassigned. Removed.
 On the quay, Sheikh Isa and Sheikh Ahmed watch.
@@ -2374,8 +2388,7 @@ There is the failure they could
 afford to punish.
 The ship begins to pull from the quay.
 
-SHEIKH AHMED
-(CONT’D)
+SHEIKH AHMED (CONT'D)
 We should have captured Khalil
 ourselves.
 SHEIKH ISA
@@ -2412,8 +2425,8 @@ Khalil will return. It is only a
 matter of how long.
 Isa, troubled, watches Ahmed go.
 
-**第56场 S056 内景 ROYAL RESIDENCE / SHEIKH ISA'S PRAYER ROOM - DAY - 1932**
-
+<!-- SCENE: S057 -->
+INT. SHEIKH ISA'S PRAYER ROOM - DAY - 1932
 NOURA
 So you did not vanquish the pirates,
 Grandfather?
@@ -2440,20 +2453,21 @@ SHEIKH ISA
 As did I. Aisha was truly my blessing.
 His smile fades.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 Though that same day brought
 something I had prayed never to
 see.
-**第57场 S057 外景 ROYAL RESIDENCE / COURTYARD GARDEN - DAY.**
 
+<!-- SCENE: S058 -->
+EXT. ROYAL RESIDENCE / COURTYARD GARDEN - DAY.
 SUPER: MANAMA - 1888
 Ahmed (now 40s) tends to his Frangipani tree - still without
 bloom. He looks unwell. Slow, congested breathing, pale skin.
 He goes to lift the water-tin, it slips from his hand and falls
 to the ground. Water absorbs into the thirsty soil.
 
-**第58场 S058 内景 ROYAL RESIDENCE / LIBRARY - CONTINUOUS**
-
+<!-- SCENE: S059 -->
+INT. ROYAL RESIDENCE / LIBRARY - CONTINUOUS
 SHEIKHA HAYA (Late 30s) sits with AISHA (Late 20s) composed,
 intelligent, and unmistakably accustomed to rooms of authority.
 Books, account papers, and children’s teaching materials rest on a
@@ -2471,8 +2485,7 @@ Isa looks at Aisha with recognition.
 SHEIKH ISA
 I know who she is.
 Aisha meets this with quiet composure.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 A woman of royal blood does not
 usually present herself for such work.
 AISHA
@@ -2530,8 +2543,7 @@ AISHA
 I was fortunate in my upbringing.
 Books were not treated as decoration.
 A glance to the materials on the table.
-AISHA
-(CONT’D)
+AISHA (CONT'D)
 I was taught accounts, letters,
 poetry, law, and the management of a
 household large enough to resemble a
@@ -2554,8 +2566,7 @@ Their habits. Their laws. What they
 call order. What they call progress.
 What they call protection.
 She lets that sit.
-AISHA
-(CONT’D)
+AISHA (CONT'D)
 If Bahrain is to deal with such men,
 we must understand the shape of their
 thinking before it is used against us.
@@ -2574,8 +2585,8 @@ Haya.
 Haya gives the smallest nod. She smiles.
 Suddenly yelling from the garden -
 
-**第59场 S059 外景 ROYAL RESIDENCE / COURTYARD GARDEN - CONTINUOUS**
-
+<!-- SCENE: S060 -->
+EXT. ROYAL RESIDENCE / COURTYARD GARDEN - CONTINUOUS
 SHEIKH ISA and SHEIKHA HAYA hurry out into the garden. AISHA
 follows, but holds back in the doorway, sensing this is not her
 place to enter.
@@ -2587,8 +2598,9 @@ She falls into Haya’s arms, sobbing.
 Isa freezes for the smallest instant. Then he goes to Ahmed. The
 servants look up as Isa kneels beside his brother.
 Isa knows. It is already too late.
-**第60场 S060 内景 ROYAL RESIDENCE / SHEIKH AHMED’S ROOM - DAY**
 
+<!-- SCENE: S061 -->
+INT. ROYAL RESIDENCE / SHEIKH AHMED’S ROOM - DAY
 Sheikh Ahmed lies on his bed, gaunt and still. Sheikh Isa kneels
 by the bed. Salem Bin Hamad stands nearby, shaken. He gives Isa a
 look of deep condolence, then quietly withdraws.
@@ -2606,19 +2618,19 @@ MAJEED
 I am sorry, Your Honour.
 Isa does not open his eyes.
 MAJEED
-(CONT’D)
+(CONT'D)
 Typhoid. Without medicine, nothing
 could be done.
 Isa’s hand tightens around the prayer beads.
 
-MAJEED
-(CONT’D)
+MAJEED (CONT'D)
 The British promised... The last
 shipment did not come.
 The sorrow in Isa’s face hardens into something else. Rage.
 Abruptly he stands and pushes past Majeed -
-**第61场 S061 外景 TREE OF LIFE - SUNSET**
 
+<!-- SCENE: S062 -->
+EXT. DESERT / TREE OF LIFE - SUNSET
 A thunder of hooves, as Isa drives his horse toward the TREE OF
 LIFE ahead of him. Like he’s charging an enemy.
 He pulls up violently. The horse rears. Isa throws himself from
@@ -2627,43 +2639,39 @@ Grief breaks through him. His fists in the sand.
 SHEIKH ISA
 Father... You left me a sword.
 He draws his father’s sword. Rises unsteadily.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 But Ahmed... Ahmed was my shield. You
 told me to look to the future.
 He swings the sword at the empty air. Again. Harder.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 I look, and it is blood.
 Another savage cut through the wind.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 I build, and death comes.
 He slashes at nothing. At the British. At Khalil. At typhoid. At
 himself.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 I hold one thing together and another
 is torn from me!
 He turns on the space around him, striking again and again until
 the sword is no longer a weapon but an argument with the world.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 You brought me here as a boy. You
 spoke of unseen water. Of dreams
 beneath the sand.
 He steps closer to the trunk, trembling with rage.
 
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 What do you want from me?
 He strikes the air beside the Tree, stopping short of the living
 wood. Even in fury, he cannot wound it.
 He drops to one knee, breath ragged.
 The sun dies behind the horizon. As Isa remains beneath the Tree,
 alone with the weight of all he has inherited.
-**第62场 S062 外景 ROYAL RESIDENCE / COURTYARD - EVENING / DREAM**
 
+<!-- SCENE: S063 -->
+EXT. ROYAL RESIDENCE / COURTYARD - EVENING / DREAM
 ISA watches AHMED tend his frangipani tree. Both young men again.
 The tree in full blossom. White flowers stir in the evening wind.
 Ahmed turns to Isa and smiles. Then his smile fades. Beyond the
@@ -2682,20 +2690,20 @@ robes fall empty to the ground. Only the mask remains.
 Isa stands over it, chest heaving. Slowly, he kneels and lifts the
 mask. Behind it: nothing. No face. No man.
 Only darkness.
-**第63场 S063 内景 ROYAL RESIDENCE / BED CHAMBER - FIRST LIGHT**
 
+<!-- SCENE: S064 -->
+INT. ROYAL RESIDENCE / ISA’S BED CHAMBER - FIRST LIGHT
 Isa wakes violently. He sits up, breathing hard. For a moment, he
 does not know where he is.
 
-**第64场 S064 外景 ROYAL RESIDENCE / COURTYARD GARDEN - CONTINUOUS**
-
+<!-- SCENE: S065 -->
+EXT. ROYAL RESIDENCE / COURTYARD GARDEN - CONTINUOUS
 The palace garden lies still in the faint glow of dawn. ISA alone,
 shaken from sleep, trying to steady himself.
 SHEIKHA HAYA (O.S.)
 Isa.
 HAYA in a doorway, wrapped against the chill.
-SHEIKHA HAYA
-(CONT’D)
+SHEIKHA HAYA (CONT'D)
 I heard you calling out in your sleep.
 Haya crosses the garden and stands beside him.
 SHEIKH ISA
@@ -2728,18 +2736,19 @@ he was patient, or because he deserved
 to see it.
 (MORE)
 
+SHEIKHA HAYA (CONT'D)
 (a beat)
 It blooms now because life keeps its
 own time.
 Isa closes his eyes, breathing slowly.
-SHEIKHA HAYA
-(CONT’D)
+SHEIKHA HAYA (CONT'D)
 Ride slower, my Sheikh. You cannot
 catch life by chasing it harder.
 A faint echo of another time. He looks back at the frangipani
 blossoms. Beautiful. Alive.
-**第65场 S065 外景 ROYAL RESIDENCE / RAMPARTS - DAWN**
 
+<!-- SCENE: S066 -->
+EXT. ROYAL RESIDENCE / RAMPARTS - DAWN
 A sweeping view across Manama and the harbour. The coast we once
 saw through young Isa’s eyes — now grown, prosperous, crowded with
 dhows, warehouses, lamps burning to life.
@@ -2749,8 +2758,7 @@ SHEIKH ISA (45), older now but still commanding, approaches.
 SHEIKH ISA (O.S.)
 Salman.
 Salman turns.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 A last look before Mecca?
 SHEIKH SALMAN
 So I remember it properly. All that
@@ -2760,15 +2768,13 @@ SHEIKH ISA
 I have played my part. That is all.
 As you will.
 Isa looks back across Bahrain.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 Just yesterday you were a child in my
 arms. Now you go to the House of God.
 (a beat)
 My heart will yearn for your return.
 As too will your mother’s and
 brother’s.
-SHEIKHA HAYA (CONT’D)
 
 SHEIKH SALMAN
 You will all be in my prayers.
@@ -2777,13 +2783,13 @@ May your first Hajj and prayers be
 accepted.
 Salman bows his head.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 After your pilgrimage, we begin
 preparing. For the day Bahrain
 looks to you.
 He places a hand on Salman’s shoulder.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 You listen before you speak. Men do
 not feel diminished in your presence.
 That is rarer than courage.
@@ -2792,8 +2798,9 @@ SHEIKH SALMAN
 May I prove worthy of what you built.
 SHEIKH ISA
 That is all a father can ask.
-**第66场 S066 外景 PORT MANAMA - DAY**
 
+<!-- SCENE: S067 -->
+EXT. PORT MANAMA - DAY
 A STEAMER pulls in.
 Passengers disembark into the heat and noise of the port. Among
 them is PRATAP (80s) weathered and dignified.
@@ -2811,7 +2818,7 @@ not to travel without it.
 Isa is intrigued.
 
 PRATAP
-(CONT’D)
+(CONT'D)
 In Bombay, I met a Frenchman whose
 family appreciates luxury better than
 most.
@@ -2824,7 +2831,7 @@ more profitable. He may open doors the
 British prefer to keep locked.
 Isa smiles faintly.
 PRATAP
-(CONT’D)
+(CONT'D)
 I hoped to introduce him to you.
 SHEIKH ISA
 Then let him come. And let him prove
@@ -2834,7 +2841,7 @@ I was almost certain you would say
 that, Your Honour.
 A commotion at the top of the gangplank.
 PRATAP
-(CONT’D)
+(CONT'D)
 Ah. Here he comes now.
 JACQUES CARTIER, 28, descends the gangplank in pale European
 linen, gloves, polished shoes, and absolute confidence.
@@ -2874,8 +2881,9 @@ wish to deal in pearls, you should
 first meet the sea that makes them.
 CARTIER
 I shall be delighted, Your Honour.
-**第67场 S067 外景 OFF THE BAHRAINI COAST - DAY**
 
+<!-- SCENE: S068 -->
+EXT. OFF THE BAHRAINI COAST - DAY
 A dhow rocks gently on clear blue water. Pearl banks shimmer
 beneath the surface.
 On deck: ISA, HAMAD, MAJEED, PRATAP, and CARTIER with his team.
@@ -2899,8 +2907,7 @@ Sheikh Isa considers this.
 SHEIKH ISA
 Forever is a dangerous promise.
 Cartier’s team fastens the last buckles.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 And all this is necessary?
 CARTIER
 If I am to breathe underwater, yes.
@@ -2931,8 +2938,9 @@ Fish cutting through shafts of sun.
 The world beneath Bahrain. Quiet. Vast. Alive.
 A diver lifts a shell and places it in Cartier’s gloved hand.
 Cartier stares through the glass, awestruck.
-**第68场 S068 外景 DHOW - DAY - MOMENTS LATER**
 
+<!-- SCENE: S069 -->
+EXT. DHOW - MOMENTS LATER
 Cartier is hauled back aboard. The helmet is removed. He gasps in
 the open air, face flushed, transformed.
 CARTIER
@@ -2940,8 +2948,7 @@ Mon Dieu.
 SHEIKH ISA
 You came to see pearls.
 The diver places a shell in Isa’s hand. Isa gives it to Cartier.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 Now you have seen where they begin.
 Cartier looks at the shell as if it were sacred.
 PRATAP
@@ -2951,8 +2958,9 @@ Cartier laughs, still catching his breath.
 CARTIER
 My friend, I have seen the mind of
 God.
-**第69场 S069 外景 BAB AL-BAHRAIN / HARBOUR ADJACENT SOUK - MANAMA - DAY**
 
+<!-- SCENE: S070 -->
+EXT. BAB AL-BAHRAIN / HARBOUR ADJACENT SOUK - MANAMA - DAY
 A thriving marketplace. Spice, silk, copper, pearls. Traders from
 across the Gulf and beyond. Boys carry tea through the crowd. The
 call to prayer drifts above commerce without interrupting it.
@@ -2965,9 +2973,11 @@ Divers, merchants, shipbuilders,
 blacksmiths.
 (MORE)
 
+SHEIKH ISA (CONT'D)
 Different sects, faiths, languages,
 blood — all passing through the same
 market.
+77.
 CARTIER
 You have made a place where many
 worlds can stand beside each other
@@ -2976,8 +2986,7 @@ Bicycles weave through the crowds. Traders call out. Scales CLANG
 as coins are weighed. Fruit, nuts, spices, cloth, pearls.
 Cartier pauses often, delighted by details.
 A vendor hands coloured ice treats to children.
-CARTIER
-(CONT’D)
+CARTIER (CONT'D)
 Popsicles! Even here.
 SAAD AL HAZZANI
 Refrigeration, Monsieur Cartier.
@@ -2996,15 +3005,13 @@ Hazzani spots a spare bicycle leaning nearby.
 SAAD AL HAZZANI
 And this - a recent import.
 He climbs onto it with great confidence and very little skill.
-SAAD AL HAZZANI
-(CONT’D)
+SAAD AL HAZZANI (CONT'D)
 I am yet to master it.
 He pedals forward, wobbling badly through the crowd. For one
 alarming moment he nearly topples into a basket of dates, then
 catches himself at the last second.
 PRATAP
 I could not have said it better.
-SHEIKH ISA (CONT’D)
 
 The group laughs as they continue through the souk. Cartier buys
 tobacco for his pipe.
@@ -3012,8 +3019,9 @@ SAAD AL HAZZANI
 As you see, business here is good.
 CARTIER
 Yes. I see. Very good indeed.
-**第70场 S070 内景 THUKAIR’S HOME - DINING AREA - NIGHT**
 
+<!-- SCENE: S071 -->
+INT. THUKAIR’S HOME - DINING AREA - NIGHT
 A magnificent meal. Bowls of leben. A great platter of QUZI —
 whole lamb over rice, roasted chickens arranged around it.
 Salukis lounge at the doorway, dignified, waiting for scraps.
@@ -3027,7 +3035,7 @@ to keep an old man feeling young.
 But Bahrain... Bahrain is different.
 He looks to Cartier.
 PRATAP
-(CONT’D)
+(CONT'D)
 Its true treasures are its people.
 That is what makes these pearls so
 special.
@@ -3037,19 +3045,20 @@ They are exceptional. Pure. Lustrous.
 Unlike anything I have seen.
 He takes several pearls from the bowl into his palm.
 CARTIER
-(CONT’D)
+(CONT'D)
 I should like to show the world
 that pearls from these waters are
-beyond compare. And the jewellery.
-The jewellery must remember the
-life it came from.
+beyond compare. And the jewelry.
+The jewelry must remember the life
+it came from.
 He lifts his glass of water, studying the light through it.
 CARTIER
-(CONT’D)
+(CONT'D)
 This water, sweet from your wells. The
 sea a man must cross to reach you.
 (MORE)
 
+CARTIER (CONT'D)
 Imagine a tiara like that — pearls
 falling as though from a fountain. A
 jewel that remembers the ocean.
@@ -3074,7 +3083,7 @@ patience. Symmetry born from
 struggle.
 Cartier leans forward, lowers his voice.
 CARTIER
-(CONT’D)
+(CONT'D)
 Tell me. I’ve heard talk across the
 Gulf of a pearl unlike any other. Born
 in darkness. Perfect as night.
@@ -3082,7 +3091,7 @@ SHEIKH ISA
 The Black Pearl.
 All eyes turn to Isa.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 When I was a boy, I searched for it.
 Sadly, it does not exist.
 CARTIER
@@ -3090,7 +3099,6 @@ No?
 SHEIKH ISA
 It is but a legend.
 Cartier studies him.
-CARTIER (CONT’D)
 
 CARTIER
 A legend? Do you truly believe that?
@@ -3125,7 +3133,7 @@ with Bahrain very soon.
 All acknowledge the toast. The deal has been done.
 Cartier gestures to his PHOTOGRAPHER.
 CARTIER
-(CONT’D)
+(CONT'D)
 Gentlemen, a photograph?
 The men gather and compose themselves. Cartier adjusts his
 cuffs. Pratap sits proudly among them. Hamad stands beside Isa.
@@ -3134,8 +3142,9 @@ A FLASH of magnesium light fills the room.
 MAJEED appears, crosses quietly to Isa and whispers in his ear.
 Isa’s expression darkens. As the others continue smiling for the
 photograph.
-**第71场 S071 内景 BRITISH HMS TEAZER / OFFICE - DAY**
 
+<!-- SCENE: S072 -->
+INT. BRITISH HMS TEAZER / OFFICE - DAY
 COLONEL ROSS stands behind his desk, incredulous. DALY sits
 nearby, composed, almost amused. SHEIKH ISA faces them,
 controlled. HAMAD stands beside him, silent and watchful.
@@ -3233,11 +3242,12 @@ The ship?
 DALY
 Enough rope.
 Ross looks toward the closed door.
-**第72场 S072 外景 SEA OFF BAHRAIN - SUNRISE**
 
+<!-- SCENE: S073 -->
+EXT. SEA OFF BAHRAIN - SUNRISE
 A low red sun burns across the water.
-KHALIL’S STOLEN BRITISH WARSHIP rides heavy in the swell, patched
-and scarred, its cannon mouths black with old fire.
+KHALIL’S PIRATE WARSHIP rides heavy in the swell, patched and
+scarred, its cannon mouths black with old fire.
 A PIRATE, high in the rigging, spots something.
 PIRATE
 Khalil! A ship. Eastbound.
@@ -3245,8 +3255,7 @@ Khalil takes the spyglass.
 Through it: a MERCHANT DHOW, slow and fat in the water. Cargo
 stacked high. Too easy.
 
-PIRATE
-(CONT’D)
+PIRATE (CONT'D)
 Pearls, maybe.
 Khalil smiles.
 KHALIL
@@ -3265,24 +3274,26 @@ Isa stares at the oncoming pirate ship. He raises his sword.
 SHEIKH ISA
 We must stop Khalil. With as few
 lives lost as possible.
-**第73场 S073 外景 KHALIL’S WARSHIP / DECK - SAME**
 
+<!-- SCENE: S074 -->
+EXT. KHALIL’S WARSHIP / DECK - SAME
 Khalil lowers the spyglass. The smile drains from his face.
 KHALIL
 Turn us.
 Too late. The warship comes straight at them.
 A full-frontal assault.
 The Bahraini fighters roar.
-**第74场 S074 外景 BRITISH WARSHIP / BOW - CONTINUOUS**
 
+<!-- SCENE: S075 -->
+EXT. BRITISH WARSHIP / BOW - CONTINUOUS
 SHEIKH ISA
 Brace!
 The two ships SLAM together with a violent crack of timber. Hooks
 fly. Ropes bite. Planks crash across the gap.
 Isa is the first across.
 
-**第75场 S075 外景 KHALIL’S WARSHIP / DECK - CONTINUOUS**
-
+<!-- SCENE: S076 -->
+EXT. KHALIL’S WARSHIP / DECK - CONTINUOUS
 Isa knocks down the first pirate before he can lift his blade.
 Hamad and the Bahraini fighters pour in behind him. The deck
 explodes into brutal combat.
@@ -3346,8 +3357,9 @@ Isa looks from Khalil’s body to Majeed. He lowers the pistol.
 MAJEED
 Forgive me, Your Honour. There was no
 choice.
-**第76场 S076 内景 ROYAL RESIDENCE / LIBRARY - DAY**
 
+<!-- SCENE: S077 -->
+INT. ROYAL RESIDENCE / LIBRARY - DAY
 HAYA kneels before an arched window overlooking the sea,
 shattered. ZALAIKHA kneels beside her, trying to comfort her.
 A NOTE, read and crushed in Haya’s fist.
@@ -3361,8 +3373,7 @@ Her fingers tighten around the note.
 SHEIKHA HAYA
 You were not here.
 Isa’s blood runs cold. He shakes his head, refusing it.
-SHEIKHA HAYA
-(CONT’D)
+SHEIKHA HAYA (CONT'D)
 He was returning from Hajj. His
 pilgrimage was complete.
 SHEIKH ISA
@@ -3376,8 +3387,7 @@ She holds out the note but doesn’t stand.
 SHEIKHA HAYA
 Here.
 He steps to her. She thrusts the open note toward him.
-SHEIKHA HAYA
-(CONT’D)
+SHEIKHA HAYA (CONT'D)
 Read it. Believe.
 Isa takes it. He looks at the page just long enough to know.
 SHEIKH ISA
@@ -3387,8 +3397,7 @@ SHEIKHA HAYA
 Your son is dead. I had to learn it
 without you.
 He slumps to his knees beside her.
-SHEIKHA HAYA
-(CONT’D)
+SHEIKHA HAYA (CONT'D)
 We are losing those closest to us. And
 I grieve alone. While you...
 (beat)
@@ -3397,14 +3406,15 @@ you.
 
 Isa turns away, wounded by the truth of it.
 SHEIKHA HAYA
-(CONT’D)
+(CONT'D)
 I can do nothing more for you, Isa.
 That strikes deeper than anger would.
 Haya stands, walks past him - leaves without an embrace. Without
 another word.
 The note trembles in Isa’s hand, then drops to the floor.
-**第77场 S077 外景 MANAMA STREETS / VARIOUS - EVENING**
 
+<!-- SCENE: S078 -->
+EXT. STREETS / VARIOUS MANAMA - EVENING
 The funeral procession for Sheikh Salman.
 WOMEN with lanterns. Candles along the streets leading to the
 coast. Sailors and divers sit at the edge of their dhows,
@@ -3418,8 +3428,9 @@ An inconsolable Haya leans on Zalaikha and other women from
 every community around her as they comfort her.
 Isa watches from a distance. Alone. Stoic, solemn and with an
 ocean of grief reflected in his eyes.
-**第78场 S078 外景 ROYAL RESIDENCE / RAMPARTS - NIGHT**
 
+<!-- SCENE: S079 -->
+EXT. ROYAL RESIDENCE / RAMPARTS - NIGHT
 Isa alone, looks out over Manama, silent in the dark.
 AISHA (O.S.)
 I have been looking for you.
@@ -3447,7 +3458,7 @@ And morning will come whether we are
 ready for it or not.
 Isa looks back over Manama. This time, not only in sorrow.
 AISHA
-(CONT’D)
+(CONT'D)
 We have waited long enough for the
 British. We need a hospital. Before
 disease takes another life.
@@ -3457,8 +3468,9 @@ willing to come to Bahrain.
 Isa looks at Aisha with immense gratitude in his eyes.
 SHEIKH ISA (V.O.)
 Aisha could see the true path.
-**第79场 S079 内景 ROYAL RESIDENCE / LIBRARY - DAY**
 
+<!-- SCENE: S080 -->
+INT. ROYAL RESIDENCE / LIBRARY - DAY
 Sheikh Isa watches Aisha talking with a husband who is resistant
 to letting his daughter be educated.
 SHEIKH ISA (V.O.)
@@ -3472,15 +3484,16 @@ daughter’s right to an education.
 The Husband hangs his head.
 
 AISHA
-(CONT’D)
+(CONT'D)
 Deny your children, male or female
 the right to learn and you deny
 them of their future - and yours.
 It’s clear Isa is impressed by her. Something else is growing.
 SHEIKH ISA (V.O.)
 Aisha entered my house as counsel.
-**第80场 S080 外景 ROYAL RESIDENCE / COURTYARD - DAY**
 
+<!-- SCENE: S081 -->
+EXT. ROYAL RESIDENCE / COURTYARD - DAY
 The courtyard is dressed for ceremony. Men of the ruling family,
 elders, witnesses, and attendants gathered in solemn expectation.
 SHEIKH ISA (V.O.)
@@ -3516,8 +3529,9 @@ SHEIKH ISA (V.O.)
 And Bahrain, like any house asked
 to endure, would need both memory
 and mind.
-**第81场 S081 内景 ROYAL RESIDENCE / STUDY – DAY**
 
+<!-- SCENE: S082 -->
+INT. ROYAL RESIDENCE / STUDY – DAY
 A map of Bahrain lies open on Isa’s desk.
 HOLMES, 50s, broad-shouldered - a man who has argued with the
 earth all his life, stands before SHEIKH ISA and SHEIKHA AISHA.
@@ -3531,7 +3545,7 @@ reliable water supply for Bahrain.
 As I did for the Saudis?
 Holmes looks to the map, already thinking as an engineer.
 HOLMES
-(CONT’D)
+(CONT'D)
 It is difficult work, but not
 impossible.
 Aisha glances to Isa.
@@ -3572,7 +3586,7 @@ water beneath salt. Why should the
 land be less generous than the sea?
 Isa turns back.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 We have lived by pearl and tide. But
 tides change. A country must listen
 for what comes next. I believe Bahrain
@@ -3599,20 +3613,23 @@ Hmm. And every gamble needs someone
 foolish enough to take it on.
 Holmes almost smiles.
 HOLMES
-(CONT’D)
+(CONT'D)
 I suppose that is where I come in too?
 Aisha has the smallest smile.
 Holmes looks again at the map. The old hunger to test the
 impossible is already awake in him.
-**第82场 S082 内景 BUCKINGHAM PALACE / STUDY - DAY**
 
+<!-- SCENE: S083 -->
+INT. BUCKINGHAM PALACE / STUDY - DAY
 VICTORIA, older now, sits in a wheelchair by the fire, wrapped
 in a blanket against the cold. BROWN stands nearby with a
 dossier, reading from a telegram.
 BROWN
-“...I extend my profound gratitude
+“
+...I extend my profound gratitude
 to Your Majesty for the removal of
-Colonel Ross from Bahrain.”
+Colonel Ross from Bahrain.
+”
 QUEEN VICTORIA
 Ross has been removed?
 BROWN
@@ -3622,14 +3639,15 @@ QUEEN VICTORIA
 I see. There must’ve been good
 reason then. Go on.
 BROWN
-(continues reading)
+(contines reading)
 “His departure has already eased
 the path between our two great
 countries, and I trust his
 successor will understand that
 friendship is best served when it
 does not walk in only one
-direction.”
+direction.
+”
 QUEEN VICTORIA
 The Sheikh has not lost his touch.
 BROWN
@@ -3637,15 +3655,18 @@ No, Ma’am.
 (he reads on)
 (MORE)
 
+BROWN (CONT'D)
 “On another matter, as a hospital
 is now being constructed for the
 benefit of my people, I would be
 grateful if Your Majesty might lend
 assistance to our American friends,
 who have shown admirable
-willingness in the matter.”
+willingness in the matter.
+”
 The Queen frowns slightly.
 QUEEN VICTORIA
+94.
 Americans?
 BROWN
 Yes, Ma’am.
@@ -3668,7 +3689,8 @@ BROWN
 thanks for the loan of the warship
 last month. It proved most useful
 in removing the pirate threat from
-our waters.”
+our waters.
+”
 QUEEN VICTORIA
 The loan of the what?
 BROWN
@@ -3677,7 +3699,6 @@ The warship, Ma’am.
 QUEEN VICTORIA
 I do not know anything about a
 warship.
-BROWN (CONT’D)
 
 BROWN
 No, Ma’am.
@@ -3707,8 +3728,9 @@ goodness sake, send some hospital
 builders. Before Sheikh Isa decides to
 rebuild the entire Empire by himself.
 Brown bows and heads for the door.
-**第83场 S083 外景 PORT MANAMA - DAY**
 
+<!-- SCENE: S084 -->
+EXT. PORT MANAMA - DAY
 A SERIES OF TIME CUTS:
 The port expands before us. More warehouses. More cranes. More
 cargo. More noise. Steam. Shouting. Donkeys. Sailors. Pearl
@@ -3799,8 +3821,9 @@ Bahrain.
 As the men make their way towards the town.
 
 SUPER: PORT MANAMA - 1913
-**第84场 S084 内景 THE BRITISH AGENCY / DINING ROOM - DAY**
 
+<!-- SCENE: S085 -->
+INT. BRITISH RESIDENCY / DINING ROOM - DAY
 The men at a dining table have lunch. LORIMER sits opposite ISA &
 HAMAD. DALY is by Lorimer’s side.
 LORIMER
@@ -3869,7 +3892,8 @@ LORIMER
 (quoting)
 “A man must ask East and West to
 meet without forcing either to
-kneel.”
+kneel.
+”
 SHEIKH ISA
 Rihani.
 LORIMER
@@ -3886,8 +3910,9 @@ Isa studies him. Something like trust begins.
 SHEIKH ISA
 Then allow me to show you how we are
 starting to build it.
-**第85场 S085 外景 VICTORIA MEMORIAL HOSPITAL - DAY**
 
+<!-- SCENE: S086 -->
+EXT. VICTORIA MEMORIAL HOSPITAL - DAY
 The newly opened hospital stands in the heat. Nurses attend to
 PATIENTS beneath the shaded entrance.
 SHEIKH ISA (V.O.)
@@ -3901,14 +3926,14 @@ Mr. Lorimer, may I introduce Dr. Thoms
 and Dr. Wells. Reverend Samuel Zwemer,
 and Mrs. Zwemer.
 Lorimer shakes their hands.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 Mr. Lorimer is the new Political
 Resident.
 LORIMER
 It is a great pleasure.
-**第86场 S086 内景 VICTORIA MEMORIAL HOSPITAL - LATER**
 
+<!-- SCENE: S087 -->
+INT. VICTORIA MEMORIAL HOSPITAL - LATER
 Isa & Lorimer walk the ward. Nurses move between patients resting
 in clean beds. A child is examined nearby.
 Across the ward, Daly holds court with the Americans, laughing
@@ -3921,8 +3946,7 @@ SHEIKH ISA
 He doesn’t. Nor my willingness to make
 alliance so... public.
 They glance across to Daly, all smiles and cordiality.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 I respect the American’s “can-do”
 spirit. I think that’s what they call
 it. Even in a British hospital.
@@ -3931,8 +3955,9 @@ He seems very cordial with them.
 SHEIKH ISA
 Raindrops, Mr. Lorimer.
 Lorimer smiles at their private joke.
-**第87场 S087 外景/内景 KHADIJA AL KOBRA SCHOOL / CONSTRUCTION SITE - DAY**
 
+<!-- SCENE: S088 -->
+EXT./INT. KHADIJA AL KOBRA SCHOOL / CONSTRUCTION SITE - DAY
 A school under construction. Fresh painted walls. Builders work on
 the interior. Isa enters with Hamad, Lorimer, and Daly.
 SHEIKH ISA
@@ -3963,8 +3988,9 @@ wishes to endure.
 SHEIKH ISA
 And of course we shall require a
 reliable fresh water supply.
-**第88场 S088 外景 EXPLORATORY WELL - DESERT - DAY**
 
+<!-- SCENE: S089 -->
+EXT. EXPLORATORY WELL - DESERT - DAY
 DRILLING RIGS stand against the horizon — timber and metal
 derricks clank in the heat. Workers haul pipes. Camels wait beside
 stacked equipment.
@@ -4012,8 +4038,9 @@ Isa smiles wryly.
 SHEIKH ISA
 Fear is permitted, Mr Holmes.
 Surrender is not.
-**第89场 S089 内景 THE BRITISH AGENCY /LORIMER’S OFFICE – DAY**
 
+<!-- SCENE: S090 -->
+INT. THE POLITICAL AGENCY /LORIMER’S OFFICE – DAY
 - MONTAGE BEGINS -
 LORIMER pores over accounts, ledgers, concession papers,
 shipping records. Columns of figures. Marginal notes. Names
@@ -4023,8 +4050,9 @@ Mr Lorimer wasted little time
 proving his friendship to Bahrain.
 Lorimer stops at one clause. Reads it again. His pencil marks
 the page.
-**第90场 S090 内景 THE BRITISH AGENCY/ DALY’S OFFICE – EVENING**
 
+<!-- SCENE: S091 -->
+INT. THE POLITICAL AGENCY/ DALY’S OFFICE – EVENING
 The King’s portrait watches over DALY, seated behind his desk,
 comfortable in his authority.
 Lorimer stands before him with a file of documents.
@@ -4033,12 +4061,12 @@ I’ve been reviewing the Eastern and
 General concession.
 Lorimer places the file on Daly’s desk.
 
-LORIMER
-(CONT’D)
+LORIMER (CONT'D)
 I have some questions.
 Daly’s smile remains. Only his eyes change.
-**第91场 S091 内景 THE BRITISH AGENCY / BOARDROOM – DAY**
 
+<!-- SCENE: S092 -->
+INT. THE POLITICAL AGENCY / BOARDROOM – DAY
 Lorimer argues with BRITISH ACCOUNTANTS over stacked ledgers.
 One accountant points to a column. Another shakes his head.
 Lorimer does not yield.
@@ -4050,8 +4078,9 @@ agreement could move more wealth
 than a fleet of ships.
 Lorimer copies figures from one ledger into his notebook. He
 compares signatures. Something does not balance.
-**第92场 S092 内景 THE BRITISH AGENCY / DALY’S OFFICE – DAY**
 
+<!-- SCENE: S093 -->
+INT. THE POLITICAL AGENCY / DALY’S OFFICE – DAY
 Another day. Another file.
 LORIMER
 The terms state that if fresh water
@@ -4066,8 +4095,9 @@ DALY
 Bahrain requires water. Eastern and
 General require incentive. Such
 arrangements are rarely poetic.
-**第93场 S093 外景 OIL FIELD – DAY**
 
+<!-- SCENE: S094 -->
+EXT. OIL FIELD – DAY
 Heat shimmers over the rigs. Lorimer follows HOLMES through the
 drilling site, notebook in hand. Holmes is too busy to stop.
 LORIMER
@@ -4080,8 +4110,9 @@ And how much is the penalty?
 Holmes stops just long enough to look at him.
 HOLMES
 Penalty? What penalty?
-**第94场 S094 内景 THE BRITISH AGENCY / LORIMER’S OFFICE – NIGHT**
 
+<!-- SCENE: S095 -->
+INT. THE POLITICAL AGENCY / LORIMER’S OFFICE – NIGHT
 A lamp burns low. Lorimer lays several documents side by side.
 The concession. The water clause. Company correspondence. A
 schedule of payments.
@@ -4091,8 +4122,11 @@ into an entire year. Yet he kept
 returning to the same troubling
 question.
 He draws a line from one clause to another. Then stops at a
-reference typed in passing: “AS PER SIDE LETTER.”
-INT. THE BRITISH AGENCY / DALY’S OFFICE – DAY
+reference typed in passing: “AS PER SIDE LETTER.
+”
+
+<!-- SCENE: S096 -->
+INT. THE POLITICAL AGENCY / DALY’S OFFICE – DAY
 Lorimer stands before Daly again.
 LORIMER
 What if Holmes finds oil?
@@ -4117,8 +4151,9 @@ Thank you for now, Major.
 Lorimer gathers the documents. He turns for the door.
 Daly remains behind his desk, staring at the closing door.
 For the first time, fear in his eyes.
-**第95场 S095 外景 LORIMER RESIDENCE - NIGHT**
 
+<!-- SCENE: S097 -->
+EXT. LORIMER RESIDENCE - NIGHT
 Lorimer’s house stands in shadow. Shutters half-open. Lamps
 guttering in the humid air.
 ISA & HAMAD arrive on horseback. They rein in hard.
@@ -4133,8 +4168,9 @@ OFFICER #1
 We notified the palace as soon as
 we found out, Your Honour.
 Isa pushes past the officers and enters. Hamad follows.
-**第96场 S096 内景 LORIMER RESIDENCE - STUDY - CONTINUOUS**
 
+<!-- SCENE: S098 -->
+INT. LORIMER RESIDENCE - STUDY - CONTINUOUS
 Ambulance attendants lift Lorimer’s body onto a stretcher,
 mercifully drawing a sheet over the bloodied head. A rifle lies on
 the floor near the window. Blood marks the wall behind the desk.
@@ -4159,8 +4195,9 @@ his weapon and it misfired.
 Isa looks now to the weapon on the floor.
 SHEIKH ISA
 Mr Lorimer was not a careless man.
-**第97场 S097 外景 LORIMER RESIDENCE - CONTINUOUS**
 
+<!-- SCENE: S099 -->
+EXT. LORIMER RESIDENCE - CONTINUOUS
 Isa and Hamad watch as Lorimer’s body is placed into the
 ambulance. It has started to rain.
 SHEIKH HAMAD
@@ -4170,8 +4207,9 @@ A crack of lighting. Thunder.
 SHEIKH ISA
 Come, Hamad. A storm is coming.
 More thunder rolls over Bahrain as father and son ride away.
-**第98场 S098 外景 TOOBLI BAY - DAWN**
 
+<!-- SCENE: S100 -->
+EXT. TOOBLI BAY - DAWN
 The fleet is far from shore. The wind has risen. Dark weather
 builds fast. A DHOW CAPTAIN looks to the horizon.
 DHOW CAPTAIN
@@ -4186,16 +4224,18 @@ Fear moves from face to face.
 
 SHEIKH ISA (V.O.)
 The storm to end all storms.
-**第99场 S099 外景 MANAMA STREETS - MORNING**
 
+<!-- SCENE: S101 -->
+EXT. MANAMA STREETS - MORNING
 The storm has made landfall. Isa rides through the rising chaos.
 SHEIKH ISA
 Take shelter! To high ground!
 Isa’s men move street by street, helping residents indoors.
 Doors slam. Shutters close. Stalls are abandoned. The wind builds
 with frightening speed. People run for shelter.
-**第100场 S100 内景/外景 ROYAL RESIDENCE / VARIOUS - CONTINUOUS**
 
+<!-- SCENE: S102 -->
+INT./EXT. ROYAL RESIDENCE / VARIOUS - CONTINUOUS
 SHEIKHA AISHA and the household staff batten doors and windows.
 CITIZENS plead for shelter at the palace entrance.
 SHEIKHA AISHA
@@ -4208,8 +4248,9 @@ HAYA on a balcony. Rain lashes her. She grips the stone wall,
 helpless before the scale of it. She looks out over the town -
 Below, Manama is being torn apart — roofs lifting, palms bending,
 people running through flooded lanes.
-**第101场 S101 外景 OPEN SEA / PEARL DIVING FLEET - EVENING**
 
+<!-- SCENE: S103 -->
+EXT. OPEN SEA / PEARL DIVING FLEET - EVENING
 Day has turned to night. Dhows pitches violently. Divers huddle on
 deck. The captain shouts, but the wind devours his words.
 Lightning tears open the sky. Massive waves threaten the dhows.
@@ -4217,12 +4258,14 @@ Men panic and scramble. Dhows rock and collide. Sails snap loose.
 Brave pearl divers stare terrified at the churning water. And are
 thrown overboard. Timbers split. Pearls spill into the angry sea.
 
-**第102场 S102 外景 MANAMA SHORE - NIGHT**
-
+<!-- SCENE: S104 -->
+EXT. MANAMA SHORE - NIGHT
 The storm arrives with full fury.
 Homes buckle. Palm trees tear loose. People scramble from
 collapsing walls and flying debris.
-EXT. MANAMA STREETS - CONTINUOUS
+
+<!-- SCENE: S105 -->
+EXT. STREETS / MANAMA - CONTINUOUS
 Wind screams through flooded streets. Rain lashes sideways.
 Branches, roof tiles, baskets, doors — everything not fixed
 becomes a weapon.
@@ -4235,12 +4278,12 @@ her arms. She is soaked, wild with terror.
 YOUNG MOTHER
 My boy!
 Isa reins in hard.
-YOUNG MOTHER
-(CONT’D)
+YOUNG MOTHER (CONT'D)
 Help him! Please! My boy!
 She points back toward a half-collapsed house.
-**第103场 S103 外景 COLLAPSED HOUSE FRONT - CONTINUOUS**
 
+<!-- SCENE: S106 -->
+EXT. COLLAPSED HOUSE FRONT - CONTINUOUS
 Isa pushes through the storm toward the damaged house.
 A BOY of eight lies pinned, a heavy WOODEN BEAM across his legs.
 Water surges around him. He’s going to drown.
@@ -4255,7 +4298,7 @@ HAMAD (O.S.)
 Father!
 HAMAD forces his way through the storm. Hamad sees it at once.
 HAMAD
-(CONT’D)
+(CONT'D)
 Not from the front. The wall will come
 down.
 Isa moves along the raised stone to the boy’s side, dropping into
@@ -4267,14 +4310,12 @@ When I pull him clear, you take the
 weight.
 Floodwater surges through the street. The boy goes under.
 The damaged wall GROANS. The beam shifts an inch.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 Now!
 Together they lift. The beam rises just enough.
 Hamad takes the full weight, straining, nearly driven to one knee.
 Isa pulls the boy’s legs free and hauls him into his arms.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 Go!
 Hamad lets the beam drop and throws himself clear.
 The timber crashes down.
@@ -4286,8 +4327,8 @@ Hamad catches his arm. Rain streams down Hamad’s face. His eyes
 are steady. Clear.
 Father and son turn together. And disappear back into the storm
 
-**第104场 S104 外景 MANAMA / VARIOUS - MORNING**
-
+<!-- SCENE: S107 -->
+EXT. MANAMA / VARIOUS - MORNING
 On horseback, SHEIKH ISA moves through what remains of his world.
 Fragments of boats. Fishing nets. Palm fronds. The lifeblood of
 the community reduced to wreckage.
@@ -4303,11 +4344,13 @@ Nearby, NURSES help the wounded. RABBI JOSEF and members of his
 synagogue hand out blankets. SHEIKHA HAYA and her female servants
 beckon women to join in prayer.
 Isa nods to her. She holds his gaze a moment.
-**第105场 S105 外景 ROYAL RESIDENCE / COURTYARD GARDEN - CONTINUOUS**
 
+<!-- SCENE: S108 -->
+EXT. ROYAL RESIDENCE / COURTYARD GARDEN - CONTINUOUS
 Ahmed’s Frangipani Tree is being righted by the palace staff.
-**第106场 S106 内景 ROYAL RESIDENCE / RAMPARTS - DAWN**
 
+<!-- SCENE: S109 -->
+INT. ROYAL RESIDENCE / RAMPARTS - DAWN
 HAMAD looks over the devastated town.
 Roofs torn off. Streets choked with mud and wreckage.
 ISA joins him. For a moment, father and son say nothing.
@@ -4323,7 +4366,7 @@ Then we begin with the living.
 Hamad turns to him.
 
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 Food. Shelter. Medicine. Whatever can
 be saved, we save. Whatever must be
 rebuilt, we rebuild.
@@ -4337,7 +4380,7 @@ Hamad takes it. He unwraps the cloth.
 SHEIKH ALI’S SWORD.
 Hamad looks at his father, unable to speak.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 My father’s sword is now yours.
 Hamad grips it carefully, reverently.
 SHEIKH HAMAD
@@ -4348,41 +4391,42 @@ SHEIKH ISA
 That is what I once thought too.
 He looks back over the ruined town.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 My father taught me not to rush into
 danger. In the storm, I did not have
 to remember that lesson alone.
 Isa lays a hand on the sword.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 I carried this through war and peace.
 Triumph and loss. None of those gave
 it value except service to others. A
 reminder to build beyond ourselves.
 Hamad’s eyes fill.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 All my life I have told Bahrain it has
 a future.
 (MORE)
 
+SHEIKH ISA (CONT'D)
 Now I place that future in your hands
 freeing it from uncertainty.
 Isa turns fully towards Hamad.
+A brief shadow crosses him.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 The British propose to make
 decisions with or without my
 approval.
-A brief shadow crosses him.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 If they will not allow a ruler his
 authority then we shall give them
 two rulers instead -
 Hamad stands proudly, already sensing what is to come.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 I shall name you as my successor. In
 the majlis, to our people and to the
 British. For Bahrain’s future.
@@ -4394,21 +4438,20 @@ SHEIKH ISA
 Come. Let us give Bahrain
 certainty.
 Hamad holds the sword to his chest. Father and son embrace.
-**第107场 S107 内景 ROYAL RESIDENCE / STUDY - DAY**
 
+<!-- SCENE: S110 -->
+INT. ROYAL RESIDENCE / STUDY - DAY
 ISA stands at his desk, reading a letter. HOLMES waits before
 him, uneasy.
 HOLMES
 I am truly sorry, Your Honour.
 Lorimer was a good man.
 Isa does not look up.
-HOLMES
-(CONT’D)
+HOLMES (CONT'D)
 He asked me to retrieve this side
 letter from the company office. It
 only just arrived.
 Isa reads the page again.
-SHEIKH ISA (CONT’D)
 
 SHEIKH ISA
 A private commission attached to
@@ -4458,8 +4501,9 @@ Isa sighs with profound disappointment.
 SHEIKH ISA
 And Bahrain shall miss you, Mr
 Holmes.
-**第108场 S108 外景 TREE OF LIFE - DUSK**
 
+<!-- SCENE: S111 -->
+EXT. TREE OF LIFE - DUSK
 Sheikh Isa leads his horse across the sand towards the TREE OF
 LIFE. Miraculously still standing after the storm.
 Isa stops before it. He lays a hand on the bark, as though taking
@@ -4473,7 +4517,7 @@ understand your dream.
 He looks up into the branches, then kneels in the sand, raising
 his hands in prayer.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 O Allah... with hardship comes ease.
 Guide me to what is good for me, for
 my faith, for my life, and for
@@ -4484,8 +4528,9 @@ Isa lowers his hands.
 Drained, he settles against the roots, prayer beads still in his
 hand. His eyes close.
 Above him, a shooting star cuts across the sky and vanishes.
-**第109场 S109 外景 DESERT / TREE OF LIFE - NIGHT - DREAM**
 
+<!-- SCENE: S112 -->
+EXT. DESERT / TREE OF LIFE - NIGHT - DREAM
 Isa opens his eyes.
 A WHITE DEER stands before him. Pale. Luminous. Impossible.
 It watches him.
@@ -4518,8 +4563,9 @@ Young Isa is overcome with relief. A burden has been lifted.
 Isa helps Young Isa to his feet. For a moment, they stand together
 in the desert.
 Then Young Isa turns and walks away into the dawn light.
-**第110场 S110 外景 TREE OF LIFE - DAWN**
 
+<!-- SCENE: S113 -->
+EXT. TREE OF LIFE - DAWN
 Isa wakes beneath the tree. The prayer beads still in his hand.
 First light touches the bark above him.
 He sits up slowly, looks to the heavens. Something he has carried
@@ -4527,14 +4573,15 @@ for years has finally shown him its face.
 
 SHEIKH ISA
 Alhamdulillah.
-(a whisper)
 Praise be to God.
+(a whisper)
 He goes to his horse, climbs onto the saddle and rides off.
 SHEIKH ISA (V.O.)
 That morning, I awoke at peace with
 the boy I had been.
-**第111场 S111 外景 SHORELINE - MORNING**
 
+<!-- SCENE: S114 -->
+EXT. SHORELINE - MORNING
 A DATE FARMER pulls a DEAD CHILD from the water.
 A YOUNG GIRL, MARYAM, six, sits in the sand, crying out to sea for
 her father. He has not returned.
@@ -4548,19 +4595,18 @@ Aisha moves on, shaken, walking along the ruined shore.
 She stops at a boat that lies half-buried in the sand.
 Aisha touches the hull. Her fingers come away stained with BLACK
 RESIDUE.
-**第112场 S112 内景 ROYAL RESIDENCE / COURTYARD - DAY**
 
+<!-- SCENE: S115 -->
+INT. ROYAL RESIDENCE / COURTYARD - DAY
 AISHA hurries forward as ISA rides into the courtyard.
 SHEIKHA AISHA
 I waited for your return.
 Isa dismounts as the horse is lead away by attendents.
-SHEIKHA AISHA
-(CONT’D)
+SHEIKHA AISHA (CONT'D)
 I found something this morning. A
 blessing among the ruins.
 Isa steps toward her.
-SHEIKHA AISHA
-(CONT’D)
+SHEIKHA AISHA (CONT'D)
 Liquid bitumen. On the hull of a
 beached pearling boat.
 
@@ -4572,20 +4618,20 @@ SHEIKH ISA
 Or debris carried by the storm.
 Isa looks toward the damaged courtyard, the torn palms.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 The storm brought half the Gulf to our
 shore.
 Aisha watches him closely.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 There is no oil in Bahrain. It was
 only a dream.
 Isa stops. Realises what he’s just said.
 SHEIKHA AISHA
 A dream. Do you truly believe that?
 Once again, Isa cannot answer.
-**第113场 S113 外景 MOUNTAIN OF SMOKE / OIL FIELDS - DAY**
 
+<!-- SCENE: S116 -->
+EXT. MOUNTAIN OF SMOKE / OIL FIELDS - DAY
 The storm has torn through the oil field. Derricks lean broken.
 Debris lies in the sand. Ripped canvas snaps in the wind.
 SHEIKH ISA rides in, reins in hard.
@@ -4595,8 +4641,9 @@ Where is Holmes?
 Workers salvage what they can.
 WORKER
 He’s left for the port, Your Honour.
-**第114场 S114 外景 PORT MANAMA - DAY**
 
+<!-- SCENE: S117 -->
+EXT. PORT MANAMA - DAY
 The port is wounded by the storm. Broken crates. Torn sailcloth.
 Men repair what they can.
 HOLMES waits near the quay with his luggage. But there is no
@@ -4651,8 +4698,9 @@ to honour what Daly arranged.
 Isa’s eyes do not waver.
 SHEIKH ISA
 We needn’t be concerned about Daly.
-**第115场 S115 内景 THE BRITISH AGENCY / DALY’S OFFICE – DAY**
 
+<!-- SCENE: S118 -->
+INT. THE POLITICAL AGENCY / DALY’S OFFICE – DAY
 The office bears the scars of the storm. A broken shutter. Damp
 papers. Sand and rain blown across the floor. Servants have
 already cleared the worst of it, but DALY is tidying what
@@ -4684,7 +4732,7 @@ DALY
 A little.
 He tests the blade’s weight.
 DALY
-(CONT’D)
+(CONT'D)
 Badly enough to remember the
 bruises. Well enough to inflict a
 few.
@@ -4719,7 +4767,7 @@ Only in a careless man.
 Daly presses. Isa turns the blade aside with casual precision.
 
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 Mr Lorimer was not such a man.
 DALY
 An unfortunate accident.
@@ -4770,7 +4818,7 @@ You mistake restraint for weakness.
 Daly breathes hard. Isa lowers the sword. Reaches into his robe
 and removes the side letter. Places it on Daly’s desk.
 SHEIKH ISA
-(CONT’D)
+(CONT'D)
 I think you know its contents.
 Daly stares at it. His face drains.
 DALY
@@ -4781,8 +4829,9 @@ that.
 The door opens. SHEIKH HAMAD enters with two BRITISH OFFICERS
 carrying pistols.
 For the first time, Daly has no words.
-**第116场 S116 内景 THE BRITISH AGENCY / BOARDROOM ROOM - DAY**
 
+<!-- SCENE: S119 -->
+INT. THE POLITICAL AGENCY / MEETING ROOM - DAY
 A TEAM OF LAWYERS from the Eastern and General Syndicate sit
 before SHEIKH ISA and SHEIKH HAMAD. HOLMES stands beside them.
 Isa nods, and Hamad hands the senior LAWYER a deed of payment.
@@ -4793,12 +4842,12 @@ LAWYER
 Fair enough. Not what we lost, but
 enough to be rid of it.
 He gathers the documents.
-LAWYER
-(CONT’D)
+LAWYER (CONT'D)
 Frankly, Your Honour, I doubt anyone
 will bother looking here again.
 (MORE)
 
+LAWYER (CONT'D)
 There is no oil in the Arabian Gulf.
 We have the financial deficit to prove
 it.
@@ -4807,6 +4856,7 @@ Holmes watches them go, holding his tongue.
 SHEIKH HAMAD
 We paid them three times what they
 paid you.
+124.
 HOLMES
 I’m sorry, Your Honour. I warned they
 were ruthless men.
@@ -4818,14 +4868,12 @@ SHEIKH ISA
 It is a larger cost to sell our
 future.
 He looks down at a map on the table.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 Schools. Canals. Medicines. Roads.
 Every promise we have made would begin
 waiting on British support again.
 Isa places his hand over Bahrain.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 My father did not want Bahrain merely
 improved. He wanted her free. A
 country cannot call itself sovereign
@@ -4840,9 +4888,9 @@ and another. Until the land answers.
 HOLMES
 Of course, Your Honour.
 (a smile tugs)
-LAWYER (CONT’D)
 (MORE)
 
+HOLMES (CONT'D)
 Though I fear there’ll be more days
 ahead when it will seem hopeless.
 Isa smiles wryly as well.
@@ -4853,8 +4901,9 @@ Holmes smiles back. And paces to the door with renewed purpose.
 SHEIKH ISA (V.O.)
 But the earth does not give up its
 secrets because men are impatient.
-**第117场 S117 外景 JABAL AL-DUKHAN – DESERT DRILL SITE – DAY**
 
+<!-- SCENE: S120 -->
+EXT. JABAL AL-DUKHAN – DESERT DRILL SITE – DAY
 A drill turns against a hard, white sky.
 HOLMES stands beside the rig, face burned by sun and failure,
 watching the cable hammer down into the earth.
@@ -4871,35 +4920,36 @@ You must ask again, Mr Holmes.
 Holmes nods with determination.
 HOLMES
 Yes, Your Honour.
-**第118场 S118 外景 ANOTHER DRILL SITE – ANOTHER DAY**
 
+<!-- SCENE: S121 -->
+EXT. ANOTHER DRILL SITE – ANOTHER DAY
 Men haul pipe. Sweat. Flies. Heat. The drill breaks through.
 A violent surge of WATER erupts — but the men recoil. A worker
 cups it. Tastes. Spits.
 WORKER
 More salt!
-HOLMES (CONT’D)
 
 Holmes turns away, furious.
 SHEIKH ISA (V.O.)
 And when the earth did speak,
 sometimes it mocked us.
-**第119场 S119 外景 WORKERS’ CAMP – DAY**
 
+<!-- SCENE: S122 -->
+EXT. WORKERS’ CAMP – DAY
 Holmes storms through the camp, shouting at exhausted men.
 HOLMES
 Again! We drill again!
 The workers are too tired to answer. One throws down a length of
 pipe. It crashes into the deck. Holmes spins on him.
-HOLMES
-(CONT’D)
+HOLMES (CONT'D)
 You want to go home? Then go! But do
 not stand here and call yourself a
 driller!
 The man lowers his eyes. Holmes catches himself. His rage is
 really fear.
-**第120场 S120 外景 ANOTHER DRILL SITE – NIGHT**
 
+<!-- SCENE: S123 -->
+EXT. ANOTHER DRILL SITE – NIGHT
 The brake wheel screams as a drill line runs too fast.
 Men shout as a WORKER grabs the spinning handle and it smashes him
 aside.
@@ -4909,8 +4959,9 @@ SHEIKH ISA (V.O.)
 There were injuries. Accidents. Days
 when men cursed the work. Nights when
 they thought morning wouldn’t come.
-**第121场 S121 外景 DRILL SITE – DAY**
 
+<!-- SCENE: S124 -->
+EXT. DRILL SITE – DAY
 Another bore hole. Another failure. Abandoned wells across the
 desert — crude timber scars against the stone.
 Holmes stands, spent. With Isa again. The failed wells stretch
@@ -4921,24 +4972,27 @@ Holmes cannot quite meet Isa’s eye.
 
 HOLMES
 Yes, Your Honour.
-**第122场 S122 外景 PARIS - DAY**
 
+<!-- SCENE: S125 -->
+EXT. PARIS - DAY
 An aerial view of Paris. Boulevards, bridges, the Seine, smoke
 rising from chimneys, motorcars and carriages move through the
 city’s arteries.
 SHEIKH ISA (V.O.)
 Then when hope was almost lost, we
 were given reason to still believe.
-In the distance - rapidly approaching - the Tour Eiffel.
+In the distance - rapidly approaching - the Tour Eiffel. Iron
+lacework climbing impossibly into the sky.
 SUPER: PARIS, SPRING - 1930
 Move toward the structure, closer - through girders and platforms,
 toward the first level -
-**第123场 S123 内景 EIFFEL TOWER RESTAURANT - FIRST PLATFORM - DAY**
 
+<!-- SCENE: S126 -->
+INT. EIFFEL TOWER RESTAURANT - FIRST PLATFORM - DAY
 Through the window — and toward -
-JACQUES CARTIER sits alone at a table overlooking the city of
-light. A fine bottle of Bordeaux breathes beside him. A glass in
-his hand.
+JACQUES CARTIER sits alone at a table overlooking city of light.
+A fine bottle of Bordeaux breathes beside him. A glass in his
+hand. His lunch untouched.
 He is older, but with the same alert curiosity in his eyes.
 Paris belongs to him, yet his mind is elsewhere.
 The MAÎTRE D’ sweeps in with a WAITER behind him, carrying a
@@ -4950,14 +5004,13 @@ Cartier turns, mildly brought back to the world.
 The waiter places the platter before him. The maître d’ lifts the
 silver cover.
 A dozen plump oysters glisten on crushed ice.
-MAÎTRE D’
-(CONT’D)
+MAÎTRE D’ (CONT'D)
 (In French, subtitled)
 From the sweet waters of Bahrain.
 Fresh from the morning’s ship.
+
 Cartier looks at the oysters. Bahrain. The word means much. He
 smiles.
-
 CARTIER
 (In French, subtitled)
 Thank you.
@@ -4967,8 +5020,7 @@ MAÎTRE D’
 Much easier to obtain these days,
 Monsieur.
 Cartier gives the faintest smile, barely listening.
-MAÎTRE D’
-(CONT’D)
+MAÎTRE D’ (CONT'D)
 (In French, subtitled)
 And the new collection? My wife is
 an avid connoisseur of your fine
@@ -4982,21 +5034,23 @@ MAÎTRE D’
 (In French, subtitled)
 Bon appétit, Monsieur Cartier.
 The maître d’ bows. He and the waiter withdraw.
-Cartier sips his wine then picks up the first oyster. A small
-squeeze of lemon. He tips it into his mouth.
+Cartier sips his Bordeaux. Paris gleams below him, unaware of how
+fragile it is.
+Cartier picks up the first oyster. A small squeeze of lemon. He
+tips it into his mouth.
 Almost at once, his expression changes.
 Not pleasure. Irritation. He scowls, and brings a napkin to his
 lips. He spits into the napkin. Looks down.
 We do not see what rests within his hands. But Cartier does.
 His annoyance vanishes. His face breaks into awe. He beholds the
 wonder of wonders.
-**第124场 S124 内景 ROYAL RESIDENCE / STUDY - DAY**
 
+<!-- SCENE: S127 -->
+INT. ROYAL RESIDENCE / ISA’S STUDY - DAY
 Sea light dapples the walls as SHEIKH ISA (72) awaits. Majeed
 appears at the doorway.
 MAJEED
 Monsieur Cartier, Your Honour.
-
 JACQUES CARTIER enters. Impeccably dressed despite the heat. The
 years between these two are full. Isa smiles.
 SHEIKH ISA
@@ -5025,15 +5079,14 @@ both men allow the silence.
 CARTIER
 I heard of your loss. Your son.
 Isa’s smile fades.
-CARTIER
-(CONT’D)
+CARTIER (CONT'D)
 I am very sorry.
 Isa lowers his eyes.
+
 SHEIKH ISA
 A man learns that grief does not leave
 him. It only changes where it sits.
 Cartier nods, moved by this.
-
 CARTIER
 Pratap spoke of you often.
 SHEIKH ISA
@@ -5041,14 +5094,12 @@ You saw him?
 CARTIER
 In India. At the end.
 Isa absorbs this carefully.
-CARTIER
-(CONT’D)
+CARTIER (CONT'D)
 He died in his home. Peacefully.
 Surrounded by family — everything he
 loved.
 A small, sad smile from Isa.
-CARTIER
-(CONT’D)
+CARTIER (CONT'D)
 He was happy, Your Honour.
 SHEIKH ISA
 Allah is merciful.
@@ -5069,11 +5120,11 @@ Inside rests a single BLACK PEARL.
 Set elegantly on a simple gold chain. Not ostentatious. Perfect.
 For a moment, Isa is a boy again, delighting in the impossible. He
 says nothing as he reaches slowly into the box and lifts it.
+
 The pearl catches the light, holding darkness and colour at once —
 black, green, silver, the faintest blue. Darkness made luminous.
 SHEIKH ISA
 From Bahrain?
-
 CARTIER
 Yes.
 (a beat)
@@ -5081,13 +5132,11 @@ It came to me over lunch. I almost
 choked on it. Destiny has a sense of
 humour.
 Isa’s eyes stay on the pearl.
-CARTIER
-(CONT’D)
+CARTIER (CONT'D)
 It crossed the sea to me. Now I return
 it to its true owner.
 Isa looks up.
-CARTIER
-(CONT’D)
+CARTIER (CONT'D)
 You once told me to meet the sea that
 makes the pearls. I did. I have
 Bahrain to thanks for my wealth. Since
@@ -5108,12 +5157,12 @@ Cartier bows his head.
 CARTIER
 Thank you. For teaching me where
 beauty begins.
-**第125场 S125 内景 WORKER’S SHACK/JABAL AL-DUKHAN – OIL FIELD – DAWN**
 
+<!-- SCENE: S128 -->
+INT. WORKER’S SHACK/JABAL AL-DUKHAN – OIL FIELD – DAWN
 Holmes (60s) sleeps exhausted at a rough desk inside a workers’
 shack. His desk cluttered with maps, drilling records, failed
 samples, broken pencils.
-
 SHEIKH ISA (V.O.)
 And then, one day, the earth
 answered.
@@ -5121,33 +5170,36 @@ Outside, the rig groans. Then a voice yells -
 WORKER (O.S.)
 Mr Holmes!
 Holmes jolts awake.
-WORKER
-(CONT’D)
+WORKER (CONT'D)
 Mr Holmes!
 Holmes runs outside.
-**第126场 S126 外景 JABAL AL-DUKHAN/WELL NUMBER 1 – CONTINUOUS**
 
+<!-- SCENE: S129 -->
+EXT. JABAL AL-DUKHAN/WELL NUMBER 1 – CONTINUOUS
 The men are backing away from the well.
 A low rumble from beneath the earth. The ground trembles.
-A ROAR. OIL BURSTS SKYWARD. A black plume in the desert sky.
-The workers erupt — shouting, laughing, dancing in the oil. Some
-fall to their knees. Some embrace.
+A ROAR. OIL BURSTS SKYWARD.
+A black plume in the desert sky, lit by the last fire of sunset.
+For a moment no one moves.
+Then the workers erupt — shouting, laughing, dancing in the oil.
+Some fall to their knees. Some embrace.
 Holmes stands in the spray, soaked. Overwhelmed with joy -
 SUPER: JEBEL/JABAL AL-DUKHAN “MOUNTAIN OF SMOKE” 2 JUNE 1932
-**第127场 S127 外景 DESERT ROAD – DAY**
 
+<!-- SCENE: S130 -->
+EXT. DESERT ROAD – DAY
 Open-top limousines cut across the desert toward Jabal Al-Dukhan.
 Isa (80s) rides in the first car with HAYA, AISHA, and HAMAD.
 Behind them: family, advisers, guards.
-**第128场 S128 外景 JABAL AL-DUKHAN – OIL FIELD – DAY**
 
+<!-- SCENE: S131 -->
+EXT. JABAL AL-DUKHAN – OIL FIELD – DAY
 The cars arrive.
 Isa steps out slowly. Haya follows. Then Aisha. Hamad.
 Before them: the wellhead, the machinery, men blackened with oil,
 the desert transformed by a force no one can yet measure.
 Holmes approaches, still stained from the strike.
 He holds out a small glass vial of crude oil.
-
 HOLMES
 I refused to take no for an answer,
 Your Honour.
@@ -5161,21 +5213,23 @@ Now the fire beneath us had risen.
 Haya & Hamad watch the plume with quiet astonishment. Aisha
 watches Isa.
 Isa’s eyes are fixed on the well — not triumph, but awe.
-**第129场 S129 内景 ROYAL RESIDENCE / STUDY – DAY**
 
+<!-- SCENE: S132 -->
+INT. PALACE – SHEIKH ISA’S STUDY – DAY
 The black pearl sits on Isa’s desk. Beside it now: the vial of
 dark oil.
 Two small objects. Two eras.
 SHEIKH ISA (V.O.)
 The pearl had fed us. The oil would
 change us.
-**第130场 S130 外景 BAHRAIN SHORE – MORNING**
 
+<!-- SCENE: S133 -->
+EXT. BAHRAIN SHORE – MORNING
 Cannon fire rolls across the water.
-The majestic ship HMS LUPIN enters the bay. Flags snap in the
-wind.
-**第131场 S131 外景 MANAMA – PUBLIC SPACE – DAY**
+The majestic ship LUBEN enters the bay. Flags snap in the wind.
 
+<!-- SCENE: S134 -->
+EXT. MANAMA – PUBLIC SPACE – DAY
 The whole of Bahrain seems to have gathered.
 Drums. Rifles raised. Men cheering. Women singing. Children
 running between robes and banners.
@@ -5183,16 +5237,17 @@ KING AL-SA’UD stands before Sheikh Isa and Sheikh Hamad. He
 presents Hamad with a sword.
 KING AL-SA’UD
 Congratulations to you both.
-
 The crowd cheer.
-**第132场 S132 外景 STREETS OF MANAMA – DAY**
 
+<!-- SCENE: S135 -->
+EXT. STREETS OF MANAMA – DAY
 ZALAIKHA leads a group of women in a song of jubilation.
 Haya stands with Aisha near Isa, both moved in different ways.
 SHEIKH ISA (V.O.)
 My father had dreamed that Bahrain
 might stand on more than pearl and
 tide.
+Crowds flood the streets.
 SHEIKH HAMAD
 May we prove worthy of what lies
 beneath us.
@@ -5204,23 +5259,24 @@ He would have seen this in you.
 SHEIKHA AISHA
 Your father’s dream has been
 fulfilled.
+Isa’s eyes fill, though he does not weep.
 He looks toward the horizon — the sea beyond the city, the twin
 minarets of Al-Khamis Mosque standing like witnesses.
 SHEIKH ISA
 It has begun.
 (a beat)
 Alhamdulillah.
+
 The sound rises around him —
 CROWD
 Sheikh Isa! Sheikh Isa!
 The chant grows.
-CROWD
-(CONT’D)
+CROWD (CONT'D)
 Hakim! Hakim!
 Haya and Aisha stand beside him as the chant rises over Manama.
 
-**第133场 S133 内景 ROYAL RESIDENCE / SHEIKH ISA’S PRAYER ROOM - 1932**
-
+<!-- SCENE: S136 -->
+INT. SHEIKH ISA’S PRAYER ROOM, PALACE - 1932
 The room is quiet now. Noura sits beside her grandfather. The
 story has changed her.
 NOURA
@@ -5233,8 +5289,7 @@ SHEIKH ISA
 I told you that you would not need to
 guess.
 Noura thinks.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 So tell me.
 NOURA
 It was all of it. The pirates leaving.
@@ -5245,38 +5300,36 @@ Yes. All of it.
 (a beat)
 And none of it.
 Noura waits.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 It was what I promised my father when
 he lay dying on the battlefield.
 
-EXT. EAST RIFFA - BATTLEFIELD - DAY (FLASHBACK)
+<!-- SCENE: S137 -->
+EXT. EAST RIFA - BATTLEFIELD - DAY (FLASHBACK)
 Young Isa kneels over SHEIKH ALI. Blood. Dust. The ruined sound of
 battle fading around them.
 YOUNG ISA
 I promise, Father.
 Ali’s hand grips Isa’s.
-YOUNG ISA
-(CONT’D)
+YOUNG ISA (CONT'D)
 I promise you.
 Ali smiles. His hand releases. He is gone.
 
-**第134场 S134 内景 ROYAL RESIDENCE / SHEIKH ISA’S PRAYER ROOM - 1932 - RESUME**
-
+<!-- SCENE: S138 -->
+INT. SHEIKH ISA’S PRAYER ROOM – 1932 - RESUME
 Noura understands.
 NOURA
 It was your promise.
 Isa nods.
 SHEIKH ISA
-Yes.
+HYes.
 (a beat)
 The promise we make to those who came
 before us. To carry their love to
 those who come after.
 Noura looks at him, deeply moved. Isa sees the tears in her eyes
 and gently saves her from them.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 But I have kept you from your friends.
 NOURA
 I do not mind.
@@ -5284,56 +5337,49 @@ SHEIKH ISA
 Go. Let your grandfather have a moment
 to pray and give thanks.
 Noura rises.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 Thank you, Noura.
 NOURA
 I’ve done nothing to thank me for.
+
 SHEIKH ISA
 You were here. You held my hand. You
 listened. That is enough.
 She hesitates, wanting to say more.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 (he smiles)
 Go on.
 She smiles also, through her tears and heads for the door.
 Isa watches her go. He turns toward the qibla. Slowly, with great
 effort and dignity, he begins to pray.
-
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 Allah Akbar.
 (bows his head.)
 O Allah...
 He lowers himself into sujood, forehead touching the prayer mat.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 Subhana rabbi al-a'la.
 His voice is faint now. At the door, Noura pauses. Something makes
 her look back. Isa rises slowly to sit. His hands lift in dua.
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 (his breathing shallows)
 Rabbana taqabbal minna... wa min
 sha'bina.
 His hands remain raised a moment longer. Then lower. He leans
 forward again into prostration. A final whisper:
-SHEIKH ISA
-(CONT’D)
+SHEIKH ISA (CONT'D)
 La ilaha illa Allah...
 He falls forward onto the floor.
 NOURA
 Grandfather?
 Noura stares. A terrible silence.
-NOURA
-(CONT’D)
+NOURA (CONT'D)
 (rushing to him)
 Grandfather!
 Noura kneels beside him, she reaches out, almost frightened to
 touch him. Takes his hand, gently holds it.
-NOURA
-(CONT’D)
+
+NOURA (CONT'D)
 Grandfather, I am still here.
 Servants rush in - hover at the door, unsure what can be done.
 Then Hamad enters, moves past them.
@@ -5342,7 +5388,6 @@ him. He runs forward, drops to his knees beside Isa.
 He bends, touching his forehead to Isa’s. He starts to cry.
 DRIFT AWAY away from them... Out through the carved window... Out
 over Manama. The rooftops. The minarets. The harbour.
-
 SHEIKH ISA (V.O.)
 May God bless you, O Bahrain.
 May your people be embraced in

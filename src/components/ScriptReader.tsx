@@ -1,7 +1,7 @@
 import React, { useMemo, useState, useRef, useEffect } from 'react';
 import rawScript from '@/data/rawScript.md?raw';
 import v4Script from '@/data/v4Script.md?raw';
-import { scriptVersions, getScriptVersions, getV3Content, getV4Content } from '@/data/scriptVersions';
+import { scriptVersions, getScriptVersions, getV3Content, getV4Content, getV3EnglishOriginal, getV4EnglishOriginal } from '@/data/scriptVersions';
 import type { ScriptVersion } from '@/data/scriptVersions';
 import { ChevronDown, GitBranch, FileDiff, BookOpen, List } from 'lucide-react';
 import { VersionDiffViewer } from './VersionDiffViewer';
@@ -17,12 +17,14 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
   const [showVersionMenu, setShowVersionMenu] = useState(false);
   const [showDiffViewer, setShowDiffViewer] = useState(false);
   const [showSynopsis, setShowSynopsis] = useState(false);
-  const [v4Language, setV4Language] = useState<'zh' | 'en'>('zh');
+  const [language, setLanguage] = useState<'zh' | 'en'>('zh');
   
   // 管理可编辑的V4内容（支持从版本差异面板修改后同步）
   const [editableV4Content, setEditableV4Content] = useState<string | null>(null);
 
   const isV4 = selectedVersionId === 'v4';
+  const isV3 = selectedVersionId === 'v3';
+  const supportsBilingual = isV3 || isV4;
 
   const currentContent = useMemo(() => {
     if (isV4) {
@@ -30,11 +32,14 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
       if (editableV4Content) {
         return editableV4Content;
       }
-      return getV4Content(v4Language);
+      return getV4Content(language);
+    }
+    if (isV3) {
+      return getV3Content(language);
     }
     const version = versions.find((v) => v.id === selectedVersionId);
     return version?.content || rawScript;
-  }, [versions, selectedVersionId, isV4, v4Language, editableV4Content]);
+  }, [versions, selectedVersionId, isV4, isV3, language, editableV4Content]);
 
   const lines = useMemo(() => {
     const arr = currentContent.split('\n');
@@ -80,6 +85,7 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
     setSearchQuery('');
     setMatchIndex(0);
     setShowJumpDialog(false);
+    setLanguage('zh');
     if (containerRef.current) {
       containerRef.current.scrollTop = 0;
     }
@@ -175,38 +181,38 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
               <ChevronDown size={12} className={`transition-transform ${showVersionMenu ? 'rotate-180' : ''}`} />
             </button>
 
-            {/* V4 中英文切换 */}
-            {isV4 && (
-              <>
-                <div className="flex items-center gap-0.5 bg-slate-100 rounded-md p-0.5">
-                  <button
-                    onClick={() => setV4Language('zh')}
-                    className={`px-2 py-0.5 text-xs rounded transition-colors ${
-                      v4Language === 'zh' ? 'bg-white text-slate-700 shadow-sm' : 'text-slate-500'
-                    }`}
-                  >
-                    🇨🇳 中文
-                  </button>
-                  <button
-                    onClick={() => setV4Language('en')}
-                    className={`px-2 py-0.5 text-xs rounded transition-colors ${
-                      v4Language === 'en' ? 'bg-white text-slate-700 shadow-sm' : 'text-slate-500'
-                    }`}
-                  >
-                    🇬🇧 EN
-                  </button>
-                </div>
-
-                {/* 版本差异按钮 */}
+            {/* 中英文切换 - V3和V4都支持 */}
+            {supportsBilingual && (
+              <div className="flex items-center gap-0.5 bg-slate-100 rounded-md p-0.5">
                 <button
-                  onClick={() => setShowDiffViewer(true)}
-                  className="flex items-center gap-1 px-2 py-0.5 text-xs rounded-md bg-violet-50 text-violet-700 hover:bg-violet-100 border border-violet-200 transition-colors"
-                  title="查看 V3 与 V4 版本差异"
+                  onClick={() => setLanguage('zh')}
+                  className={`px-2 py-0.5 text-xs rounded transition-colors ${
+                    language === 'zh' ? 'bg-white text-slate-700 shadow-sm' : 'text-slate-500'
+                  }`}
                 >
-                  <FileDiff size={12} />
-                  <span>版本差异</span>
+                  🇨🇳 中文
                 </button>
-              </>
+                <button
+                  onClick={() => setLanguage('en')}
+                  className={`px-2 py-0.5 text-xs rounded transition-colors ${
+                    language === 'en' ? 'bg-white text-slate-700 shadow-sm' : 'text-slate-500'
+                  }`}
+                >
+                  🇬🇧 EN
+                </button>
+              </div>
+            )}
+
+            {/* V4 版本差异按钮 */}
+            {isV4 && (
+              <button
+                onClick={() => setShowDiffViewer(true)}
+                className="flex items-center gap-1 px-2 py-0.5 text-xs rounded-md bg-violet-50 text-violet-700 hover:bg-violet-100 border border-violet-200 transition-colors"
+                title="查看 V3 与 V4 版本差异"
+              >
+                <FileDiff size={12} />
+                <span>版本差异</span>
+              </button>
             )}
 
             {showVersionMenu && (
@@ -308,13 +314,8 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
       {/* 正文 / 概述 切换 */}
       {showSynopsis ? (
         <div className="flex-1 overflow-hidden">
-          <SynopsisView onNavigate={(lineNumber) => {
-            const scene = script?.scenes.find((s) =>
-              s.lines.some((l) => l.lineNumber <= lineNumber)
-            );
-            if (scene) {
-              onNavigate?.(lineNumber);
-            }
+          <SynopsisView onNavigate={(sceneId, lineNumber) => {
+            onNavigate?.(lineNumber);
           }} />
         </div>
       ) : (
@@ -388,7 +389,7 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
 
       {showJumpDialog && (
         <div className="fixed inset-0 bg-black/30 z-50 flex items-center justify-center" onClick={() => setShowJumpDialog(false)}>
-          <div className="bg-white rounded-lg shadow-xl p-4 w-64" onClick={handleKeyDown}>
+          <div className="bg-white rounded-lg shadow-xl p-4 w-64" onClick={(e) => e.stopPropagation()}>
             <h3 className="text-sm font-semibold text-slate-700 mb-3">跳转到行</h3>
             <input
               type="number"
@@ -422,11 +423,11 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
         </div>
       )}
 
-      {/* 版本差异对比窗口 */}
+      {/* 版本差异对比窗口 - 始终使用英文原版对比（根据script-diff技能原则，避免翻译干扰） */}
       {showDiffViewer && (
         <VersionDiffViewer
-          v3Content={getV3Content('en')}
-          v4Content={getV4Content('en')}
+          v3Content={getV3EnglishOriginal()}
+          v4Content={getV4EnglishOriginal()}
           onClose={() => setShowDiffViewer(false)}
           onSaveV4Content={(content) => {
             setEditableV4Content(content);
