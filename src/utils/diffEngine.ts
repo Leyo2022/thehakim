@@ -32,6 +32,11 @@ export interface VersionDiff {
 export function normalizeLine(line: string): string {
   return line
     .toLowerCase()
+    // Normalize Unicode quotes/apostrophes to ASCII
+    .replace(/[\u2018\u2019\u201A\u201B]/g, "'")
+    .replace(/[\u201C\u201D\u201E\u201F]/g, '"')
+    // Normalize dashes
+    .replace(/[\u2013\u2014\u2015]/g, '-')
     // Remove all punctuation characters
     .replace(/[\/—\-–－－_—+*#@!$%^&()=\[\]{}|\\:;"'`<>,.~?]/g, ' ')
     // Remove English punctuation
@@ -249,8 +254,12 @@ export function validateSceneIdConvention(sceneId: string): string | null {
 // Compute line diff using the `diff` npm package (Myers algorithm)
 // With normalization to detect semantic matches
 function computeLineDiff(leftLines: string[], rightLines: string[]): DiffLine[] {
-  const leftText = leftLines.join('\n');
-  const rightText = rightLines.join('\n');
+  // Normalize lines: trim trailing whitespace (common PDF vs manual formatting difference)
+  const normLeft = leftLines.map(l => l.replace(/\s+$/, ''));
+  const normRight = rightLines.map(l => l.replace(/\s+$/, ''));
+
+  const leftText = normLeft.join('\n');
+  const rightText = normRight.join('\n');
   
   const changes: Change[] = diffLines(leftText, rightText);
   
@@ -266,7 +275,6 @@ function computeLineDiff(leftLines: string[], rightLines: string[]): DiffLine[] 
     }
     
     if (change.removed) {
-      // Lines removed from left
       for (const part of parts) {
         leftLineNum++;
         diff.push({
@@ -276,7 +284,6 @@ function computeLineDiff(leftLines: string[], rightLines: string[]): DiffLine[] 
         });
       }
     } else if (change.added) {
-      // Lines added to right
       for (const part of parts) {
         rightLineNum++;
         diff.push({
@@ -286,7 +293,6 @@ function computeLineDiff(leftLines: string[], rightLines: string[]): DiffLine[] 
         });
       }
     } else {
-      // Unchanged lines
       for (const part of parts) {
         leftLineNum++;
         rightLineNum++;
@@ -301,32 +307,68 @@ function computeLineDiff(leftLines: string[], rightLines: string[]): DiffLine[] 
     }
   }
   
-  // Merge adjacent removed+added into modified
-  // Then check if they're actually the same after normalization
-  const merged: DiffLine[] = [];
-  let k = 0;
-  while (k < diff.length) {
-    if (diff[k].type === 'removed' && k + 1 < diff.length && diff[k + 1].type === 'added') {
-      const left = diff[k].left!;
-      const right = diff[k + 1].right!;
-      const normalizedMatch = isNormalizedMatch(left, right);
+  // Post-process: match removed lines to added lines within a sliding window
+  // This handles cases where extra/missing lines cause adjacent removed+added pairs
+  // to be separated by other lines, but the lines are actually the same content.
+  const result: DiffLine[] = [];
+  let i = 0;
+  while (i < diff.length) {
+    if (diff[i].type === 'removed') {
+      // Look ahead up to 10 lines for a matching added line
+      const removedLine = diff[i];
+      let matchIdx = -1;
+      const windowEnd = Math.min(i + 10, diff.length);
+      for (let j = i + 1; j < windowEnd; j++) {
+        if (diff[j].type === 'added') {
+          if (isNormalizedMatch(removedLine.left!, diff[j].right!)) {
+            matchIdx = j;
+            break;
+          }
+        } else if (diff[j].type === 'unchanged') {
+          // Stop searching if we hit an unchanged line that's likely a real anchor
+          // But only if the unchanged line isn't just after a small gap
+          if (j > i + 3) break;
+        }
+      }
       
-      merged.push({
-        type: normalizedMatch ? 'unchanged' : 'modified',
-        left: left,
-        right: right,
-        leftLineNum: diff[k].leftLineNum,
-        rightLineNum: diff[k + 1].rightLineNum,
-        isNormalizedMatch: normalizedMatch,
-      });
-      k += 2;
+      if (matchIdx !== -1) {
+        const addedLine = diff[matchIdx];
+        const same = isNormalizedMatch(removedLine.left!, addedLine.right!);
+        result.push({
+          type: same ? 'unchanged' : 'modified',
+          left: removedLine.left,
+          right: addedLine.right,
+          leftLineNum: removedLine.leftLineNum,
+          rightLineNum: addedLine.rightLineNum,
+          isNormalizedMatch: same,
+        });
+        // Emit any lines between i and matchIdx as added lines (they were skipped)
+        // These are genuinely new lines in V4
+        for (let j = i + 1; j < matchIdx; j++) {
+          if (diff[j].type === 'added') {
+            result.push(diff[j]);
+          } else if (diff[j].type === 'removed') {
+            // These removed lines didn't match - emit as removed
+            // But check if they match an earlier added line
+            result.push(diff[j]);
+          }
+        }
+        i = matchIdx + 1;
+      } else {
+        result.push(diff[i]);
+        i++;
+      }
+    } else if (diff[i].type === 'added') {
+      // Check if this added line matches a previous unmatched removed within window
+      result.push(diff[i]);
+      i++;
     } else {
-      merged.push(diff[k]);
-      k++;
+      result.push(diff[i]);
+      i++;
     }
   }
   
-  return merged;
+  return result;
 }
 
 // Compare two script versions using scene ID matching (not positional)

@@ -1,7 +1,7 @@
 import React, { useMemo, useState, useRef, useEffect } from 'react';
 import rawScript from '@/data/rawScript.md?raw';
 import v4Script from '@/data/v4Script.md?raw';
-import { scriptVersions, getScriptVersions, getV4Content } from '@/data/scriptVersions';
+import { scriptVersions, getScriptVersions, getV3Content, getV4Content } from '@/data/scriptVersions';
 import type { ScriptVersion } from '@/data/scriptVersions';
 import { ChevronDown, GitBranch, FileDiff, BookOpen, List } from 'lucide-react';
 import { VersionDiffViewer } from './VersionDiffViewer';
@@ -425,8 +425,8 @@ export const ScriptReader: React.FC<ScriptReaderProps> = ({ onNavigate }) => {
       {/* 版本差异对比窗口 */}
       {showDiffViewer && (
         <VersionDiffViewer
-          v3Content={rawScript}
-          v4Content={editableV4Content || v4Script}
+          v3Content={getV3Content('en')}
+          v4Content={getV4Content('en')}
           onClose={() => setShowDiffViewer(false)}
           onSaveV4Content={(content) => {
             setEditableV4Content(content);

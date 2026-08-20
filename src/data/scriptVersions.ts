@@ -1,4 +1,5 @@
 import rawScript from './rawScript.md?raw';
+import v3EnglishScript from './v3EnglishScript.md?raw';
 import v4Script from './v4Script.md?raw';
 import v4EnglishScript from './v4EnglishScript.md?raw';
 
@@ -37,6 +38,10 @@ export const getScriptVersionContent = (versionId: string): string => {
 
 export const getScriptVersions = (): ScriptVersion[] => {
   return scriptVersions;
+};
+
+export const getV3Content = (language: 'zh' | 'en'): string => {
+  return language === 'zh' ? rawScript : v3EnglishScript;
 };
 
 export const getV4Content = (language: 'zh' | 'en'): string => {
